@@ -49,9 +49,8 @@ assets. `composer lint` / `composer lint:fix` for PHP code style.
   notification carries the wish and a CP link only — contact details stay in the
   Control Panel.
 - **Photos** are stored in the private `wishes` asset container
-  (`storage/app/private/wishes`, outside the web root) under `Y/m`, named
-  `<entry slug>-<12 random>.<ext>` so a file can be traced back to its entry
-  without the path being guessable from a name. Moderators view them through
+  (`storage/app/private/wishes`, outside the web root) under `Y/m`, named after
+  the entry slug so the two always pair up. Moderators view them through
   `GET /cp/wishes/{path}/photo`, which requires a CP session and the
   `view wishes entries` permission. Site assets use the separate public
   `assets` container (`public/assets`, gitignored).
