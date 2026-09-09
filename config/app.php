@@ -79,7 +79,8 @@ return [
 	|
 	*/
 
-	'timezone' => 'UTC',
+	// Swiss site: submission timestamps and CP dates should read local, not UTC.
+	'timezone' => 'Europe/Zurich',
 
 	/*
 	|--------------------------------------------------------------------------
