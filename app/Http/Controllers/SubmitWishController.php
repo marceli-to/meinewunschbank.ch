@@ -6,6 +6,7 @@ use App\Http\Requests\SubmitWishRequest;
 use App\Mail\NewWishNotification;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Statamic\Facades\Asset;
@@ -53,8 +54,19 @@ class SubmitWishController extends Controller
 
 		$entry->save();
 
+		// The queue runs `sync` on a flat-file install, so this sends inside the
+		// request. The wish is already saved at this point — a mail transport
+		// failure must not turn a successful submission into an error for the
+		// visitor, so log it and carry on.
 		if ($notify = config('mail.notify')) {
-			Mail::to($notify)->send(new NewWishNotification($entry));
+			try {
+				Mail::to($notify)->send(new NewWishNotification($entry));
+			} catch (\Throwable $e) {
+				Log::error('Wish notification could not be sent.', [
+					'entry' => $entry->id(),
+					'exception' => $e,
+				]);
+			}
 		}
 
 		return response()->json([

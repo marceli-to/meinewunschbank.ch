@@ -6,10 +6,15 @@ photo; submissions land unpublished in the Control Panel for review.
 ## Setup
 
 ```bash
-composer setup          # install, .env, key, migrate, npm install + build
+composer setup          # install, .env, key, publish CP assets, npm install + build
 php artisan statamic:make:user --super
 herd secure             # https://meinewunschbank.ch.test
 ```
+
+This is a **flat-file install — there is no database**. Users live in `/users`
+(gitignored: they carry password hashes and this repo is public), roles in
+`resources/users/roles.yaml`, and session/cache are file-backed. The queue runs
+`sync`, so mail sends inside the request.
 
 `npm run dev` for the front-end watcher, `npm run cp:dev` for Control Panel assets.
 
@@ -35,5 +40,7 @@ herd secure             # https://meinewunschbank.ch.test
   `resources/css/partials/spacing.css`.
 - Type scale tokens live in `resources/css/partials/font-sizes.css`.
 - Outside production all mail is redirected to `MAIL_TO`.
+- Nothing may assume a database. Password resets, sessions, cache and the Stache
+  are all on disk under `storage/`.
 - Submissions (`content/collections/wishes/*`) are **not** versioned — they hold
   personal data and this repository is public.
