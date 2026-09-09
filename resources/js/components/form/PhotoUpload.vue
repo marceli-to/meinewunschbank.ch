@@ -60,7 +60,7 @@ function clear() {
                 </button>
                 <button
                     type="button"
-                    class="btn inline-flex w-auto font-sans-bold leading-none px-16 py-10 xl:px-20 xl:py-12 rounded-full border border-accent text-accent cursor-pointer hover:bg-accent hover:text-white transition-colors"
+                    class="btn inline-flex w-auto font-bold leading-none px-16 py-10 xl:px-20 xl:py-12 rounded-full border border-accent text-accent cursor-pointer hover:bg-accent hover:text-white transition-colors"
                     @click="pick">
                     Foto hochladen
                 </button>

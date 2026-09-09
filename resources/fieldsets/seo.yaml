@@ -10,7 +10,6 @@ fields:
     handle: noindex
     field:
       type: toggle
-      display: 'Von Suchmaschinen ausschliessen (noindex)'
-      instructions: 'Verhindert die Indexierung dieser Seite (setzt <meta name="robots" content="noindex, nofollow">).'
+      display: 'Diese Seite von Suchmaschinen ausschliessen'
       default: false
       localizable: false

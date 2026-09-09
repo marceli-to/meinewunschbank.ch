@@ -15,7 +15,7 @@
   <a
     href="{{ href }}"
     {{ if label }}aria-label="{{ label }}"{{ /if }}
-    class="btn inline-flex w-auto font-sans-bold leading-none px-16 py-12 md:px-16 md:py-12 xl:px-20 xl:py-16 no-underline hover:underline underline-offset-2 xl:underline-offset-4 decoration-2 {{ variant == 'inverted' ? 'bg-white text-accent' : 'bg-accent text-white' }} {{ class }}">
+    class="btn inline-flex w-auto font-bold leading-none px-16 py-12 md:px-16 md:py-12 xl:px-20 xl:py-16 no-underline hover:underline underline-offset-2 xl:underline-offset-4 decoration-2 {{ variant == 'inverted' ? 'bg-white text-accent' : 'bg-accent text-white' }} {{ class }}">
     {{ slot }}
   </a>
 {{ else }}
@@ -23,7 +23,7 @@
     type="button"
     {{ if on }}@click="{{ on }}"{{ /if }}
     {{ if label }}aria-label="{{ label }}"{{ /if }}
-    class="btn inline-flex w-auto font-sans-bold leading-none px-16 py-12 md:px-16 md:py-12 xl:px-20 xl:py-16 no-underline hover:underline underline-offset-2 xl:underline-offset-4 decoration-2 cursor-pointer {{ variant == 'inverted' ? 'bg-white text-accent' : 'bg-accent text-white' }} {{ class }}">
+    class="btn inline-flex w-auto font-bold leading-none px-16 py-12 md:px-16 md:py-12 xl:px-20 xl:py-16 no-underline hover:underline underline-offset-2 xl:underline-offset-4 decoration-2 cursor-pointer {{ variant == 'inverted' ? 'bg-white text-accent' : 'bg-accent text-white' }} {{ class }}">
     {{ slot }}
   </button>
 {{ /if }}

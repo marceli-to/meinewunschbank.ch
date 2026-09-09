@@ -15,7 +15,8 @@
 @source not "../../public";
 
 @theme {
-  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-sans: 'Frutiger Next', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-script: 'Starstoles', ui-rounded, cursive;
   --color-accent: #E30613; /* Raiffeisen red */
   --color-error: #B00016;
   --color-light: #FFFFFF;
@@ -25,18 +26,6 @@
 
 [x-cloak] {
   @apply hidden!;
-}
-
-/* Weight aliases the templates use. Once a branded webfont replaces the system
-   stack, point these at its family instead of leaning on font-weight. */
-@utility font-sans-medium {
-  font-family: var(--font-sans);
-  font-weight: 500;
-}
-
-@utility font-sans-bold {
-  font-family: var(--font-sans);
-  font-weight: 700;
 }
 
 p:not(:last-child),
@@ -53,9 +42,8 @@ article ul {
 }
 
 article li {
-  @apply list-item mb-2 md:mb-4 xl:mb-8;
+  @apply list-item;
 }
 
 article a:not(.btn) {
-  @apply underline underline-offset-2 xl:underline-offset-4 decoration-1 xl:decoration-2 hover:no-underline;
 }

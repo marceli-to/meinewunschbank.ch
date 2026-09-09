@@ -1,15 +1,47 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-Df0hrl9L.css",
+    "file": "assets/app-DlhfBOg5.css",
     "name": "app",
     "names": [
       "app.css"
     ],
     "src": "resources/css/app.css",
-    "isEntry": true
+    "isEntry": true,
+    "assets": [
+      "assets/frutiger-next-regular-DrwvbFQ3.woff2",
+      "assets/frutiger-next-regular-DzuTzjfW.woff",
+      "assets/frutiger-next-bold-DBM-NV_G.woff2",
+      "assets/frutiger-next-bold-B3n6_IDh.woff",
+      "assets/starstoles-regular-5H0tqgtF.woff2",
+      "assets/starstoles-regular-BohyDZJD.woff"
+    ]
+  },
+  "resources/fonts/frutiger-next-bold.woff": {
+    "file": "assets/frutiger-next-bold-B3n6_IDh.woff",
+    "src": "resources/fonts/frutiger-next-bold.woff"
+  },
+  "resources/fonts/frutiger-next-bold.woff2": {
+    "file": "assets/frutiger-next-bold-DBM-NV_G.woff2",
+    "src": "resources/fonts/frutiger-next-bold.woff2"
+  },
+  "resources/fonts/frutiger-next-regular.woff": {
+    "file": "assets/frutiger-next-regular-DzuTzjfW.woff",
+    "src": "resources/fonts/frutiger-next-regular.woff"
+  },
+  "resources/fonts/frutiger-next-regular.woff2": {
+    "file": "assets/frutiger-next-regular-DrwvbFQ3.woff2",
+    "src": "resources/fonts/frutiger-next-regular.woff2"
+  },
+  "resources/fonts/starstoles-regular.woff": {
+    "file": "assets/starstoles-regular-BohyDZJD.woff",
+    "src": "resources/fonts/starstoles-regular.woff"
+  },
+  "resources/fonts/starstoles-regular.woff2": {
+    "file": "assets/starstoles-regular-5H0tqgtF.woff2",
+    "src": "resources/fonts/starstoles-regular.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BoreEMNA.js",
+    "file": "assets/app-ClDlGdWs.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true

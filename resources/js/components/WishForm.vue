@@ -108,25 +108,25 @@ async function submit() {
 
 <template>
     <section>
-        <h2 class="font-sans-bold leading-[1.1] text-lg md:text-2xl xl:text-4xl mb-32 md:mb-48 xl:mb-64">
+        <h2 class="font-bold leading-[1.1] text-lg md:text-2xl xl:text-4xl mb-32 md:mb-48 xl:mb-64">
             {{ title }}
         </h2>
 
         <div v-if="done" role="status" class="border border-accent p-20 md:p-32">
-            <p class="font-sans-bold">Vielen Dank für Ihren Herzenswunsch!</p>
+            <p class="font-bold">Vielen Dank für Ihren Herzenswunsch!</p>
             <p class="mb-0">Wir haben Ihre Einreichung erhalten und melden uns bei Ihnen.</p>
         </div>
 
         <form v-else novalidate class="flex flex-col gap-40 md:gap-56 xl:gap-72" @submit.prevent="submit">
             <fieldset>
-                <legend class="w-full font-sans-bold text-md md:text-lg xl:text-xl mb-16 md:mb-20 border-b border-accent pb-8">
+                <legend class="w-full font-bold text-md md:text-lg xl:text-xl mb-16 md:mb-20 border-b border-accent pb-8">
                     Ihr Foto auf der Wunschbank *
                 </legend>
                 <PhotoUpload v-model="form.photo" :error="errors.photo" />
             </fieldset>
 
             <fieldset>
-                <legend class="w-full font-sans-bold text-md md:text-lg xl:text-xl mb-16 md:mb-20">
+                <legend class="w-full font-bold text-md md:text-lg xl:text-xl mb-16 md:mb-20">
                     Was ist Ihr Herzenswunsch? *
                 </legend>
                 <FormTextarea
@@ -138,7 +138,7 @@ async function submit() {
             </fieldset>
 
             <fieldset>
-                <legend class="w-full font-sans-bold text-md md:text-lg xl:text-xl mb-16 md:mb-20">
+                <legend class="w-full font-bold text-md md:text-lg xl:text-xl mb-16 md:mb-20">
                     Möchten Sie Ihren Wunsch mit einem Link ergänzen?
                 </legend>
                 <FormTextarea
@@ -150,7 +150,7 @@ async function submit() {
             </fieldset>
 
             <fieldset>
-                <legend class="w-full font-sans-bold text-md md:text-lg xl:text-xl mb-8 md:mb-12">
+                <legend class="w-full font-bold text-md md:text-lg xl:text-xl mb-8 md:mb-12">
                     Ihre Kontaktdaten *
                 </legend>
                 <p class="mb-24 md:mb-32">
@@ -205,7 +205,7 @@ async function submit() {
                 <button
                     type="submit"
                     :disabled="sending"
-                    class="btn inline-flex w-auto self-start font-sans-bold leading-none px-20 py-12 xl:px-24 xl:py-16 rounded-full bg-accent text-white cursor-pointer hover:bg-accent/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    class="btn inline-flex w-auto self-start font-bold leading-none px-20 py-12 xl:px-24 xl:py-16 rounded-full bg-accent text-white cursor-pointer hover:bg-accent/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
                     {{ sending ? 'Wird gesendet …' : 'Absenden' }}
                 </button>
                 <p class="mb-0 text-xxs">* Pflichtfelder</p>

@@ -1,2 +1,31 @@
-/* Webfonts — placeholder until the Raiffeisen type is available. The stack in
-   app.css falls back to the system UI sans, so nothing is loaded for now. */
+/* Webfonts. The files live in resources/fonts and the URLs are relative to
+   this partial, so Vite resolves and fingerprints them into the build. An
+   absolute /fonts/… path would 404 in dev — laravel-vite-plugin sets
+   publicDir: false, so the dev server never serves public/. */
+
+@font-face {
+  font-family: 'Frutiger Next';
+  src: url('../../fonts/frutiger-next-regular.woff2') format('woff2'),
+       url('../../fonts/frutiger-next-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frutiger Next';
+  src: url('../../fonts/frutiger-next-bold.woff2') format('woff2'),
+       url('../../fonts/frutiger-next-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Starstoles';
+  src: url('../../fonts/starstoles-regular.woff2') format('woff2'),
+       url('../../fonts/starstoles-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
