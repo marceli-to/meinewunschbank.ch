@@ -10,9 +10,9 @@ use Statamic\Facades\Entry as Entries;
 /**
  * Writes a submission into the `wishes` collection.
  *
- * Always unpublished: nothing a visitor submits appears anywhere until somebody
- * in the Control Panel has looked at it. The slug comes from MakeSlug, so the
- * entry and its photo carry the same name.
+ * Submissions start at status `pending`; a moderator moves them to granted or
+ * declined. The slug comes from MakeSlug, so the entry and its photo carry the
+ * same name.
  */
 class Create
 {
@@ -23,10 +23,15 @@ class Create
 	{
 		$entry = Entries::make()
 			->collection('wishes')
-			->published(false)
+			// Publishing is inert — the collection has no route, so an entry
+			// renders nowhere either way. Marking submissions published keeps the
+			// CP from badging every one of them "Draft"; whether a wish was
+			// granted is `status`.
+			->published(true)
 			->slug($slug)
 			->data([
 				'title' => $data['firstname'].' '.$data['lastname'],
+				'status' => 'pending',
 				'photo' => $photo->path(),
 				'wish' => $data['wish'],
 				'link' => $data['link'] ?? null,

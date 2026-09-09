@@ -1,7 +1,11 @@
 title: Herzenswunsch
-# Filled by the public form (SubmitWishController), reviewed here. Everything is
-# read-only in the Control Panel — an entry is a record of what somebody sent,
-# not an editable document.
+# Filled by the public form (the Wish actions), reviewed here. What the visitor
+# sent is read-only — an entry is a record of a submission, not an editable
+# document. `status` is the one thing a moderator changes.
+#
+# Statamic's own published/draft state is meaningless here: the collection has no
+# route, so nothing renders either way. Whether a wish is granted is `status`;
+# granting itself happens outside this application.
 tabs:
   main:
     display: Wunsch
@@ -113,3 +117,21 @@ tabs:
               display: Eingereicht am
               time_enabled: true
               read_only: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: status
+            field:
+              type: select
+              display: Status
+              instructions: 'Wurde dieser Herzenswunsch erfüllt?'
+              default: pending
+              clearable: false
+              listable: true
+              options:
+                pending: Offen
+                granted: Erfüllt
+                declined: 'Nicht erfüllt'
