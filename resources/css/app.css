@@ -1,0 +1,55 @@
+@import "./partials/fonts.css";
+@import "tailwindcss";
+@import "./partials/spacing.css";
+@import "./partials/font-sizes.css";
+
+@source "../views";
+@source "../../content";
+@source "../js/**/*.vue";
+@source "../**/*.js";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --color-accent: #E30613; /* Raiffeisen red */
+  --color-error: #B00016;
+  --color-light: #FFFFFF;
+  --color-muted: #F2F2F2;
+  --color-line: #D9D9D9;
+}
+
+[x-cloak] {
+  @apply hidden!;
+}
+
+/* Weight aliases the templates use. Once a branded webfont replaces the system
+   stack, point these at its family instead of leaning on font-weight. */
+@utility font-sans-medium {
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+@utility font-sans-bold {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+p:not(:last-child),
+ul:not(:last-child) {
+  @apply mb-16 md:mb-20 xl:mb-24;
+}
+
+strong, b {
+  @apply font-bold;
+}
+
+article ul {
+  @apply list-disc m-0 ml-20 md:ml-24 xl:ml-28;
+}
+
+article li {
+  @apply list-item mb-2 md:mb-4 xl:mb-8;
+}
+
+article a:not(.btn) {
+  @apply underline underline-offset-2 xl:underline-offset-4 decoration-1 xl:decoration-2 hover:no-underline;
+}

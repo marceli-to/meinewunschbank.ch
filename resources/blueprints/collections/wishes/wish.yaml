@@ -1,0 +1,115 @@
+title: Herzenswunsch
+# Filled by the public form (SubmitWishController), reviewed here. Everything is
+# read-only in the Control Panel — an entry is a record of what somebody sent,
+# not an editable document.
+tabs:
+  main:
+    display: Wunsch
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Name
+              read_only: true
+          -
+            handle: photo
+            field:
+              type: assets
+              display: Foto
+              container: wishes
+              max_files: 1
+              mode: list
+              read_only: true
+          -
+            handle: wish
+            field:
+              type: textarea
+              display: Herzenswunsch
+              read_only: true
+          -
+            handle: link
+            field:
+              type: text
+              display: Link
+              read_only: true
+  contact:
+    display: Kontaktdaten
+    sections:
+      -
+        fields:
+          -
+            handle: firstname
+            field:
+              type: text
+              display: Vorname
+              read_only: true
+              width: 50
+          -
+            handle: lastname
+            field:
+              type: text
+              display: Nachname
+              read_only: true
+              width: 50
+          -
+            handle: street
+            field:
+              type: text
+              display: 'Strasse, Nr.'
+              read_only: true
+              width: 50
+          -
+            handle: city
+            field:
+              type: text
+              display: 'PLZ, Ort'
+              read_only: true
+              width: 50
+          -
+            handle: email
+            field:
+              type: text
+              display: E-Mail-Adresse
+              read_only: true
+              width: 50
+          -
+            handle: phone
+            field:
+              type: text
+              display: Telefonnummer
+              read_only: true
+              width: 50
+          -
+            handle: birthdate
+            field:
+              type: date
+              display: Geburtsdatum
+              read_only: true
+              width: 50
+  consent:
+    display: Einwilligungen
+    sections:
+      -
+        fields:
+          -
+            handle: accepts_terms
+            field:
+              type: toggle
+              display: 'Teilnahmebedingungen akzeptiert'
+              read_only: true
+          -
+            handle: accepts_publication
+            field:
+              type: toggle
+              display: 'Veröffentlichung zugestimmt'
+              read_only: true
+          -
+            handle: submitted_at
+            field:
+              type: date
+              display: Eingereicht am
+              time_enabled: true
+              read_only: true

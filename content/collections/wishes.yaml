@@ -1,0 +1,7 @@
+title: Herzenswünsche
+# No `route:` — submissions are not pages. They exist only in the Control Panel.
+sort_by: submitted_at
+sort_dir: desc
+revisions: false
+sites:
+  - default

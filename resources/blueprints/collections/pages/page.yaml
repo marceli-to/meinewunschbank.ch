@@ -1,0 +1,69 @@
+title: Seite
+tabs:
+  main:
+    display: Inhalt
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Titel
+              validate:
+                - required
+          -
+            handle: blocks
+            field:
+              type: replicator
+              display: 'Content Blocks'
+              collapse: true
+              sets:
+                main:
+                  display: Main
+                  sets:
+                    editor:
+                      display: Text
+                      instructions: 'Ein Textabschnitt mit Titel und Fliesstext'
+                      icon: fieldtype-text
+                      fields:
+                        - import: editor
+                    wish_form:
+                      display: 'Wunsch-Formular'
+                      instructions: 'Das Formular zum Einreichen eines Herzenswunsches'
+                      icon: fieldtype-form
+                      fields:
+                        -
+                          handle: form_title
+                          field:
+                            type: text
+                            display: Titel
+                            default: 'Jetzt Herzenswunsch einreichen'
+  settings:
+    display: Einstellungen
+    sections:
+      -
+        display: SEO
+        fields:
+          - import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+              show_regenerate: true
+      -
+        display: Template
+        fields:
+          -
+            handle: template
+            field:
+              type: template
+              display: Template

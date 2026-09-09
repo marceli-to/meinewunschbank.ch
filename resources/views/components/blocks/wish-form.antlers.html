@@ -1,0 +1,7 @@
+{{#
+  Mount point for the Vue form island. The component is mounted in app.js and
+  posts to /api/wishes; everything below the heading is rendered by Vue.
+#}}
+{{ partial:components/layout/inner }}
+  <div id="wish-form" data-title="{{ form_title | entities }}"></div>
+{{ /partial:components/layout/inner }}

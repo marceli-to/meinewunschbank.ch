@@ -1,0 +1,8 @@
+title: Adresse
+fields:
+  -
+    handle: address
+    field:
+      type: textarea
+      display: Adresse
+      instructions: 'Wird im Footer mit Zeilenumbrüchen ausgegeben.'
