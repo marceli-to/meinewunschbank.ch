@@ -120,15 +120,14 @@ return [
 	| Markdown Mail Settings
 	|--------------------------------------------------------------------------
 	|
-	| Theme = the CSS inlined into every Markdown mail. Laravel's stock theme
-	| for now; publish the components with
-	| `php artisan vendor:publish --tag=laravel-mail` and drop a
-	| resources/views/vendor/mail/html/themes/<name>.css next to them to brand it.
+	| Theme = the CSS inlined into every Markdown mail. 'wunschbank' resolves to
+	| resources/views/vendor/mail/html/themes/wunschbank.css. The components are
+	| published under the same vendor/mail path, so header/footer are editable.
 	|
 	*/
 
 	'markdown' => [
-		'theme' => env('MAIL_THEME', 'default'),
+		'theme' => env('MAIL_THEME', 'wunschbank'),
 
 		'paths' => [
 			resource_path('views/vendor/mail'),
