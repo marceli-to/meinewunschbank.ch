@@ -37,9 +37,9 @@ assets. `composer lint` / `composer lint:fix` for PHP code style.
   `wish_form` block. It posts multipart to `POST /api/wishes` (rate limited to
   10/min). The controller only wires things together: validation lives in
   `SubmitWishRequest` (18+ birthdate, image ≤ 12 MB, German messages), the work
-  in `App\Actions\SubmitWish`, which composes `StoreWishPhoto`,
-  `CreateWishEntry` and `NotifyOfNewWish`. The entry is created **unpublished**
-  and the notification to `MAIL_NOTIFY` is queued. If the entry fails
+  in `App\Actions\Wish\Submit`, which composes `StorePhoto`, `Create` and
+  `Notify` from the same namespace. The entry is created **unpublished** and the
+  notification to `MAIL_NOTIFY` is queued. If the entry fails
   to save the uploaded photo is deleted again; if the notification cannot be
   queued it is logged rather than failing the visitor's submission.
 - **Mails** are Markdown mailables themed by
@@ -72,7 +72,9 @@ assets. `composer lint` / `composer lint:fix` for PHP code style.
   Stache are all on disk under `storage/`.
 - Controllers stay thin — the work goes in an action under `app/Actions`.
 - An action is one class, one public `handle()`. Anything bigger is split into
-  further actions and composed through the constructor, the way `SubmitWish`
-  composes the three steps of a submission.
+  further actions and composed through the constructor, the way
+  `Actions\Wish\Submit` composes the three steps of a submission.
+- Actions are grouped per subject in a subfolder (`app/Actions/Wish/`), so the
+  class name says what it does and the namespace says what to.
 - Submissions (`content/collections/wishes/*`) are **not** versioned — they hold
   personal data and this repository is public.

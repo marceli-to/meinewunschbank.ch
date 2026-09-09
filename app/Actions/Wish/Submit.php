@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Wish;
 
 use Illuminate\Http\UploadedFile;
 use Statamic\Contracts\Entries\Entry;
@@ -12,12 +12,12 @@ use Throwable;
  * one thing none of them can — undoing a stored photo when the entry it was
  * meant for never came into existence.
  */
-class SubmitWish
+class Submit
 {
 	public function __construct(
-		private StoreWishPhoto $storePhoto,
-		private CreateWishEntry $createEntry,
-		private NotifyOfNewWish $notify,
+		private StorePhoto $storePhoto,
+		private Create $createEntry,
+		private Notify $notify,
 	) {}
 
 	/**

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Wish;
 
 use App\Mail\NewWishNotification;
 use Illuminate\Support\Facades\Log;
@@ -16,7 +16,7 @@ use Throwable;
  * is logged and swallowed. Delivery itself is the worker's problem; the mailable
  * is queued.
  */
-class NotifyOfNewWish
+class Notify
 {
 	public function handle(Entry $entry): void
 	{

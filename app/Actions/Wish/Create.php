@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Wish;
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
@@ -15,7 +15,7 @@ use Statamic\Facades\Entry as Entries;
  * in the Control Panel has looked at it. The slug stays readable but carries a
  * random suffix, so two submissions from the same name cannot collide.
  */
-class CreateWishEntry
+class Create
 {
 	/**
 	 * @param  array<string, mixed>  $data  the validated payload

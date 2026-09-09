@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Wish;
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Str;
@@ -15,7 +15,7 @@ use Statamic\Facades\Asset as Assets;
  * year/month folder keeps the directory browsable, and the randomised filename
  * means a guessed path can never surface somebody's submission.
  */
-class StoreWishPhoto
+class StorePhoto
 {
 	public function handle(UploadedFile $photo): Asset
 	{
