@@ -12,15 +12,16 @@ use Statamic\Facades\Asset as Assets;
  *
  * Private on purpose: the visitor's consent covers publication *if the wish is
  * granted*, not immediate publication, so nothing here is web-reachable. The
- * year/month folder keeps the directory browsable, and the randomised filename
- * means a guessed path can never surface somebody's submission.
+ * year/month folder keeps the directory browsable and the name ties the file to
+ * its entry, while the random suffix keeps the path from being guessable from
+ * the submitter's name alone.
  */
 class StorePhoto
 {
-	public function handle(UploadedFile $photo): Asset
+	public function handle(UploadedFile $photo, string $slug): Asset
 	{
 		$path = now()->format('Y/m').'/'
-			.Str::random(24).'.'
+			.$slug.'-'.Str::lower(Str::random(12)).'.'
 			.strtolower($photo->getClientOriginalExtension() ?: $photo->guessExtension());
 
 		$asset = Assets::make()->container('wishes')->path($path);

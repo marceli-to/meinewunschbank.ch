@@ -37,8 +37,8 @@ assets. `composer lint` / `composer lint:fix` for PHP code style.
   `wish_form` block. It posts multipart to `POST /api/wishes` (rate limited to
   10/min). The controller only wires things together: validation lives in
   `SubmitWishRequest` (18+ birthdate, image ≤ 12 MB, German messages), the work
-  in `App\Actions\Wish\Submit`, which composes `StorePhoto`, `Create` and
-  `Notify` from the same namespace. The entry is created **unpublished** and the
+  in `App\Actions\Wish\Submit`, which composes `MakeSlug`, `StorePhoto`,
+  `Create` and `Notify` from the same namespace. The entry is created **unpublished** and the
   notification to `MAIL_NOTIFY` is queued. If the entry fails
   to save the uploaded photo is deleted again; if the notification cannot be
   queued it is logged rather than failing the visitor's submission.
@@ -49,8 +49,9 @@ assets. `composer lint` / `composer lint:fix` for PHP code style.
   notification carries the wish and a CP link only — contact details stay in the
   Control Panel.
 - **Photos** are stored in the private `wishes` asset container
-  (`storage/app/private/wishes`, outside the web root) under `Y/m` with a
-  randomised filename. Moderators view them through
+  (`storage/app/private/wishes`, outside the web root) under `Y/m`, named
+  `<entry slug>-<12 random>.<ext>` so a file can be traced back to its entry
+  without the path being guessable from a name. Moderators view them through
   `GET /cp/wishes/{path}/photo`, which requires a CP session and the
   `view wishes entries` permission. Site assets use the separate public
   `assets` container (`public/assets`, gitignored).

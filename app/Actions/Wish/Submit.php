@@ -15,6 +15,7 @@ use Throwable;
 class Submit
 {
 	public function __construct(
+		private MakeSlug $makeSlug,
 		private StorePhoto $storePhoto,
 		private Create $createEntry,
 		private Notify $notify,
@@ -25,10 +26,13 @@ class Submit
 	 */
 	public function handle(array $data, UploadedFile $photo): Entry
 	{
-		$asset = $this->storePhoto->handle($photo);
+		// Worked out first: the entry and its photo are named from the same slug.
+		$slug = $this->makeSlug->handle($data);
+
+		$asset = $this->storePhoto->handle($photo, $slug);
 
 		try {
-			$entry = $this->createEntry->handle($data, $asset);
+			$entry = $this->createEntry->handle($data, $asset, $slug);
 		} catch (Throwable $e) {
 			// Otherwise the upload is stranded on the private disk with nothing
 			// referencing it.

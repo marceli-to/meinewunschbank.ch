@@ -3,7 +3,6 @@
 namespace App\Actions\Wish;
 
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Str;
 use Statamic\Contracts\Assets\Asset;
 use Statamic\Contracts\Entries\Entry;
 use Statamic\Facades\Entry as Entries;
@@ -12,20 +11,20 @@ use Statamic\Facades\Entry as Entries;
  * Writes a submission into the `wishes` collection.
  *
  * Always unpublished: nothing a visitor submits appears anywhere until somebody
- * in the Control Panel has looked at it. The slug stays readable but carries a
- * random suffix, so two submissions from the same name cannot collide.
+ * in the Control Panel has looked at it. The slug comes from MakeSlug, so the
+ * entry and its photo carry the same name.
  */
 class Create
 {
 	/**
 	 * @param  array<string, mixed>  $data  the validated payload
 	 */
-	public function handle(array $data, Asset $photo): Entry
+	public function handle(array $data, Asset $photo, string $slug): Entry
 	{
 		$entry = Entries::make()
 			->collection('wishes')
 			->published(false)
-			->slug(Str::slug($data['firstname'].'-'.$data['lastname'].'-'.Str::random(6)))
+			->slug($slug)
 			->data([
 				'title' => $data['firstname'].' '.$data['lastname'],
 				'photo' => $photo->path(),
