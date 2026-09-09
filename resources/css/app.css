@@ -17,11 +17,22 @@
 @theme {
   --font-sans: 'Frutiger Next', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --font-script: 'Starstoles', ui-rounded, cursive;
-  --color-accent: #E30613; /* Raiffeisen red */
-  --color-error: #B00016;
-  --color-light: #FFFFFF;
-  --color-muted: #F2F2F2;
-  --color-line: #D9D9D9;
+
+  --color-brand: #E82025;
+  --color-snow: #FFFFFF;
+  --color-ink: #000000;
+  --color-blush: #FFC0C6;
+  --color-crimson: #B90000;
+  --color-garnet: #7B0000;
+  --color-maroon: #550102;
+  --color-mist: #EDEDED;
+  --color-silver: #D6D6D6;
+  --color-slate: #999999;
+  --color-charcoal: #4D4D4D;
+  --color-linen: #E5DBD0;
+  --color-sand: #CCBCA9;
+  --color-walnut: #A99480;
+
 }
 
 [x-cloak] {

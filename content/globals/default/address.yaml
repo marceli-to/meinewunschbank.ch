@@ -1,4 +1,49 @@
-address: |
-  Raiffeisenbank Weissenstein
-  Hauptstrasse 1
-  4500 Solothurn
+address:
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'Raiffeisenbank Weissenstein'
+      -
+        type: text
+        text: |-
+
+          Hauptgasse 67
+      -
+        type: hardBreak
+      -
+        type: text
+        text: '4502 Solothurn'
+      -
+        type: hardBreak
+      -
+        type: text
+        text: "Tel.\_"
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://www.raiffeisen.ch/bin/www/phonenr?SStJNEIxSDNYMlk2VjJZNVMwSjFEMEox'
+              rel: noopener
+              target: _blank
+              title: null
+        text: "+41\_32 625 01 01"
+      -
+        type: hardBreak
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://www.raiffeisen.ch/bin/www/mailaddr?d09lU2lVc05zTGVVblZzVnRTZUFpVW5TVHJJYUhpUWZOZkNlT2lKc0xlRG5SQldjWmg='
+              rel: noopener
+              target: _blank
+              title: null
+        text: weissenstein@raiffeisen.ch

@@ -1,58 +1,119 @@
-<footer class="bg-accent text-white">
-  {{ partial:components/layout/inner spacing="py-20 md:py-32 xl:py-44" class="flex flex-col md:justify-between md:flex-row md:w-full gap-24 text-xxs md:text-xs" }}
-    <div class="flex flex-col gap-16 md:gap-24 xl:gap-32">
-      <div>
-        <a href="/" aria-label="Zur Startseite">
-          {{ partial:components/logos/logo class="text-white" }}
-        </a>
-      </div>
-      <div class="[&_a]:text-white [&_a]:no-underline [&_a:hover]:text-white/50 [&_a]:transition-colors">
+{{#
+  Die Raiffeisen-Wortmarke steht über dem Raster und schiebt es nach unten.
+  Im Raster stehen die Blöcke in DOM-Reihenfolge 1 Adresse, 3 Logo,
+  5 Hauptnavigation, 4 Social, 2 Rechtliches — also in der Mobile-Reihenfolge.
+  Dieselbe Reihenfolge fliesst bei md ohne Zutun ins Zweispalten-Layout; nur xl
+  braucht eine explizite Platzierung, weil die Hauptnavigation in die dritte
+  Spalte springt und über beide Zeilen geht:
+
+    default        md            xl
+    1              1  3          1  3  5
+    3              5  4          2  4  5
+    5              2
+    4
+    2
+#}}
+<footer class="bg-brand text-snow">
+  {{ partial:components/layout/inner
+     spacing="py-20 md:py-28 xl:py-36"
+     class="flex flex-col gap-20 md:gap-24 xl:gap-28 text-xxs md:text-xs" }}
+
+    {{# Wortmarke — ausserhalb des Rasters #}}
+    <a href="/" aria-label="Zur Startseite" class="block w-120 md:w-140 xl:w-160">
+      {{ partial:components/logos/raiffeisen class="w-full h-auto text-snow" }}
+    </a>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-start gap-x-20 md:gap-x-28 xl:gap-x-36 gap-y-24 md:gap-y-32 xl:gap-y-40">
+
+      {{# 1 — Adresse #}}
+      <div class="xl:col-start-1 xl:row-start-1 [&_a]:text-snow [&_a]:underline [&_a]:underline-offset-2 [&_a]:decoration-1 [&_a:hover]:no-underline">
         {{ address:address | nl2br }}
       </div>
-    </div>
-    <div class="flex flex-col gap-16 md:gap-24 xl:gap-32 md:justify-between">
-      <ul class="flex gap-12 md:gap-16 xl:gap-20 md:justify-end md:mt-16 xl:mt-24">
-        {{ if social_media:instagram }}
-          <li>
-            <a 
-              href="{{ social_media:instagram }}" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              aria-label="Instagram"
-              class="block w-20 md:w-28 xl:w-36 h-20 md:h-28 xl:h-36 text-white hover:text-white/50 transition-colors">
-              {{ partial:components/icons/instagram class="w-full h-auto" }}
-            </a>
-          </li>
-        {{ /if }}
-        {{ if social_media:linkedin }}
-          <li>
-            <a 
-              href="{{ social_media:linkedin }}" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              aria-label="LinkedIn"
-              class="block w-20 md:w-28 xl:w-36 h-20 md:h-28 xl:h-36 text-white hover:text-white/50 transition-colors">
-              {{ partial:components/icons/linkedin class="w-full h-auto" }}
-            </a>
-          </li>
-        {{ /if }}
-      </ul>
-      <div>
+
+      {{# 3 — Jubiläumslogo #}}
+      <div class="md:justify-self-end xl:justify-self-center xl:col-start-2 xl:row-start-1">
+        {{ partial:components/logos/anniversary/your-white-byline class="xl:w-192 h-auto" }}
+      </div>
+
+      {{# 5 — Hauptnavigation #}}
+      <nav class="md:justify-self-start xl:justify-self-end xl:col-start-3 xl:row-start-1 xl:row-span-2 xl:text-right">
+        <ul class="font-bold flex flex-col gap-y-4 md:gap-y-6 xl:gap-y-8">
+          {{ nav:main }}
+            <li>
+              <a
+                href="{{ url }}"
+                class="hover:text-snow/50 transition-colors"
+                {{ if is_current || is_parent }}aria-current="page"{{ /if }}>
+                {{ title }}
+              </a>
+            </li>
+          {{ /nav:main }}
+        </ul>
+      </nav>
+
+      {{# 4 — Social Media #}}
+      <div class="md:justify-self-end xl:justify-self-center xl:col-start-2 xl:row-start-2 bg-blue-100">
+        <ul class="flex gap-12 md:gap-16 xl:gap-20">
+          {{ if social_media:facebook }}
+            <li>
+              <a
+                href="{{ social_media:facebook }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                class="block size-20 xl:size-24">
+                {{ partial:components/icons/facebook class="w-full h-auto hover:scale-110 transition-transform" }}
+              </a>
+            </li>
+          {{ /if }}
+          {{ if social_media:instagram }}
+            <li>
+              <a
+                href="{{ social_media:instagram }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                class="block size-20 xl:size-24">
+                {{ partial:components/icons/instagram class="w-full h-auto hover:scale-110 transition-transform" }}
+              </a>
+            </li>
+          {{ /if }}
+          {{ if social_media:linkedin }}
+            <li>
+              <a
+                href="{{ social_media:linkedin }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="block size-20 xl:size-24">
+                {{ partial:components/icons/linkedin class="w-full h-auto hover:scale-110 transition-transform" }}
+              </a>
+            </li>
+          {{ /if }}
+        </ul>
+      </div>
+
+      {{# 2 — Rechtliches #}}
+      <div class="xl:col-start-1 xl:row-start-2">
         <nav>
-          <ul class="flex gap-x-12 md:gap-x-18 xl:gap-x-24">
+          <ul class="font-bold flex flex-col gap-y-4 md:gap-y-6 xl:gap-y-8">
             {{ nav:privacy }}
               <li>
-                <a 
+                <a
                   href="{{ url }}"
-                  class=" hover:text-white/50 transition-colors"
-                  aria-label="{{ title }}">
+                  class="hover:text-snow/50 transition-colors">
                   {{ title }}
                 </a>
               </li>
             {{ /nav:privacy }}
+            <li>
+              &copy; Raiffeisenbank Weissenstein
+            </li>
           </ul>
         </nav>
       </div>
+
     </div>
+
   {{ /partial:components/layout/inner }}
 </footer>
