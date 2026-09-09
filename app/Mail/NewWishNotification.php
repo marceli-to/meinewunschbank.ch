@@ -20,7 +20,8 @@ use Statamic\Contracts\Entries\Entry;
  */
 class NewWishNotification extends Mailable implements ShouldQueue
 {
-	use Queueable, SerializesModels;
+	use Queueable;
+	use SerializesModels;
 
 	/** Retry a transient transport failure instead of failing permanently. */
 	public int $tries = 3;

@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
 	{
 		// Outside production, funnel ALL outgoing mail to MAIL_TO (e.g. Mailpit)
 		// so real recipient addresses are never contacted from dev/staging.
-		if (! $this->app->isProduction() && ($catchAll = config('mail.to'))) {
+		if (!$this->app->isProduction() && ($catchAll = config('mail.to'))) {
 			Mail::alwaysTo($catchAll);
 		}
 
