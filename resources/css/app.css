@@ -8,6 +8,12 @@
 @source "../js/**/*.vue";
 @source "../**/*.js";
 
+/* Tailwind's automatic source detection also walks everything committed under
+   public/ — which since the CP assets were published means Statamic's Control
+   Panel bundle. Left alone it drags thousands of CP candidates into the site
+   stylesheet (22 kB -> 185 kB) along with our own build output. */
+@source not "../../public";
+
 @theme {
   --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --color-accent: #E30613; /* Raiffeisen red */

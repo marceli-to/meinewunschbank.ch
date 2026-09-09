@@ -19,10 +19,7 @@ class StorePhoto
 {
 	public function handle(UploadedFile $photo, string $slug): Asset
 	{
-		$path = now()->format('Y/m').'/'
-			.$slug.'.'
-			.strtolower($photo->getClientOriginalExtension() ?: $photo->guessExtension());
-
+		$path = now()->format('Y/m') . '/' . $slug . '.' . strtolower($photo->getClientOriginalExtension() ?: $photo->guessExtension());
 		$asset = Assets::make()->container('wishes')->path($path);
 		$asset->upload($photo);
 

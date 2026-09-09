@@ -1,7 +1,15 @@
 {{#
   Mount point for the Vue form island. The component is mounted in app.js and
   posts to /api/wishes; everything below the heading is rendered by Vue.
+
+  `data-prefill` fills the form with test data so a tester only has to pick a
+  photo. It is emitted from the server, never baked into the bundle — the built
+  JS is committed and deployed as-is, so a build-time flag would leak whatever
+  was set on the machine that ran the build.
 #}}
 {{ partial:components/layout/inner }}
-  <div id="wish-form" data-title="{{ form_title | entities }}"></div>
+  <div
+    id="wish-form"
+    data-title="{{ form_title | entities }}"
+    {{ if config:app:env != 'production' }}data-prefill="true"{{ /if }}></div>
 {{ /partial:components/layout/inner }}

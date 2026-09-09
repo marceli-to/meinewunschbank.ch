@@ -5,9 +5,12 @@ import FormInput from './form/FormInput.vue';
 import FormLabel from './form/FormLabel.vue';
 import FormTextarea from './form/FormTextarea.vue';
 import PhotoUpload from './form/PhotoUpload.vue';
+import { wishFormDefaults } from '../support/wishFormDefaults';
 
-defineProps({
+const props = defineProps({
     title: { type: String, default: 'Jetzt Herzenswunsch einreichen' },
+    // Set by the server outside production — see the block template.
+    prefill: { type: Boolean, default: false },
 });
 
 // One flat object — mirrors the payload SubmitWishRequest validates, so a
@@ -26,6 +29,11 @@ const form = reactive({
     accepts_terms: false,
     accepts_publication: false,
 });
+
+// Everything but the photo, which a browser will not let us set.
+if (props.prefill) {
+    Object.assign(form, wishFormDefaults());
+}
 
 const errors = ref({});
 const sending = ref(false);
