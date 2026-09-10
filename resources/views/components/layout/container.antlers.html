@@ -1,8 +1,8 @@
 {{#
-  Zentrierter Inhaltsrahmen mit den Standard-Seitenrändern.
-  @param compact - mit compact="true" die schmale Variante (74rem) statt 90rem.
-  @param spacing - vertikale Abstände, z. B. py-20 md:py-28.
-  @param class - zusätzliche Klassen.
+  Centered content frame with the standard page gutters.
+  @param compact - Narrow variant (74rem) instead of 90rem.
+  @param spacing - Vertical spacing, e.g. py-20 md:py-28.
+  @param class - Extra classes.
 #}}
 <div class="{{ if compact }}max-w-[74rem]{{ else }}max-w-[90rem]{{ /if }} mx-auto px-20 md:px-32 lg:px-44 {{ spacing ?? '' }} {{ class }}">
   {{ slot }}
