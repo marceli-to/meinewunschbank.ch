@@ -2,7 +2,7 @@
   <a
     href="{{ url }}"
     aria-label="{{ title }}"
-    class="font-bold text-md md:text-xl xl:text-3xl leading-none text-accent no-underline hover:underline underline-offset-2 xl:underline-offset-6 decoration-1 md:decoration-2 xl:decoration-4 {{ is_active || is_current ? 'underline' : '' }}"
+    class="font-bold text-[18px] md:text-[22px] lg:text-[24px] leading-none hover:text-brand transition-colors {{ is_active || is_current ? 'text-brand' : '' }}"
     x-on:click="menu = false">
     {{ title }}
   </a>

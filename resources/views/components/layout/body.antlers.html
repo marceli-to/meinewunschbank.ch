@@ -1,5 +1,6 @@
 <body
-  class="min-h-screen flex flex-col text-ink antialiased font-sans text-xs md:text-sm xl:text-md leading-[1.25]"
-  x-data="{ menu: false }">
+  class="min-h-screen flex flex-col text-ink antialiased font-sans text-[16px] md:text-[18px] lg:text-[20px] leading-[1.25]"
+  x-data="{ menu: false }"
+  @keydown.escape.window="menu = false">
   {{ slot }}
 </body>
