@@ -9,53 +9,51 @@
   x-transition:leave-end="opacity-0"
   class="fixed top-0 left-0 z-70 bg-white w-full h-dvh">
   
-  {{ partial:components/layout/outer class="py-16 md:py-20 xl:py-30 flex items-center justify-between" }}
+  {{ partial:components/layout/container spacing="py-36 lg:py-40" class="flex items-start justify-between" }}
     <a href="/" aria-label="Zur Startseite">
-      {{ partial:components/logos/logo class="text-accent" }}
+      {{ partial:components/logos/anniversary/my-bank-black-byline class="w-198 lg:w-236 h-auto" }}
     </a>
     {{ partial:components/menu/buttons/hide }}
-  {{ /partial:components/layout/outer }}
+  {{ /partial:components/layout/container }}
 
-  {{ partial:components/layout/inner spacing="py-0" }}
+  <!-- {{ partial:components/layout/container compact="true" }}
+    <div class="flex flex-col gap-y-40 md:gap-y-64 xl:gap-y-96 mt-15 md:mt-39 xl:mt-57">
+      
+      <ul class="flex flex-col gap-y-20 md:gap-y-32 xl:gap-y-40">
+        {{ nav:main }}
+          {{ partial:components/menu/item }}
+        {{ /nav:main }}
+      </ul>
 
-  <div class="flex flex-col gap-y-40 md:gap-y-64 xl:gap-y-96 mt-15 md:mt-39 xl:mt-57">
-    
-    <ul class="flex flex-col gap-y-20 md:gap-y-32 xl:gap-y-40">
-      {{ nav:main }}
-        {{ partial:components/menu/item }}
-      {{ /nav:main }}
-    </ul>
+      <ul class="flex gap-16 md:gap-24 xl:gap-32">
+        {{ if social_media:instagram }}
+          <li>
+            <a 
+              href="{{ social_media:instagram }}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Instagram"
+              class="block w-32 md:w-40 xl:w-52 h-32 md:h-40 xl:h-52 text-accent hover:text-accent/50 transition-colors">
+              {{ partial:components/icons/instagram class="w-full h-auto" }}
+            </a>
+          </li>
+        {{ /if }}
+        {{ if social_media:linkedin }}
+          <li>
+            <a 
+              href="{{ social_media:linkedin }}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="LinkedIn"
+              class="block w-32 md:w-40 xl:w-52 h-32 md:h-40 xl:h-52 text-accent hover:text-accent/50 transition-colors">
+              {{ partial:components/icons/linkedin class="w-full h-auto" }}
+            </a>
+          </li>
+        {{ /if }}
+      </ul>
 
-    <ul class="flex gap-16 md:gap-24 xl:gap-32">
-      {{ if social_media:instagram }}
-        <li>
-          <a 
-            href="{{ social_media:instagram }}" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="Instagram"
-            class="block w-32 md:w-40 xl:w-52 h-32 md:h-40 xl:h-52 text-accent hover:text-accent/50 transition-colors">
-            {{ partial:components/icons/instagram class="w-full h-auto" }}
-          </a>
-        </li>
-      {{ /if }}
-      {{ if social_media:linkedin }}
-        <li>
-          <a 
-            href="{{ social_media:linkedin }}" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="LinkedIn"
-            class="block w-32 md:w-40 xl:w-52 h-32 md:h-40 xl:h-52 text-accent hover:text-accent/50 transition-colors">
-            {{ partial:components/icons/linkedin class="w-full h-auto" }}
-          </a>
-        </li>
-      {{ /if }}
-    </ul>
-
-  </div>
-
-  {{ /partial:components/layout/inner }}
+    </div>
+  {{ /partial:components/layout/container }} -->
 
 </nav>
 
