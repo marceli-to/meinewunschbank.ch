@@ -23,9 +23,12 @@
     <div class="text-[16px] md:text-[18px] mt-12 md:mt-16">{{ teaser_date }}</div>
   {{ /if }}
 
-  <span class="mt-16 md:mt-20 flex items-center gap-16 text-brand text-[16px] md:text-[18px]">
-    <span class="h-px flex-1 bg-brand"></span>
-    <span class="group-hover:underline underline-offset-2">mehr erfahren</span>
+  {{# The arrow holds its space when hidden, so revealing it on hover moves
+      nothing else on the card. #}}
+  <span class="mt-16 md:mt-20 flex items-center gap-16 text-crimson text-[16px] md:text-[18px]">
+    <span class="h-px flex-1 bg-crimson"></span>
+    <span>mehr erfahren</span>
+    {{ partial:components/icons/arrow-right-long class="w-50 h-auto shrink-0 opacity-0 transition-opacity group-hover:opacity-100" }}
   </span>
 
 </a>
