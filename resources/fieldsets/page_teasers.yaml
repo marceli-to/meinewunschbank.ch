@@ -1,0 +1,17 @@
+title: Seiten-Teaser
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+      instructions: 'Überschrift des Abschnitts, z. B. «Jubiläumsaktionen» oder «Rückblicke».'
+  -
+    handle: pages
+    field:
+      type: entries
+      display: Seiten
+      instructions: 'Die Seiten im Slider, in dieser Reihenfolge. Titel, Datum und Bild kommen aus der jeweiligen Seite.'
+      collections:
+        - pages
+      create: false

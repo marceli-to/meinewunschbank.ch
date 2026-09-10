@@ -1,0 +1,17 @@
+title: Teaser
+fields:
+  -
+    handle: teaser_image
+    field:
+      type: assets
+      display: 'Teaser-Bild'
+      instructions: 'Wird im Slider angezeigt.'
+      container: assets
+      max_files: 1
+      mode: list
+  -
+    handle: teaser_date
+    field:
+      type: text
+      display: Datum
+      instructions: 'Freier Text, z. B. «08.04.2027», «22./23.05.2027» oder «ganzes Jahr».'

@@ -29,6 +29,12 @@ tabs:
                       icon: hero-image-above-text
                       fields:
                         - import: intro
+                    page_teasers:
+                      display: 'Seiten-Teaser'
+                      instructions: 'Ein Abschnitt mit manuell gewählten Seiten-Teasern'
+                      icon: layout-carousel-horizontal
+                      fields:
+                        - import: page_teasers
                     editor:
                       display: Text
                       instructions: 'Ein Textabschnitt mit Titel und Fliesstext'
@@ -44,6 +50,11 @@ tabs:
   settings:
     display: Einstellungen
     sections:
+      -
+        display: Teaser
+        instructions: 'Angaben für den Teaser dieser Seite.'
+        fields:
+          - import: teaser
       -
         display: SEO
         fields:

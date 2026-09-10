@@ -1,0 +1,21 @@
+<section data-swiper-scope>
+  {{ partial:components/layout/container spacing="py-20 md:py-28 lg:py-36" }}
+
+    {{ if title }}
+      {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[34px] lg:text-[40px]" }}
+        {{ title }}
+      {{ /partial:components/headings/h2 }}
+    {{ /if }}
+
+    {{ partial:components/swiper/buttons class="mt-16 md:mt-20" }}
+
+    {{ partial:components/swiper/container class="mt-16 md:mt-20" }}
+      {{ pages }}
+        {{ partial:components/swiper/item }}
+          {{ partial:components/teaser }}
+        {{ /partial:components/swiper/item }}
+      {{ /pages }}
+    {{ /partial:components/swiper/container }}
+
+  {{ /partial:components/layout/container }}
+</section>
