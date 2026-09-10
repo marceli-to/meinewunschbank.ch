@@ -41,7 +41,7 @@
 
 p:not(:last-child),
 ul:not(:last-child) {
-  @apply mb-16 md:mb-20 xl:mb-24;
+  @apply mb-16 md:mb-20 lg:mb-24;
 }
 
 strong, b {
@@ -49,7 +49,7 @@ strong, b {
 }
 
 article ul {
-  @apply list-disc m-0 ml-20 md:ml-24 xl:ml-28;
+  @apply list-disc m-0 ml-20 md:ml-24 lg:ml-28;
 }
 
 article li {
