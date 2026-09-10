@@ -36,16 +36,26 @@ Conventions:
 
 ## Content blocks
 
-A page's `blocks` replicator drives everything. Adding a block means three
+A page's `blocks` replicator drives everything. Adding a block means four
 edits, in this order:
 
-1. A set under `blocks` in `resources/blueprints/collections/pages/page.yaml`,
-   with `display`, `instructions` and `icon` — all editor-facing text in German.
-2. A partial at `resources/views/components/blocks/<handle>.antlers.html`,
+1. **A fieldset** at `resources/fieldsets/<handle>.yaml` holding the block's
+   fields. Always a real fieldset, even for a single field and even when only
+   one block uses it today — other collections may want the same block later.
+   Fieldsets may import each other: `intro` pulls in `editor` for its body
+   text.
+2. **A set** under `blocks` in
+   `resources/blueprints/collections/pages/page.yaml` that does nothing but
+   `- import: <handle>`, plus `display`, `instructions` and `icon` — all
+   editor-facing text in German. The blueprint stays thin; the fields live in
+   the fieldset.
+3. **A partial** at `resources/views/components/blocks/<handle>.antlers.html`,
    named after the set handle with underscores as hyphens (`wish_form` ->
    `wish-form.antlers.html`).
-3. A branch in `resources/views/components/blocks.antlers.html` matching on
+4. **A branch** in `resources/views/components/blocks.antlers.html` matching on
    `type`.
+
+Set handle, fieldset filename and partial name always match.
 
 Every block opens with a `layout/container`, which owns its vertical spacing.
 The established rhythm is `spacing="py-20 md:py-28 lg:py-36"`.

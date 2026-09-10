@@ -23,6 +23,12 @@ tabs:
                 main:
                   display: Main
                   sets:
+                    intro:
+                      display: Intro
+                      instructions: 'Bild oder Video, Titel und zwei Textspalten'
+                      icon: hero-image-above-text
+                      fields:
+                        - import: intro
                     editor:
                       display: Text
                       instructions: 'Ein Textabschnitt mit Titel und Fliesstext'

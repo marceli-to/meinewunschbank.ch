@@ -1,0 +1,24 @@
+title: Intro
+fields:
+  -
+    handle: media
+    field:
+      type: assets
+      display: 'Bild oder Video'
+      instructions: 'Wird über die volle Bildschirmbreite ausgegeben.'
+      container: assets
+      max_files: 1
+      mode: list
+  -
+    handle: title
+    field:
+      type: textarea
+      display: Titel
+      instructions: 'Zeilenumbrüche werden übernommen.'
+  -
+    handle: lead
+    field:
+      type: textarea
+      display: Lead
+      instructions: 'Fett gesetzt, in der linken Spalte.'
+  - import: editor

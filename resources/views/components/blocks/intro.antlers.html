@@ -1,0 +1,42 @@
+{{#
+  Homepage opener: full-bleed media, a centred title, then lead and text side
+  by side. The media sits outside the container so it runs edge to edge.
+  `media` is a single asset, not a collection — the field is max_files: 1.
+#}}
+<section>
+
+  {{ if media }}
+    {{ if media:is_video }}
+      <video
+        src="{{ media:url }}"
+        class="block w-full h-auto"
+        autoplay muted loop playsinline></video>
+    {{ else }}
+      {{ partial:components/media/image :image="media" :alt="media:alt" eager="true" }}
+    {{ /if }}
+  {{ /if }}
+
+  {{ partial:components/layout/container compact="true" spacing="py-32 md:py-40 lg:py-48" }}
+
+    {{ if title }}
+      {{ partial:components/headings/h1 class="text-center text-[20px] md:text-[22px] lg:text-[24px] leading-[1.35]" }}
+        {{ title | trim | nl2br }}
+      {{ /partial:components/headings/h1 }}
+    {{ /if }}
+
+    <div class="grid md:grid-cols-2 gap-x-24 lg:gap-x-32 gap-y-20 mt-32 md:mt-40 lg:mt-48 text-[16px] md:text-[17px] lg:text-[18px]">
+      {{ if lead }}
+        <div class="font-bold">
+          {{ lead | trim | nl2br }}
+        </div>
+      {{ /if }}
+      {{ if editor }}
+        <article>
+          {{ editor }}
+        </article>
+      {{ /if }}
+    </div>
+
+  {{ /partial:components/layout/container }}
+
+</section>
