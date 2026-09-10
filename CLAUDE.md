@@ -79,6 +79,12 @@ Tailwind 4, configured entirely in `resources/css/app.css` — there is no
 - **Colours** are the tokens in `app.css`: `brand` (Raiffeisen red), `snow`,
   `ink`, `blush`, `crimson`, `garnet`, `maroon`, `mist`, `silver`, `slate`,
   `charcoal`, `linen`, `sand`, `walnut`. There is no `accent` token.
+- **Images are stored uncropped and cropped by CSS.** Glide has one preset per
+  width (`md`/`lg`/`xl` = 768/1280/1920, plus `-webp` twins) at `fit: max`, so
+  a file is never upscaled. The ratio comes from an aspect class passed to
+  `media/image` along with `object-cover` — `aspect-square`, otherwise an
+  arbitrary value such as `aspect-[16/7]` — varying per breakpoint where the
+  design does.
 - **Breakpoints are `md:` and `lg:` only** — no `xl:`, and no `sm:`. Base
   styles are mobile; `md:` and `lg:` step up from there. `max-md:` handles
   mobile-only overrides, such as the footer's reordered grid.

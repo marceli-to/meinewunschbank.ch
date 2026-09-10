@@ -4,10 +4,10 @@
     {{ if media:is_video }}
       <video
         src="{{ media:url }}"
-        class="block w-full h-auto"
+        class="block w-full h-auto aspect-square md:aspect-[16/8] lg:aspect-[16/6] object-cover"
         autoplay muted loop playsinline></video>
     {{ else }}
-      {{ partial:components/media/image :image="media" :alt="media:alt" eager="true" }}
+      {{ partial:components/media/image :image="media" :alt="media:alt" class="aspect-square md:aspect-[16/8] lg:aspect-[16/6] object-cover" eager="true" }}
     {{ /if }}
   {{ /if }}
 
