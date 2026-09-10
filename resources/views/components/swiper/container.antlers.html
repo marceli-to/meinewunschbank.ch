@@ -1,0 +1,12 @@
+{{#
+  Swiper viewport. Must sit inside an element carrying data-swiper-scope,
+  which is what pairs it with its buttons — app.js initialises one Swiper per
+  scope, so several sliders can share a page.
+  @param class - Extra classes.
+  @param slot - The slides, each wrapped in components/swiper/item.
+#}}
+<div class="swiper {{ class }}" data-swiper>
+  <div class="swiper-wrapper">
+    {{ slot }}
+  </div>
+</div>

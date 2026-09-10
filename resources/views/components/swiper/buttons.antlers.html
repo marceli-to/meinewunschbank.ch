@@ -1,0 +1,14 @@
+{{#
+  Previous/next arrows. Belongs inside the same data-swiper-scope as the
+  container it drives. Swiper adds its own disabled class when an end is
+  reached; the styling for that lives in app.css.
+  @param class - Extra classes for the row.
+#}}
+<div class="flex items-center justify-between {{ class }}">
+  <button type="button" data-swiper-prev aria-label="Vorherige Beiträge" class="cursor-pointer">
+    {{ partial:components/icons/arrow-left class="w-40 md:w-48 h-auto" }}
+  </button>
+  <button type="button" data-swiper-next aria-label="Nächste Beiträge" class="cursor-pointer">
+    {{ partial:components/icons/arrow-right class="w-40 md:w-48 h-auto" }}
+  </button>
+</div>
