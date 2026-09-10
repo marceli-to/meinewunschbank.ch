@@ -1,10 +1,10 @@
 <header class="sticky top-0 z-50 bg-white">
-  {{ partial:components/layout/outer class="py-16 md:py-20 xl:py-30 flex items-center justify-between" }}
+  {{ partial:components/layout/container spacing="py-20" class="flex items-start justify-between" }}
     <a href="/" aria-label="Zur Startseite">
-      {{ partial:components/logos/logo class="text-accent" }}
+      {{ partial:components/logos/anniversary/my-bank-black-byline class="w-232 lg:w-274 h-auto" compact="true" }}
     </a>
     {{ partial:components/menu/buttons/show }}
-  {{ /partial:components/layout/outer }}
+  {{ /partial:components/layout/container }}
 </header>
 
 {{ partial:components/menu/container }}
