@@ -32,7 +32,7 @@ assets. `composer lint` / `composer lint:fix` for PHP code style.
   `components/layout/*`. Page content is a `blocks` replicator; each set maps to
   a partial in `components/blocks/` via `components/blocks.antlers.html`.
 - **Front end** — Tailwind 4 (`resources/css/app.css`, with the Raiffeisen red
-  as `--color-accent`), Alpine for lightweight UI state such as the menu and
+  as `--color-brand`), Alpine for lightweight UI state such as the menu and
   collapses, and one Vue island for the form.
 - **The form** — `resources/js/components/WishForm.vue`, mounted on the
   `wish_form` block. It posts multipart to `POST /api/wishes` (rate limited to

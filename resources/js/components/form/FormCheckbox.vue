@@ -17,7 +17,7 @@ defineEmits(['update:modelValue']);
                 :checked="modelValue"
                 :aria-invalid="error ? 'true' : null"
                 :aria-describedby="error ? `${id}-error` : null"
-                class="mt-2 size-18 md:size-20 shrink-0 accent-accent border border-accent"
+                class="mt-2 size-18 md:size-20 shrink-0 accent-brand border border-brand"
                 @change="$emit('update:modelValue', $event.target.checked)">
             <label :for="id" class="font-bold cursor-pointer">
                 <slot />
