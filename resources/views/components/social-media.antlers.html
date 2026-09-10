@@ -1,0 +1,38 @@
+<ul class="flex gap-12 md:gap-16 lg:gap-20 {{ class }}">
+  {{ if social_media:facebook }}
+    <li>
+      <a
+        href="{{ social_media:facebook }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Raiffeisenbank Weissenstein auf Facebook"
+        class="block size-24">
+        {{ partial:components/icons/facebook class="w-full h-auto hover:scale-120 transition-transform" }}
+      </a>
+    </li>
+  {{ /if }}
+  {{ if social_media:instagram }}
+    <li>
+      <a
+        href="{{ social_media:instagram }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Raiffeisenbank Weissenstein auf Instagram"
+        class="block size-24">
+        {{ partial:components/icons/instagram class="w-full h-auto hover:scale-120 transition-transform" }}
+      </a>
+    </li>
+  {{ /if }}
+  {{ if social_media:linkedin }}
+    <li>
+      <a
+        href="{{ social_media:linkedin }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Raiffeisenbank Weissenstein auf LinkedIn"
+        class="block size-24">
+        {{ partial:components/icons/linkedin class="w-full h-auto hover:scale-120 transition-transform" }}
+      </a>
+    </li>
+  {{ /if }}
+</ul>

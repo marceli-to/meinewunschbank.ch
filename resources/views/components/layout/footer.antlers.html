@@ -18,44 +18,7 @@
 
       {{# Social Media #}}
       <div class="max-md:order-2 md:justify-self-center md:col-start-2 md:row-start-2 mt-16 md:mt-78 lg:mt-82">
-        <ul class="flex gap-12 md:gap-16 lg:gap-20">
-          {{ if social_media:facebook }}
-            <li>
-              <a
-                href="{{ social_media:facebook }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                class="block size-24">
-                {{ partial:components/icons/facebook class="w-full h-auto hover:scale-120 transition-transform" }}
-              </a>
-            </li>
-          {{ /if }}
-          {{ if social_media:instagram }}
-            <li>
-              <a
-                href="{{ social_media:instagram }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                class="block size-24">
-                {{ partial:components/icons/instagram class="w-full h-auto hover:scale-120 transition-transform" }}
-              </a>
-            </li>
-          {{ /if }}
-          {{ if social_media:linkedin }}
-            <li>
-              <a
-                href="{{ social_media:linkedin }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                class="block size-24">
-                {{ partial:components/icons/linkedin class="w-full h-auto hover:scale-120 transition-transform" }}
-              </a>
-            </li>
-          {{ /if }}
-        </ul>
+        {{ partial:components/social-media class="text-snow" }}
       </div>
 
       {{# Logo Anniversary #}}
