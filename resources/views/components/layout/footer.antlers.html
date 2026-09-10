@@ -3,7 +3,7 @@
   {{ partial:components/layout/inner spacing="py-20 md:py-28 xl:py-36" class="text-[14px] md:text-[16px]" }}
 
     {{# Logo Raiffeisen #}}
-    <a href="/" aria-label="Zur Startseite" class="block w-120 md:w-140 lg:w-160">
+    <a href="/" aria-label="Zur Startseite" class="block w-120 md:w-140 lg:w-160 mb-16 md:mb-20">
       {{ partial:components/logos/raiffeisen class="w-full h-auto text-snow" }}
     </a>
 
@@ -11,13 +11,13 @@
 
       {{# Address #}}
       <div class="max-md:order-1 md:col-start-1 md:row-start-1">
-        <div class="[&_a]:text-snow [&_a]:underline [&_a]:underline-offset-2 [&_a]:decoration-1 [&_a:hover]:no-underline text-[16px] md:text-[18px]">
+        <div class="[&_a]:text-snow [&_a]:underline [&_a]:underline-offset-2 lg:[&_a]:underline-offset-4 [&_a]:decoration-1 [&_a:hover]:no-underline text-xxs md:text-[18px]">
           {{ address:address | nl2br }}
         </div>
       </div>
 
       {{# Social Media #}}
-      <div class="max-md:order-2 md:justify-self-center md:col-start-2 md:row-start-2 mt-12 md:mt-78 lg:mt-82">
+      <div class="max-md:order-2 md:justify-self-center md:col-start-2 md:row-start-2 mt-16 md:mt-78 lg:mt-82">
         <ul class="flex gap-12 md:gap-16 lg:gap-20">
           {{ if social_media:facebook }}
             <li>
@@ -59,18 +59,18 @@
       </div>
 
       {{# Logo Anniversary #}}
-      <div class="max-md:order-3 md:justify-self-center md:col-start-2 md:row-start-1 md:ml-52 max-md:mt-24">
+      <div class="max-md:order-3 md:justify-self-center md:col-start-2 md:row-start-1 md:ml-52 max-md:mt-32">
         {{ partial:components/logos/anniversary/your-white-byline class="w-192 h-auto" }}
       </div>
 
       {{# Main Navigation #}}
-      <nav class="max-md:order-4 md:justify-self-end md:col-start-3 md:row-start-1 md:row-span-2 md:text-right max-md:mt-24">
+      <nav class="max-md:order-4 md:justify-self-end md:col-start-3 md:row-start-1 md:row-span-2 md:text-right max-md:mt-32">
         <ul class="font-bold flex flex-col gap-y-4 md:gap-y-6 lg:gap-y-8">
           {{ nav:main }}
             <li>
               <a
                 href="{{ url }}"
-                class="hover:text-snow/50 transition-colors"
+                class="no-underline underline-offset-2 lg:underline-offset-4 decoration-1 hover:underline"
                 {{ if is_current || is_parent }}aria-current="page"{{ /if }}>
                 {{ title }}
               </a>
@@ -87,7 +87,7 @@
               <li>
                 <a
                   href="{{ url }}"
-                  class="hover:text-snow/50 transition-colors">
+                  class="no-underline underline-offset-2 lg:underline-offset-4 decoration-1 hover:underline">
                   {{ title }}
                 </a>
               </li>
@@ -102,5 +102,5 @@
     </div>
 
   {{ /partial:components/layout/inner }}
-  
+
 </footer>
