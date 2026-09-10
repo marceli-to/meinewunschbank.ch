@@ -1,9 +1,3 @@
-{{#
-  Centered content frame with the standard page gutters.
-  @param compact - Narrow variant (74rem) instead of 90rem.
-  @param spacing - Vertical spacing, e.g. py-20 md:py-28.
-  @param class - Extra classes.
-#}}
-<div class="{{ if compact }}max-w-[74rem]{{ else }}max-w-[90rem]{{ /if }} mx-auto px-20 md:px-32 lg:px-44 {{ spacing ?? '' }} {{ class }}">
+<div class="{{ if compact }}max-w-[78rem]{{ else }}max-w-[96rem]{{ /if }} mx-auto px-20 md:px-32 lg:px-44 {{ spacing ?? '' }} {{ class }}">
   {{ slot }}
 </div>
