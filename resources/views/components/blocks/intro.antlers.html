@@ -16,22 +16,22 @@
     {{ /if }}
   {{ /if }}
 
-  {{ partial:components/layout/container compact="true" spacing="py-32 md:py-40 lg:py-48" }}
+  {{ partial:components/layout/container compact="true" spacing="py-20 md:py-28 lg:py-36" }}
 
     {{ if title }}
-      {{ partial:components/headings/h1 class="text-center text-[20px] md:text-[22px] lg:text-[24px] leading-[1.35]" }}
+      {{ partial:components/headings/h1 class="md:text-center text-[22px] md:text-[28px] lg:text-[34px]" }}
         {{ title | trim | nl2br }}
       {{ /partial:components/headings/h1 }}
     {{ /if }}
 
-    <div class="grid md:grid-cols-2 gap-x-24 lg:gap-x-32 gap-y-20 mt-32 md:mt-40 lg:mt-48 text-[16px] md:text-[17px] lg:text-[18px]">
+    <div class="grid md:grid-cols-2 gap-y-24 md:gap-x-24 lg:gap-x-36 py-20 md:py-24 lg:py-28 border-b border-b-sand">
       {{ if lead }}
-        <div class="font-bold">
+        <div class="font-bold text-[18px] md:text-[22px] lg:text-[26px]">
           {{ lead | trim | nl2br }}
         </div>
       {{ /if }}
       {{ if editor }}
-        <article>
+        <article class="text-[16px] md:text-[20px] lg:text-[24px]">
           {{ editor }}
         </article>
       {{ /if }}

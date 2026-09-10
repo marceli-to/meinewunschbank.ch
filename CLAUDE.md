@@ -33,6 +33,9 @@ Conventions:
   and pass `spacing` for the vertical rhythm.
 - Icons and logos are partials, not files referenced by `<img>`, so they take
   `currentColor` from the caller's text colour.
+- **Headings carry `text-balance`.** It is baked into the `headings/h1`…`h4`
+  partials, so use those rather than a bare `<h1>`. Bard renders its own
+  headings and cannot, so `article h2, article h3` get it from `app.css`.
 
 ## Content blocks
 

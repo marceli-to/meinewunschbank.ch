@@ -108,7 +108,7 @@ async function submit() {
 
 <template>
     <section>
-        <h2 class="font-bold leading-[1.1] text-lg md:text-2xl lg:text-4xl mb-32 md:mb-48 lg:mb-64">
+        <h2 class="text-balance font-bold leading-[1.1] text-lg md:text-2xl lg:text-4xl mb-32 md:mb-48 lg:mb-64">
             {{ title }}
         </h2>
 
