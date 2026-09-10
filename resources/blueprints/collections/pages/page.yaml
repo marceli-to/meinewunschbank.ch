@@ -34,12 +34,7 @@ tabs:
                       instructions: 'Das Formular zum Einreichen eines Herzenswunsches'
                       icon: fieldtype-form
                       fields:
-                        -
-                          handle: form_title
-                          field:
-                            type: text
-                            display: Titel
-                            default: 'Jetzt Herzenswunsch einreichen'
+                        - import: wish_form
   settings:
     display: Einstellungen
     sections:

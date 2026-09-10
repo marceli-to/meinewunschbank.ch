@@ -1,0 +1,8 @@
+title: 'Wisch Form'
+fields:
+  -
+    handle: form_title
+    field:
+      type: text
+      display: Titel
+      default: 'Jetzt Herzenswunsch einreichen'
