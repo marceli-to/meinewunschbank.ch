@@ -10,12 +10,13 @@ Everything under `resources/views/components/` is a partial, called as
 `{{ partial:components/path/name param="value" }}`. There is no Blade in the
 site templates (Blade is used only for mails and the sitemap).
 
-A partial that takes parameters documents them in a comment block at the top:
+A partial that takes parameters documents them in a comment block at the top.
+Parameters only — do not open a component with a comment explaining what it is
+or why it is built that way; the components here are small enough to read.
 
 ```antlers
 {{#
-  What it is, in one sentence.
-  @param compact - Narrow variant (74rem) instead of 90rem.
+  @param compact - Narrow variant (78rem) instead of 96rem.
   @param class - Extra classes.
 #}}
 ```
@@ -95,7 +96,10 @@ Tailwind 4, configured entirely in `resources/css/app.css` — there is no
 UI copy, editor-facing labels and `aria-label`s are German.
 
 **Code comments are always English, and brief.** A line or two saying why, not
-what — the code already says what. Skip the comment when the code is plain.
+what — the code already says what. Skip the comment when the code is plain,
+which is most of the time: no header comment describing a component, and no
+running commentary on markup. Comment only the line that would otherwise read
+as a mistake.
 
 Commit messages are English, imperative, sentence case, no prefix or trailing
 period, and say why when the why is not obvious: *"Drop the menu's blur so it
