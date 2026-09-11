@@ -1,15 +1,18 @@
-<section data-swiper-scope>
-  {{ partial:components/layout/container spacing="py-20 md:py-28 lg:py-36" }}
+<section data-swiper-scope class="py-20 md:py-28 lg:py-36">
 
-    {{ if title }}
-      {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[34px] lg:text-[40px]" }}
+  {{ if title }}
+    {{ partial:components/layout/container compact="true" }}
+      {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[36px] lg:text-[44px]" }}
         {{ title }}
       {{ /partial:components/headings/h2 }}
-    {{ /if }}
+    {{ /partial:components/layout/container }}
+  {{ /if }}
 
-    {{ partial:components/swiper/buttons class="mt-16 md:mt-20" }}
+  {{ partial:components/layout/container class="mt-8 md:mt-12 lg:mt-0" }}
 
-    {{ partial:components/swiper/container class="mt-16 md:mt-20" }}
+    {{ partial:components/swiper/buttons }}
+
+    {{ partial:components/swiper/container class="mt-16 md:mt-20 lg:mt-24" }}
       {{ pages }}
         {{ partial:components/swiper/item }}
           {{ partial:components/teaser }}
@@ -18,4 +21,5 @@
     {{ /partial:components/swiper/container }}
 
   {{ /partial:components/layout/container }}
+
 </section>

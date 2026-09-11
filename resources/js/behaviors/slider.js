@@ -14,7 +14,7 @@ export default function initSliders() {
 
         new Swiper(container, {
             modules: [Navigation],
-            slidesPerView: 1.15,
+            slidesPerView: 1,
             spaceBetween: 24,
             breakpoints: {
                 768: { slidesPerView: 2, spaceBetween: 24 },

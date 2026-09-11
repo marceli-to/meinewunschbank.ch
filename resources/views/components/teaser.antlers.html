@@ -1,34 +1,34 @@
-{{#
-  One page teaser. Rendered inside an entries loop, so it reads the entry's
-  own title, url and teaser fields from the surrounding scope.
-  @param class - Extra classes.
-#}}
-<a href="{{ url }}" class="group flex flex-col no-underline {{ class }}">
+<a 
+  href="{{ url }}" 
+  aria-label="{{ title }} – mehr erfahren"
+  class="group flex flex-col no-underline {{ class }}">
 
   {{ if teaser_image }}
     {{ partial:components/media/image
        :image="teaser_image"
        :alt="teaser_image:alt"
-       class="aspect-[3/2] object-cover"
+       class="aspect-[3/2] object-cover transition group-hover:brightness-85"
        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 85vw" }}
   {{ /if }}
 
-  {{ partial:components/headings/h3 class="font-bold text-[22px] md:text-[26px] lg:text-[30px] mt-16 md:mt-20" }}
+  {{ partial:components/headings/h3 class="font-bold text-[22px] md:text-[28px] lg:text-[34px] mt-12 md:mt-16 lg:mt-20 mb-4 lg:mb-8" }}
     {{ title }}
   {{ /partial:components/headings/h3 }}
 
-  {{# A div, not a p: the global p:not(:last-child) rule in app.css would add
-      a bottom margin on top of the spacing below. #}}
-  {{ if teaser_date }}
-    <div class="text-[16px] md:text-[18px] mt-12 md:mt-16">{{ teaser_date }}</div>
-  {{ /if }}
+  <span class="flex flex-col gap-y-8 md:gap-y-12 text-[16px] lg:text-[18px]">
 
-  {{# The arrow holds its space when hidden, so revealing it on hover moves
-      nothing else on the card. #}}
-  <span class="mt-16 md:mt-20 flex items-center gap-16 text-crimson text-[16px] md:text-[18px]">
-    <span class="h-px flex-1 bg-crimson"></span>
-    <span>mehr erfahren</span>
-    {{ partial:components/icons/arrow-right-long class="w-50 h-auto shrink-0 opacity-0 transition-opacity group-hover:opacity-100" }}
+    {{ if teaser_date }}
+      <span>
+        {{ teaser_date }}
+      </span>
+    {{ /if }}
+
+    <span class="flex items-center gap-16 text-crimson">
+      <span class="h-px flex-1 bg-crimson"></span>
+      <span>mehr erfahren</span>
+      {{ partial:components/icons/arrow-right-long class="w-50 h-auto shrink-0 opacity-0 -translate-x-8 transition duration-300 ease-out group-hover:opacity-100 group-hover:translate-x-0" }}
+    </span>
+
   </span>
 
 </a>
