@@ -3,7 +3,7 @@ id: 6873a7d8-ea8b-4be3-aabf-f633e3cf6adb
 blueprint: page
 title: Herzenswünsche
 teaser_date: 'ganzes Jahr'
-teaser_image: dummy/dummy-intro-hero.jpg
+teaser_image: dummy/dummy-pageteaser-1.jpg
 blocks:
   -
     id: 8dFTiqMd4LeY9N9KP3Lt6

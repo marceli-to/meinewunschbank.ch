@@ -36,7 +36,7 @@ blocks:
   -
     id: 2b8f6a13-9c4e-4d75-8e30-6f1a9b2c7d54
     type: page_teasers
-    enabled: true
+    enabled: false
     title: Rückblicke
     pages:
       - ccc6ab59-7d77-4a79-bea1-a0b443dd5447
@@ -56,5 +56,5 @@ blocks:
 meta_description: 'Reichen Sie Ihren Herzenswunsch bei der Raiffeisenbank Weissenstein ein.'
 noindex: false
 updated_by: 448047dc-96bb-4513-80da-27938e2d8dac
-updated_at: 1789044897
+updated_at: 1789112071
 ---
