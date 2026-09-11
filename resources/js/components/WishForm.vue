@@ -126,11 +126,12 @@ async function submit() {
             </fieldset>
 
             <fieldset>
-                <legend class="w-full font-bold text-md md:text-lg lg:text-xl mb-16 md:mb-20">
+                <legend id="wish-legend" class="w-full font-bold text-md md:text-lg lg:text-xl mb-16 md:mb-20">
                     Was ist Ihr Herzenswunsch? *
                 </legend>
                 <FormTextarea
                     id="wish"
+                    labelledby="wish-legend"
                     v-model="form.wish"
                     :rows="5"
                     :error="errors.wish"
@@ -138,11 +139,12 @@ async function submit() {
             </fieldset>
 
             <fieldset>
-                <legend class="w-full font-bold text-md md:text-lg lg:text-xl mb-16 md:mb-20">
+                <legend id="link-legend" class="w-full font-bold text-md md:text-lg lg:text-xl mb-16 md:mb-20">
                     Möchten Sie Ihren Wunsch mit einem Link ergänzen?
                 </legend>
                 <FormTextarea
                     id="link"
+                    labelledby="link-legend"
                     v-model="form.link"
                     :rows="2"
                     :error="errors.link"
@@ -205,6 +207,7 @@ async function submit() {
                 <button
                     type="submit"
                     :disabled="sending"
+                    :aria-busy="sending ? 'true' : null"
                     class="btn inline-flex w-auto self-start font-bold leading-none px-20 py-12 lg:px-24 lg:py-16 rounded-full bg-brand text-white cursor-pointer hover:bg-brand/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
                     {{ sending ? 'Wird gesendet …' : 'Absenden' }}
                 </button>

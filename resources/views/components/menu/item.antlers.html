@@ -1,7 +1,7 @@
 <li>
   <a
     href="{{ url }}"
-    aria-label="{{ title }}"
+    {{ if is_active || is_current }}aria-current="page"{{ /if }}
     class="font-bold text-[18px] md:text-[22px] lg:text-[24px] leading-none hover:text-brand transition-colors {{ is_active || is_current ? 'text-brand' : '' }}"
     x-on:click="menu = false">
     {{ title }}
