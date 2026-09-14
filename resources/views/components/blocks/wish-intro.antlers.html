@@ -1,21 +1,21 @@
 {{ partial:components/layout/section spacing="loose" }}
 
-  {{ partial:components/layout/container compact="true" class="max-w-[62rem] text-center" }}
+  {{ partial:components/layout/container compact="true" class="text-center" }}
 
     {{ if title }}
-      {{ partial:components/headings/h1 class="font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2]" }}
+      {{ partial:components/headings/h1 class="font-bold text-[32px] md:text-[48px] lg:text-[64px] leading-none mb-12 md:mb-16 lg:mb-20" }}
         {{ title }}
       {{ /partial:components/headings/h1 }}
     {{ /if }}
 
     {{ if editor }}
-      <article class="mt-16 md:mt-20 lg:mt-24 text-balance text-[16px] md:text-[20px] lg:text-[22px]">
+      <article class="text-[22px] md:text-[28px] lg:text-[34px]">
         {{ editor }}
       </article>
     {{ /if }}
 
     {{ if button_label && button_link }}
-      {{ partial:components/button :href="button_link" class="mt-20 lg:mt-28" }}
+      {{ partial:components/button :href="button_link" class="mt-16 md:mt-24 lg:mt-32" }}
         {{ button_label }}
       {{ /partial:components/button }}
     {{ /if }}
