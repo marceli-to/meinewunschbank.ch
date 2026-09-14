@@ -1,0 +1,30 @@
+title: 'Call to Action'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+  - import: editor
+  -
+    handle: image
+    field:
+      type: assets
+      display: Bild
+      instructions: 'Wird rechts neben dem Text ausgegeben, im Format 4:3 beschnitten.'
+      container: assets
+      max_files: 1
+      mode: list
+  -
+    handle: button_label
+    field:
+      type: text
+      display: 'Button-Text'
+      instructions: 'Ohne Text und Ziel wird kein Button ausgegeben.'
+  -
+    handle: button_link
+    field:
+      type: link
+      display: 'Button-Ziel'
+      collections:
+        - pages

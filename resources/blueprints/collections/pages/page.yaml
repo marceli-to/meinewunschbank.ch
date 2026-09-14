@@ -35,6 +35,12 @@ tabs:
                       icon: layout-carousel-horizontal
                       fields:
                         - import: page_teasers
+                    call_to_action:
+                      display: 'Call to Action'
+                      instructions: 'Text mit Bild und Button'
+                      icon: layout-two-columns
+                      fields:
+                        - import: call_to_action
                     editor:
                       display: Text
                       instructions: 'Ein Textabschnitt mit Titel und Fliesstext'

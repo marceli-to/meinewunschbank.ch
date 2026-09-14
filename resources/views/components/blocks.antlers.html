@@ -6,6 +6,10 @@
   {{ partial:components/blocks/page-teasers }}
 {{ /if }}
 
+{{ if type == 'call_to_action' }}
+  {{ partial:components/blocks/call-to-action }}
+{{ /if }}
+
 {{ if type == 'editor' }}
   {{ partial:components/blocks/editor }}
 {{ /if }}

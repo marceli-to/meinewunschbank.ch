@@ -13,7 +13,7 @@
   <a
     href="{{ href }}"
     {{ if label }}aria-label="{{ label }}"{{ /if }}
-    class="btn inline-flex w-auto font-bold leading-none px-16 py-12 md:px-16 md:py-12 lg:px-20 lg:py-16 no-underline hover:underline underline-offset-2 lg:underline-offset-4 decoration-2 {{ variant == 'inverted' ? 'bg-white text-brand' : 'bg-brand text-white' }} {{ class }}">
+    class="btn inline-flex w-auto font-bold text-[16px] lg:text-[18px] leading-none px-16 py-10 md:px-20 md:py-12 lg:px-32 lg:py-14 rounded-full no-underline bg-brand text-white hover:bg-crimson transition-colors {{ class }}">
     {{ slot }}
   </a>
 {{ else }}
@@ -21,7 +21,7 @@
     type="button"
     {{ if on }}@click="{{ on }}"{{ /if }}
     {{ if label }}aria-label="{{ label }}"{{ /if }}
-    class="btn inline-flex w-auto font-bold leading-none px-16 py-12 md:px-16 md:py-12 lg:px-20 lg:py-16 no-underline hover:underline underline-offset-2 lg:underline-offset-4 decoration-2 cursor-pointer {{ variant == 'inverted' ? 'bg-white text-brand' : 'bg-brand text-white' }} {{ class }}">
+    class="btn inline-flex w-auto font-bold text-[16px] lg:text-[18px] leading-none px-16 py-10 md:px-20 md:py-12 lg:px-32 lg:py-14 rounded-full no-underline cursor-pointer bg-brand text-white hover:bg-crimson transition-colors {{ class }}">
     {{ slot }}
   </button>
 {{ /if }}

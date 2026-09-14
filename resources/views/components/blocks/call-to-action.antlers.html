@@ -1,0 +1,41 @@
+<section class="bg-linen">
+  {{ partial:components/layout/container compact="true" spacing="py-40 md:py-56 lg:py-72" }}
+
+    <div class="grid md:grid-cols-12 items-start gap-y-24 md:gap-x-36 lg:gap-x-52">
+
+      <div class="md:col-span-6 lg:col-span-5">
+
+        {{ if title }}
+          {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2] mb-12 lg:mb-16" }}
+            {{ title }}
+          {{ /partial:components/headings/h2 }}
+        {{ /if }}
+
+        {{ if editor }}
+          <article class="text-[16px] md:text-[20px] lg:text-[24px]">
+            {{ editor }}
+          </article>
+        {{ /if }}
+
+        {{ if button_label && button_link }}
+          {{ partial:components/button :href="button_link" class="mt-16 lg:mt-32" }}
+            {{ button_label }}
+          {{ /partial:components/button }}
+        {{ /if }}
+
+      </div>
+
+      {{ if image }}
+        <div class="md:col-span-6 lg:col-span-7">
+          {{ partial:components/media/image
+            :image="image"
+            :alt="image:alt"
+            class="aspect-[4/3] object-cover"
+            sizes="(min-width: 768px) 58vw, 90vw" }}
+        </div>
+      {{ /if }}
+
+    </div>
+
+  {{ /partial:components/layout/container }}
+</section>
