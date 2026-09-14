@@ -1,4 +1,4 @@
-<section>
+{{ partial:components/layout/section }}
 
   {{ if media }}
     {{ if media:is_video }}
@@ -11,7 +11,7 @@
     {{ /if }}
   {{ /if }}
 
-  {{ partial:components/layout/container compact="true" spacing="py-20 md:py-28 lg:py-36" }}
+  {{ partial:components/layout/container compact="true" spacing="pt-20 md:pt-28 lg:pt-36" }}
 
     {{ if title }}
       {{ partial:components/headings/h1 class="md:text-center text-[22px] md:text-[28px] lg:text-[34px]" }}
@@ -34,4 +34,4 @@
 
   {{ /partial:components/layout/container }}
 
-</section>
+{{ /partial:components/layout/section }}

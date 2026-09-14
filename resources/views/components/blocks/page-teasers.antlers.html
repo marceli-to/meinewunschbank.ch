@@ -1,25 +1,29 @@
-<section data-swiper-scope class="py-20 md:py-28 lg:py-36">
+{{ partial:components/layout/section spacing="loose" }}
 
-  {{ if title }}
-    {{ partial:components/layout/container compact="true" }}
-      {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2]" }}
-        {{ title }}
-      {{ /partial:components/headings/h2 }}
+  <div data-swiper-scope>
+
+    {{ if title }}
+      {{ partial:components/layout/container compact="true" }}
+        {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2]" }}
+          {{ title }}
+        {{ /partial:components/headings/h2 }}
+      {{ /partial:components/layout/container }}
+    {{ /if }}
+
+    {{ partial:components/layout/container class="mt-8 md:mt-12 lg:mt-0" }}
+
+      {{ partial:components/swiper/buttons }}
+
+      {{ partial:components/swiper/container class="mt-16 md:mt-20 lg:mt-24" }}
+        {{ pages }}
+          {{ partial:components/swiper/item }}
+            {{ partial:components/teaser }}
+          {{ /partial:components/swiper/item }}
+        {{ /pages }}
+      {{ /partial:components/swiper/container }}
+
     {{ /partial:components/layout/container }}
-  {{ /if }}
 
-  {{ partial:components/layout/container class="mt-8 md:mt-12 lg:mt-0" }}
+  </div>
 
-    {{ partial:components/swiper/buttons }}
-
-    {{ partial:components/swiper/container class="mt-16 md:mt-20 lg:mt-24" }}
-      {{ pages }}
-        {{ partial:components/swiper/item }}
-          {{ partial:components/teaser }}
-        {{ /partial:components/swiper/item }}
-      {{ /pages }}
-    {{ /partial:components/swiper/container }}
-
-  {{ /partial:components/layout/container }}
-
-</section>
+{{ /partial:components/layout/section }}
