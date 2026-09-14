@@ -1,28 +1,33 @@
-{{ partial:components/layout/section spacing="loose" class="bg-brand text-white" }}
+{{ partial:components/layout/section spacing="loose" class="bg-crimson text-white" }}
 
   {{ partial:components/layout/container compact="true" }}
 
     {{ if title }}
-      {{ partial:components/headings/h2 class="font-bold text-[22px] md:text-[28px] lg:text-[34px] leading-[1.2]" }}
+      {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2]" }}
         {{ title }}
       {{ /partial:components/headings/h2 }}
     {{ /if }}
 
-    <ol class="mt-24 md:mt-32 lg:mt-40 flex flex-col gap-24 md:gap-32 lg:gap-40">
+    <ol class="mt-24 md:mt-32 lg:mt-40 flex flex-col gap-y-16 md:gap-y-40 lg:gap-y-64">
       {{ steps }}
-        <li class="flex items-start gap-20 md:gap-28 lg:gap-36">
+        <li class="flex items-start gap-16 md:gap-40 lg:gap-64">
 
           {{ if icon }}
-            {{ partial src="components/icons/{icon}" class="size-48 md:size-60 lg:size-72 shrink-0" }}
+            {{ partial src="components/icons/{icon}" class="size-64 md:size-96 lg:size-128 shrink-0 text-white/50" }}
           {{ /if }}
 
-          <div class="max-w-[46rem]">
-            {{ partial:components/headings/h3 class="font-bold text-[16px] md:text-[18px] lg:text-[20px]" }}
+          <div>
+
+            {{ partial:components/headings/h3 class="font-bold text-[18px] md:text-[24px] lg:text-[28px] mb-4" }}
               {{ count }}. {{ title }}
             {{ /partial:components/headings/h3 }}
+
             {{ if text }}
-              <p class="mt-4 md:mt-8 text-[15px] md:text-[16px] lg:text-[18px]">{{ text | nl2br }}</p>
+              <p class="text-[16px] md:text-[20px] lg:text-[24px]">
+                {{ text | nl2br }}
+              </p>
             {{ /if }}
+
           </div>
 
         </li>
