@@ -62,6 +62,29 @@ blocks:
     type: milestones
     enabled: true
   -
+    id: tSt1Ml-Rv8kQw3Nd7Za2X
+    type: testimonials
+    enabled: true
+    testimonials:
+      -
+        id: tSt1Ml-row-1
+        image: dummy/dummy-testimonial-1.jpg
+        quote: 'Die Bank kennt unsere Region und die Menschen, die hier leben. Wenn ich eine Frage habe, sitzt mir jemand gegenüber, der den Ort kennt – das ist heute nicht mehr selbstverständlich.'
+        name: 'Marie Muster'
+        role: 'Geschäftsführerin, Muster AG'
+      -
+        id: tSt1Ml-row-2
+        image: dummy/dummy-testimonial-2.jpg
+        quote: 'Als wir unseren Betrieb übernommen haben, hat uns die Raiffeisenbank Weissenstein von Anfang an begleitet. Man hat uns zugehört, statt uns ein fertiges Produkt hinzulegen.'
+        name: 'Thomas Beispiel'
+        role: 'Landwirt, Langendorf'
+      -
+        id: tSt1Ml-row-3
+        image: dummy/dummy-testimonial-3.jpg
+        quote: 'Was mir bleibt, sind die kleinen Momente: der Kaffee am Schalter, das kurze Gespräch auf dem Markt. Eine Bank, die Teil des Dorfs ist und nicht nur eine Adresse.'
+        name: 'Anna Vorlage'
+        role: 'Genossenschafterin, Solothurn'
+  -
     id: 90f4b224-1722-4b97-a93b-8acb1fc91fcd
     type: editor
     enabled: false

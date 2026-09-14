@@ -1,0 +1,36 @@
+title: Testimonials
+fields:
+  -
+    handle: testimonials
+    field:
+      type: grid
+      display: Testimonials
+      instructions: 'Ein Eintrag pro Slide.'
+      mode: stacked
+      add_row: 'Testimonial hinzufügen'
+      fields:
+        -
+          handle: image
+          field:
+            type: assets
+            display: Bild
+            container: assets
+            max_files: 1
+            mode: list
+        -
+          handle: quote
+          field:
+            type: textarea
+            display: Zitat
+            instructions: 'Ohne Anführungszeichen erfassen – die werden automatisch gesetzt.'
+        -
+          handle: name
+          field:
+            type: text
+            display: Name
+        -
+          handle: role
+          field:
+            type: text
+            display: 'Funktion, Firma'
+            instructions: 'Wird nach dem Namen ausgegeben, z. B. «Geschäftsführerin, Muster AG».'

@@ -1,0 +1,50 @@
+{{ if testimonials }}
+  {{ partial:components/layout/section spacing="loose" }}
+
+    <div data-swiper-scope="testimonials">
+
+      {{ partial:components/layout/container }}
+
+        <div class="relative @container [--image:46rem]">
+
+          {{ partial:components/swiper/container }}
+            {{ testimonials }}
+              {{ partial:components/swiper/item }}
+                <figure class="mx-auto w-full max-w-(--image) text-center">
+
+                  {{ if image }}
+                    {{ partial:components/media/image
+                      :image="image"
+                      :alt="image:alt"
+                      class="aspect-[3/2] object-cover"
+                      sizes="(min-width: 768px) 736px, 100vw" }}
+                  {{ /if }}
+
+                  <blockquote class="mt-20 md:mt-24 lg:mt-28 text-balance text-[22px] md:text-[28px] lg:text-[34px]">
+                    «{{ quote | trim }}»
+                  </blockquote>
+
+                  {{ if name }}
+                    <figcaption class="mt-16 md:mt-24 lg:mt-32 text-[16px] lg:text-[18px]">
+                      <strong>{{ name }}{{ if role }},{{ /if }}</strong> {{ role }}
+                    </figcaption>
+                  {{ /if }}
+
+                </figure>
+              {{ /partial:components/swiper/item }}
+            {{ /testimonials }}
+          {{ /partial:components/swiper/container }}
+
+          {{ partial:components/swiper/buttons
+             prevLabel="Vorheriges Testimonial"
+             nextLabel="Nächstes Testimonial"
+             class="max-lg:mt-24 lg:absolute lg:inset-x-0 lg:top-0 lg:z-50 lg:h-[calc(min(100cqw,var(--image))*2/3)] lg:pointer-events-none" }}
+
+        </div>
+
+      {{ /partial:components/layout/container }}
+
+    </div>
+
+  {{ /partial:components/layout/section }}
+{{ /if }}

@@ -18,6 +18,10 @@
   {{ partial:components/blocks/milestones }}
 {{ /if }}
 
+{{ if type == 'testimonials' }}
+  {{ partial:components/blocks/testimonials }}
+{{ /if }}
+
 {{ if type == 'wish_form' }}
   {{ partial:components/blocks/wish-form }}
 {{ /if }}

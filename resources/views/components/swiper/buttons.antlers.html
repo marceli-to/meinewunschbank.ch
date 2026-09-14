@@ -1,12 +1,14 @@
 {{#
   Belongs inside the same data-swiper-scope as the container it drives.
+  @param prevLabel - aria-label of the previous button.
+  @param nextLabel - aria-label of the next button.
   @param class - Extra classes for the row.
 #}}
 <div class="flex items-center justify-between {{ class }}">
-  <button type="button" data-swiper-prev aria-label="Vorherige Beiträge" class="cursor-pointer">
+  <button type="button" data-swiper-prev aria-label="{{ prevLabel ?? 'Vorherige Beiträge' }}" class="pointer-events-auto cursor-pointer">
     {{ partial:components/icons/arrow-left-short class="w-34 md:w-40 h-auto" }}
   </button>
-  <button type="button" data-swiper-next aria-label="Nächste Beiträge" class="cursor-pointer">
+  <button type="button" data-swiper-next aria-label="{{ nextLabel ?? 'Nächste Beiträge' }}" class="pointer-events-auto cursor-pointer">
     {{ partial:components/icons/arrow-right-short class="w-34 md:w-40 h-auto" }}
   </button>
 </div>

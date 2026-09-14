@@ -53,6 +53,12 @@ tabs:
                       icon: layout-carousel-horizontal-2
                       fields:
                         - import: milestones
+                    testimonials:
+                      display: Testimonials
+                      instructions: 'Ein Slider mit Stimmen aus der Region'
+                      icon: quote
+                      fields:
+                        - import: testimonials
                     wish_form:
                       display: 'Wunsch-Formular'
                       instructions: 'Das Formular zum Einreichen eines Herzenswunsches'
