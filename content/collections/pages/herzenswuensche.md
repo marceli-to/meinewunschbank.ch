@@ -54,13 +54,12 @@ blocks:
     lead: 'Wir suchen Wünsche, die Freude bereiten, Menschen unterstützen oder Gemeinschaft fördern. Ob klein oder gross – entscheidend ist die Geschichte dahinter.'
     editor:
       -
-        type: paragraph
+        type: heading
+        attrs:
+          level: 3
         content:
           -
             type: text
-            marks:
-              -
-                type: bold
             text: 'Beispiele:'
       -
         type: bulletList
@@ -143,5 +142,5 @@ blocks:
           - 379d41c7-61f4-430c-bef3-6b950ab169a3
 noindex: false
 updated_by: 448047dc-96bb-4513-80da-27938e2d8dac
-updated_at: 1789386116
+updated_at: 1789390203
 ---

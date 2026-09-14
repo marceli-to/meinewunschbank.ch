@@ -1,23 +1,23 @@
-{{ partial:components/layout/section spacing="loose" class="bg-linen" }}
+{{ partial:components/layout/section spacing="snug" class="bg-linen" }}
 
   {{ partial:components/layout/container compact="true" }}
 
     {{ if title }}
-      {{ partial:components/headings/h2 class="font-bold text-[22px] md:text-[28px] lg:text-[34px] leading-[1.2]" }}
+      {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2] mb-16 md:mb-20 lg:mb-24" }}
         {{ title }}
       {{ /partial:components/headings/h2 }}
     {{ /if }}
 
-    <div class="mt-20 md:mt-28 lg:mt-36 grid md:grid-cols-2 gap-y-24 md:gap-x-36 lg:gap-x-52">
+    <div class="grid md:grid-cols-2 gap-y-16 md:gap-y-24 md:gap-x-24 lg:gap-x-32">
 
       {{ if lead }}
-        <div class="text-[16px] md:text-[20px] lg:text-[24px]">
+        <div class="text-[22px] md:text-[28px] lg:text-[34px]">
           {{ lead | trim | nl2br }}
         </div>
       {{ /if }}
 
       {{ if editor }}
-        <article class="text-[15px] md:text-[16px] lg:text-[18px]">
+        <article class="text-[16px] md:text-[20px] lg:text-[24px] [&_h3]:font-bold [&_h3]:text-[18px] md:[&_h3]:text-[24px] lg:[&_h3]:text-[28px] [&_h3]:mb-4">
           {{ editor }}
         </article>
       {{ /if }}
