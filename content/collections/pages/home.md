@@ -58,6 +58,10 @@ blocks:
       - 9920400c-d1a4-418a-a2be-d0442efb7cff
       - 20172ee6-c6d5-46e6-967d-2db6ad095711
   -
+    id: mLs1Tn-QeKv7xRa2Yd9Bc
+    type: milestones
+    enabled: true
+  -
     id: 90f4b224-1722-4b97-a93b-8acb1fc91fcd
     type: editor
     enabled: false

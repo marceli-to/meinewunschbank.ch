@@ -47,6 +47,12 @@ tabs:
                       icon: fieldtype-text
                       fields:
                         - import: editor
+                    milestones:
+                      display: Meilensteine
+                      instructions: 'Der Zeitstrahl mit den Meilensteinen aus 125 Jahren'
+                      icon: layout-carousel-horizontal-2
+                      fields:
+                        - import: milestones
                     wish_form:
                       display: 'Wunsch-Formular'
                       instructions: 'Das Formular zum Einreichen eines Herzenswunsches'

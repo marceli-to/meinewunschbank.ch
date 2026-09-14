@@ -14,6 +14,10 @@
   {{ partial:components/blocks/editor }}
 {{ /if }}
 
+{{ if type == 'milestones' }}
+  {{ partial:components/blocks/milestones }}
+{{ /if }}
+
 {{ if type == 'wish_form' }}
   {{ partial:components/blocks/wish-form }}
 {{ /if }}
