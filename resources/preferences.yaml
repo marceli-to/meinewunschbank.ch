@@ -1,13 +1,13 @@
 nav:
   reorder:
     - content
-    - anmeldungen
+    - daten
     - users
     - fields
     - tools
   sections:
-    anmeldungen:
+    daten:
       action: '@create'
-      display: Anmeldungen
+      display: Daten
       items:
         'content::collections::herzenswunsche': '@move'
