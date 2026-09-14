@@ -1,11 +1,11 @@
-{{ partial:components/layout/section spacing="loose" class="bg-linen" }}
+{{ partial:components/layout/section spacing="snug" class="bg-linen" }}
 
   {{ partial:components/layout/container compact="true" }}
 
-    <div class="mx-auto w-full max-w-[42rem]">
+    <div class="mx-auto w-full max-w-[60rem] relative">
 
       {{ if title }}
-        {{ partial:components/headings/h2 class="font-script text-brand text-[32px] md:text-[44px] lg:text-[56px] leading-none -rotate-3 origin-bottom-left" }}
+        {{ partial:components/headings/h2 class="font-script text-crimson text-[64px] md:text-[96px] lg:text-[128px] leading-none md:absolute md:-top-48 lg:-top-64" }}
           {{ title }}
         {{ /partial:components/headings/h2 }}
       {{ /if }}
@@ -14,7 +14,7 @@
         {{ partial:components/media/image
           :image="image"
           :alt="image:alt"
-          wrapperClass="mt-16 md:mt-20 lg:mt-24"
+          wrapperClass="md:mt-36 lg:mt-48 md:max-w-[32rem] lg:max-w-[40rem] mx-auto"
           class="aspect-[3/2] object-cover"
           sizes="(min-width: 768px) 672px, 100vw" }}
       {{ /if }}
