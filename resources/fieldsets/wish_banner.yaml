@@ -1,18 +1,16 @@
-title: 'Call to Action'
+title: "Herzenswünsche: Bild-Band"
 fields:
   -
     handle: title
     field:
       type: text
       display: Titel
-  - import: editor
+      instructions: 'Wird in der Schreibschrift gesetzt.'
   -
     handle: image
     field:
       type: assets
       display: Bild
-      instructions: 'Wird rechts neben dem Text ausgegeben, im Format 4:3 beschnitten.'
       container: assets
       max_files: 1
       mode: list
-  - import: button

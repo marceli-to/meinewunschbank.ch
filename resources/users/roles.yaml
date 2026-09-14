@@ -2,3 +2,14 @@ admin:
   title: Administration
   permissions:
     - super
+  preferences:
+    nav:
+      reorder:
+        - content
+        - anmeldungen
+      sections:
+        anmeldungen:
+          action: '@create'
+          display: Anmeldungen
+          items:
+            'content::collections::herzenswunsche': '@move'

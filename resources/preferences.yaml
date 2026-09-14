@@ -1,0 +1,13 @@
+nav:
+  reorder:
+    - content
+    - anmeldungen
+    - users
+    - fields
+    - tools
+  sections:
+    anmeldungen:
+      action: '@create'
+      display: Anmeldungen
+      items:
+        'content::collections::herzenswunsche': '@move'

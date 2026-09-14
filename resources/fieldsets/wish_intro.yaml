@@ -1,0 +1,9 @@
+title: "Herzenswünsche: Intro"
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+  - import: editor
+  - import: button

@@ -1,0 +1,29 @@
+{{ partial:components/layout/section spacing="loose" class="bg-linen" }}
+
+  {{ partial:components/layout/container compact="true" }}
+
+    {{ if title }}
+      {{ partial:components/headings/h2 class="font-bold text-[22px] md:text-[28px] lg:text-[34px] leading-[1.2]" }}
+        {{ title }}
+      {{ /partial:components/headings/h2 }}
+    {{ /if }}
+
+    <div class="mt-20 md:mt-28 lg:mt-36 grid md:grid-cols-2 gap-y-24 md:gap-x-36 lg:gap-x-52">
+
+      {{ if lead }}
+        <div class="text-[16px] md:text-[20px] lg:text-[24px]">
+          {{ lead | trim | nl2br }}
+        </div>
+      {{ /if }}
+
+      {{ if editor }}
+        <article class="text-[15px] md:text-[16px] lg:text-[18px]">
+          {{ editor }}
+        </article>
+      {{ /if }}
+
+    </div>
+
+  {{ /partial:components/layout/container }}
+
+{{ /partial:components/layout/section }}

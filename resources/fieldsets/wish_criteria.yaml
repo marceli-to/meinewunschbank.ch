@@ -1,0 +1,14 @@
+title: "Herzenswünsche: Kriterien"
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+  -
+    handle: lead
+    field:
+      type: textarea
+      display: Lead
+      instructions: 'Steht in der linken Spalte.'
+  - import: editor

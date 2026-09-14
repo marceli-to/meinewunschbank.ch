@@ -1,0 +1,23 @@
+{{ partial:components/layout/section spacing="tight" }}
+
+  {{ partial:components/layout/container compact="true" }}
+
+    <div class="flex flex-wrap items-center gap-x-24 gap-y-16">
+
+      {{ if title }}
+        <span class="font-bold text-[16px] md:text-[18px] lg:text-[20px]">{{ title }}</span>
+      {{ /if }}
+
+      <span class="h-px flex-1 bg-sand"></span>
+
+      {{ if button_label && button_link }}
+        {{ partial:components/button :href="button_link" }}
+          {{ button_label }}
+        {{ /partial:components/button }}
+      {{ /if }}
+
+    </div>
+
+  {{ /partial:components/layout/container }}
+
+{{ /partial:components/layout/section }}

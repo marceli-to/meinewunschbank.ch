@@ -10,18 +10,42 @@
   {{ partial:components/blocks/call-to-action }}
 {{ /if }}
 
-{{ if type == 'editor' }}
-  {{ partial:components/blocks/editor }}
+{{ if type == 'testimonials' }}
+  {{ partial:components/blocks/testimonials }}
 {{ /if }}
 
 {{ if type == 'milestones' }}
   {{ partial:components/blocks/milestones }}
 {{ /if }}
 
-{{ if type == 'testimonials' }}
-  {{ partial:components/blocks/testimonials }}
+{{ if type == 'editor' }}
+  {{ partial:components/blocks/editor }}
+{{ /if }}
+
+{{ if type == 'wish_intro' }}
+  {{ partial:components/blocks/wish-intro }}
+{{ /if }}
+
+{{ if type == 'wish_banner' }}
+  {{ partial:components/blocks/wish-banner }}
+{{ /if }}
+
+{{ if type == 'wish_steps' }}
+  {{ partial:components/blocks/wish-steps }}
+{{ /if }}
+
+{{ if type == 'wish_criteria' }}
+  {{ partial:components/blocks/wish-criteria }}
 {{ /if }}
 
 {{ if type == 'wish_form' }}
   {{ partial:components/blocks/wish-form }}
+{{ /if }}
+
+{{ if type == 'wish_conditions' }}
+  {{ partial:components/blocks/wish-conditions }}
+{{ /if }}
+
+{{ if type == 'wish_grid' }}
+  {{ partial:components/blocks/wish-grid }}
 {{ /if }}

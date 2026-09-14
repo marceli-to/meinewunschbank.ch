@@ -5,6 +5,15 @@ tree:
     entry: 8bb1bedd-9ff4-4406-acc3-6e7a14ddf2c2
   -
     entry: 6873a7d8-ea8b-4be3-aabf-f633e3cf6adb
+    children:
+      -
+        entry: cef8520f-307d-4361-a4e1-4d7dc81e0277
+      -
+        entry: ad2644e9-cddb-4a36-8e2a-cb774855efbb
+      -
+        entry: 20192b8e-1eca-4d30-a6f5-3bd38afb3a05
+      -
+        entry: 379d41c7-61f4-430c-bef3-6b950ab169a3
   -
     entry: 590dac5c-7b51-4942-a232-fafb80c39baa
   -

@@ -1,0 +1,37 @@
+{{ partial:components/layout/section spacing="loose" class="bg-linen" }}
+
+  {{ partial:components/layout/container compact="true" }}
+
+    {{ if title }}
+      {{ partial:components/headings/h2 class="font-bold text-center text-[22px] md:text-[28px] lg:text-[34px] leading-[1.2]" }}
+        {{ title }}
+      {{ /partial:components/headings/h2 }}
+    {{ /if }}
+
+    {{ if lead }}
+      <p class="mx-auto mt-16 md:mt-20 lg:mt-24 max-w-[46rem] text-center text-[16px] md:text-[18px] lg:text-[20px]">
+        {{ lead | nl2br }}
+      </p>
+    {{ /if }}
+
+    {{ groups }}
+      <div class="mt-32 md:mt-40 lg:mt-52">
+
+        {{ if label }}
+          {{ partial:components/headings/h3 class="font-bold text-[16px] md:text-[18px] lg:text-[20px]" }}
+            {{ label }}
+          {{ /partial:components/headings/h3 }}
+        {{ /if }}
+
+        <div class="mt-16 md:mt-20 lg:mt-24 grid md:grid-cols-2 gap-x-24 lg:gap-x-36 gap-y-32 md:gap-y-40">
+          {{ pages }}
+            {{ partial:components/card }}
+          {{ /pages }}
+        </div>
+
+      </div>
+    {{ /groups }}
+
+  {{ /partial:components/layout/container }}
+
+{{ /partial:components/layout/section }}

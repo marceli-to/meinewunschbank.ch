@@ -1,0 +1,25 @@
+{{ partial:components/layout/section spacing="loose" }}
+
+  {{ partial:components/layout/container compact="true" class="max-w-[62rem] text-center" }}
+
+    {{ if title }}
+      {{ partial:components/headings/h1 class="font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2]" }}
+        {{ title }}
+      {{ /partial:components/headings/h1 }}
+    {{ /if }}
+
+    {{ if editor }}
+      <article class="mt-16 md:mt-20 lg:mt-24 text-balance text-[16px] md:text-[20px] lg:text-[22px]">
+        {{ editor }}
+      </article>
+    {{ /if }}
+
+    {{ if button_label && button_link }}
+      {{ partial:components/button :href="button_link" class="mt-20 lg:mt-28" }}
+        {{ button_label }}
+      {{ /partial:components/button }}
+    {{ /if }}
+
+  {{ /partial:components/layout/container }}
+
+{{ /partial:components/layout/section }}

@@ -1,0 +1,35 @@
+title: "Herzenswünsche: Raster"
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+  -
+    handle: lead
+    field:
+      type: textarea
+      display: Lead
+  -
+    handle: groups
+    field:
+      type: grid
+      display: Gruppen
+      instructions: 'Je eine Gruppe pro Monat, mit den Seiten in dieser Reihenfolge.'
+      mode: stacked
+      add_row: 'Gruppe hinzufügen'
+      fields:
+        -
+          handle: label
+          field:
+            type: text
+            display: Titel
+            instructions: 'Freier Text, z. B. «Januar 2027».'
+        -
+          handle: pages
+          field:
+            type: entries
+            display: Seiten
+            collections:
+              - pages
+            create: false

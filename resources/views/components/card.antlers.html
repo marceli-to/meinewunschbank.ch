@@ -17,9 +17,9 @@
 
   <span class="flex flex-col gap-y-8 md:gap-y-12 text-[16px] lg:text-[18px]">
 
-    {{ if teaser_date }}
+    {{ if teaser_text }}
       <span>
-        {{ teaser_date }}
+        {{ teaser_text | trim | nl2br }}
       </span>
     {{ /if }}
 

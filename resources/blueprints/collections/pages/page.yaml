@@ -41,30 +41,69 @@ tabs:
                       icon: layout-two-columns
                       fields:
                         - import: call_to_action
-                    editor:
-                      display: Text
-                      instructions: 'Ein Textabschnitt mit Titel und Fliesstext'
-                      icon: fieldtype-text
-                      fields:
-                        - import: editor
-                    milestones:
-                      display: Meilensteine
-                      instructions: 'Der Zeitstrahl mit den Meilensteinen aus 125 Jahren'
-                      icon: layout-carousel-horizontal-2
-                      fields:
-                        - import: milestones
                     testimonials:
                       display: Testimonials
                       instructions: 'Ein Slider mit Stimmen aus der Region'
                       icon: quote
                       fields:
                         - import: testimonials
+                    milestones:
+                      display: Meilensteine
+                      instructions: 'Der Zeitstrahl mit den Meilensteinen aus 125 Jahren'
+                      icon: layout-carousel-horizontal-2
+                      fields:
+                        - import: milestones
+                    editor:
+                      display: Text
+                      instructions: 'Ein Textabschnitt mit Titel und Fliesstext'
+                      icon: fieldtype-text
+                      fields:
+                        - import: editor
+                wishes:
+                  display: Herzenswünsche
+                  sets:
+                    wish_intro:
+                      display: Intro
+                      instructions: 'Titel, Text und Button, zentriert'
+                      icon: fieldtype-textarea
+                      fields:
+                        - import: wish_intro
+                    wish_banner:
+                      display: 'Bild-Band'
+                      instructions: 'Ein Bild mit Titel in der Schreibschrift'
+                      icon: insert-image
+                      fields:
+                        - import: wish_banner
+                    wish_steps:
+                      display: Schritte
+                      instructions: 'Nummerierte Schritte mit Icon, Titel und Text'
+                      icon: steps
+                      fields:
+                        - import: wish_steps
+                    wish_criteria:
+                      display: Kriterien
+                      instructions: 'Welche Wünsche gesucht sind: Lead und Beispiele'
+                      icon: layout-two-columns
+                      fields:
+                        - import: wish_criteria
                     wish_form:
-                      display: 'Wunsch-Formular'
+                      display: Formular
                       instructions: 'Das Formular zum Einreichen eines Herzenswunsches'
                       icon: fieldtype-form
                       fields:
                         - import: wish_form
+                    wish_conditions:
+                      display: Teilnahmebedingungen
+                      instructions: 'Eine Zeile mit Titel und Button'
+                      icon: link
+                      fields:
+                        - import: wish_conditions
+                    wish_grid:
+                      display: Raster
+                      instructions: 'Erfüllte Wünsche im Raster, nach Monat gruppiert'
+                      icon: layout-grid
+                      fields:
+                        - import: wish_grid
   settings:
     display: Einstellungen
     sections:

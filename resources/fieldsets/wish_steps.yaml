@@ -1,0 +1,35 @@
+title: "Herzenswünsche: Schritte"
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+  -
+    handle: steps
+    field:
+      type: grid
+      display: Schritte
+      instructions: 'Die Nummerierung entsteht aus der Reihenfolge.'
+      mode: stacked
+      add_row: 'Schritt hinzufügen'
+      fields:
+        -
+          handle: icon
+          field:
+            type: select
+            display: Icon
+            options:
+              selfie-bench: Wunschbank
+              mobile-app: Upload
+              thumbs-up: Daumen
+        -
+          handle: title
+          field:
+            type: text
+            display: Titel
+        -
+          handle: text
+          field:
+            type: textarea
+            display: Text
