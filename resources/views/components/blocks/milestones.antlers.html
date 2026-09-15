@@ -3,19 +3,21 @@
 	{{ partial:components/layout/container compact="true" class="text-center" }}
 
 		{{ if subtitle }}
-			<p class="text-[18px] md:text-[21px] lg:text-[24px]">{{ subtitle }}</p>
+			<div class="text-[22px] md:text-[28px] lg:text-[34px] mb-12 md:mb-16 lg:mb-20">
+				{{ subtitle }}
+			</div>
 		{{ /if }}
 
 		{{ if title }}
-			{{ partial:components/headings/h2 class="font-bold leading-[1.15] text-[30px] md:text-[38px] lg:text-[46px]" }}
+			{{ partial:components/headings/h2 class="font-bold text-[32px] md:text-[48px] lg:text-[64px] leading-none mb-12 md:mb-16 lg:mb-20" }}
 				{{ title }}
 			{{ /partial:components/headings/h2 }}
 		{{ /if }}
 
 		{{ if text }}
-			<p class="mx-auto mt-24 md:mt-32 lg:mt-40 max-w-[44rem] text-balance text-[16px] md:text-[17px] lg:text-[18px] leading-[1.45]">
+			<article class="max-w-[56.25rem] mx-auto text-center text-balance text-[16px] md:text-[20px] lg:text-[24px]">
 				{{ text | nl2br }}
-			</p>
+			</article>
 		{{ /if }}
 
 	{{ /partial:components/layout/container }}
@@ -28,15 +30,8 @@
 
 				<div class="relative">
 
-					{{#
-						The axis sits behind the slides and overlaps their timeline row, so the
-						dots stay glued to the line while the slides move underneath it. No
-						z-index here on purpose: it would trap the buttons in its own stacking
-						context, under the slider wrapper that covers them.
-					#}}
 					<div class="absolute inset-x-0 top-0 h-12 text-sand">
 
-						{{# Full width, so each arrowhead's vertex lands on an end of it. #}}
 						<div class="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 bg-current"></div>
 
 						<button type="button" data-swiper-prev aria-label="Frühere Meilensteine"
@@ -51,10 +46,6 @@
 
 					</div>
 
-					{{#
-						The indent lives on a wrapper, not on .swiper: overflow clips at the
-						padding box, so padding there would let slides show in the inset.
-					#}}
 					<div class="relative z-10 px-20 md:px-32 lg:px-60">
 
 						{{ partial:components/swiper/container }}
@@ -63,7 +54,6 @@
 
 									<div class="relative h-64">
 										<span class="absolute inset-x-0 top-0 flex h-12 items-center justify-center">
-											{{# Opaque, so the axis stops short of the dot instead of running through it. #}}
 											<span class="flex h-12 w-44 lg:w-52 items-center justify-center bg-linen">
 												<span class="block size-6 rounded-full bg-walnut transition-transform duration-300 group-hover:scale-[1.6] [.swiper-slide-active_&]:scale-[1.6] pointer-fine:[.swiper-wrapper:has(.swiper-slide:hover)_.swiper-slide-active:not(:hover)_&]:scale-100"></span>
 											</span>
@@ -103,14 +93,14 @@
 
 	{{ if button_title || (button_label && button_link) }}
 
-		{{ partial:components/layout/container class="mt-56 md:mt-72 lg:mt-96" }}
+		{{ partial:components/layout/container class="mt-40 md:mt-56 lg:mt-72" }}
 
-			<div class="flex flex-col md:flex-row items-center justify-center gap-20 md:gap-32 lg:gap-44">
+			<div class="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-40 lg:gap-56">
 
 				{{ if button_title }}
-					<p class="mb-0! text-balance text-center font-bold text-[20px] md:text-[24px] lg:text-[28px]">
+					<div class="text-balance text-center font-bold text-[22px] md:text-[28px] lg:text-[34px]">
 						{{ button_title }}
-					</p>
+					</div>
 				{{ /if }}
 
 				{{ if button_label && button_link }}
