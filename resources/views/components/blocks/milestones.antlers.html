@@ -1,1 +1,128 @@
-{{ partial:components/layout/section class="bg-linen min-h-[80vh]" }}
+{{ partial:components/layout/section spacing="loose" class="bg-linen" }}
+
+	{{ partial:components/layout/container compact="true" class="text-center" }}
+
+		{{ if subtitle }}
+			<p class="text-[18px] md:text-[21px] lg:text-[24px]">{{ subtitle }}</p>
+		{{ /if }}
+
+		{{ if title }}
+			{{ partial:components/headings/h2 class="font-bold leading-[1.15] text-[30px] md:text-[38px] lg:text-[46px]" }}
+				{{ title }}
+			{{ /partial:components/headings/h2 }}
+		{{ /if }}
+
+		{{ if text }}
+			<p class="mx-auto mt-24 md:mt-32 lg:mt-40 max-w-[44rem] text-balance text-[16px] md:text-[17px] lg:text-[18px] leading-[1.45]">
+				{{ text | nl2br }}
+			</p>
+		{{ /if }}
+
+	{{ /partial:components/layout/container }}
+
+	{{ if slides }}
+
+		<div data-swiper-scope="milestones" class="mt-40 md:mt-52 lg:mt-64">
+
+			{{ partial:components/layout/container }}
+
+				<div class="relative">
+
+					{{#
+						The axis sits behind the slides and overlaps their timeline row, so the
+						dots stay glued to the line while the slides move underneath it. No
+						z-index here on purpose: it would trap the buttons in its own stacking
+						context, under the slider wrapper that covers them.
+					#}}
+					<div class="absolute inset-x-0 top-0 h-12 text-sand">
+
+						{{# Full width, so each arrowhead's vertex lands on an end of it. #}}
+						<div class="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 bg-current"></div>
+
+						<button type="button" data-swiper-prev aria-label="Frühere Meilensteine"
+							class="absolute left-0 top-1/2 z-20 grid size-44 md:size-48 -translate-y-1/2 items-center justify-items-start cursor-pointer transition-opacity [&.swiper-button-disabled]:opacity-50 [&.swiper-button-disabled]:cursor-default">
+							{{ partial:components/icons/arrow-left-thin class="w-5 h-10 md:w-6 md:h-12" }}
+						</button>
+
+						<button type="button" data-swiper-next aria-label="Spätere Meilensteine"
+							class="absolute right-0 top-1/2 z-20 grid size-44 md:size-48 -translate-y-1/2 items-center justify-items-end cursor-pointer transition-opacity [&.swiper-button-disabled]:opacity-50 [&.swiper-button-disabled]:cursor-default">
+							{{ partial:components/icons/arrow-right-thin class="w-5 h-10 md:w-6 md:h-12" }}
+						</button>
+
+					</div>
+
+					{{#
+						The indent lives on a wrapper, not on .swiper: overflow clips at the
+						padding box, so padding there would let slides show in the inset.
+					#}}
+					<div class="relative z-10 px-20 md:px-32 lg:px-60">
+
+						{{ partial:components/swiper/container }}
+							{{ slides }}
+								{{ partial:components/swiper/item class="group" }}
+
+									<div class="relative h-64">
+										<span class="absolute inset-x-0 top-0 flex h-12 items-center justify-center">
+											{{# Opaque, so the axis stops short of the dot instead of running through it. #}}
+											<span class="flex h-12 w-44 lg:w-52 items-center justify-center bg-linen">
+												<span class="block size-6 rounded-full bg-walnut transition-transform duration-300 group-hover:scale-[1.6] [.swiper-slide-active_&]:scale-[1.6] pointer-fine:[.swiper-wrapper:has(.swiper-slide:hover)_.swiper-slide-active:not(:hover)_&]:scale-100"></span>
+											</span>
+										</span>
+										{{ if year }}
+											<span class="absolute inset-x-0 top-20 origin-top text-center text-[13px] font-bold leading-none text-walnut transition-transform duration-300 group-hover:scale-[1.9] [.swiper-slide-active_&]:scale-[1.9] pointer-fine:[.swiper-wrapper:has(.swiper-slide:hover)_.swiper-slide-active:not(:hover)_&]:scale-100">{{ year }}</span>
+										{{ /if }}
+									</div>
+
+									{{ if image }}
+										{{ partial:components/media/image
+											:image="image"
+											:alt="image:alt"
+											class="aspect-square object-cover"
+											sizes="(min-width: 1024px) 25vw, (min-width: 768px) 40vw, 80vw" }}
+									{{ /if }}
+
+									{{ if editor }}
+										<article class="mt-12 text-[15px] leading-[1.4] transition-opacity duration-300 pointer-fine:opacity-0 pointer-fine:group-hover:opacity-100 [.swiper-slide-active_&]:opacity-100 pointer-fine:[.swiper-wrapper:has(.swiper-slide:hover)_.swiper-slide-active:not(:hover)_&]:opacity-0">
+											{{ editor }}
+										</article>
+									{{ /if }}
+
+								{{ /partial:components/swiper/item }}
+							{{ /slides }}
+						{{ /partial:components/swiper/container }}
+
+					</div>
+
+				</div>
+
+			{{ /partial:components/layout/container }}
+
+		</div>
+
+	{{ /if }}
+
+	{{ if button_title || (button_label && button_link) }}
+
+		{{ partial:components/layout/container class="mt-56 md:mt-72 lg:mt-96" }}
+
+			<div class="flex flex-col md:flex-row items-center justify-center gap-20 md:gap-32 lg:gap-44">
+
+				{{ if button_title }}
+					<p class="mb-0! text-balance text-center font-bold text-[20px] md:text-[24px] lg:text-[28px]">
+						{{ button_title }}
+					</p>
+				{{ /if }}
+
+				{{ if button_label && button_link }}
+					{{ partial:components/button :href="button_link" class="shrink-0" }}
+						{{ button_label }}
+					{{ /partial:components/button }}
+				{{ /if }}
+
+			</div>
+
+		{{ /partial:components/layout/container }}
+
+	{{ /if }}
+
+{{ /partial:components/layout/section }}

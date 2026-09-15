@@ -19,6 +19,14 @@ const presets = {
         spaceBetween: 24,
         loop: true,
     },
+    milestones: {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        breakpoints: {
+            768: { slidesPerView: 2, spaceBetween: 96 },
+            1024: { slidesPerView: 3, spaceBetween: 144 },
+        },
+    },
 };
 
 export default function initSliders() {

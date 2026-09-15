@@ -1,2 +1,51 @@
-title: Milestones
-fields: []
+title: Meilensteine
+fields:
+  -
+    handle: subtitle
+    field:
+      type: text
+      display: Übertitel
+      instructions: 'Steht klein über dem Titel, z. B. «Unsere Geschichte:».'
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+  -
+    handle: text
+    field:
+      type: textarea
+      display: Text
+      instructions: 'Einleitung unter dem Titel, zentriert ausgegeben.'
+  -
+    handle: slides
+    field:
+      type: grid
+      display: Meilensteine
+      instructions: 'Ein Eintrag pro Slide, in chronologischer Reihenfolge.'
+      mode: stacked
+      add_row: 'Meilenstein hinzufügen'
+      fields:
+        -
+          handle: year
+          field:
+            type: text
+            display: Jahr
+            instructions: 'Wird am Zeitstrahl ausgegeben.'
+        -
+          handle: image
+          field:
+            type: assets
+            display: Bild
+            instructions: 'Wird quadratisch beschnitten.'
+            container: assets
+            max_files: 1
+            mode: list
+        - import: editor
+  -
+    handle: button_title
+    field:
+      type: text
+      display: 'Titel neben dem Button'
+      instructions: 'Steht links neben dem Button unter dem Zeitstrahl.'
+  - import: button

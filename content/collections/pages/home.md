@@ -61,6 +61,132 @@ blocks:
     id: mLs1Tn-QeKv7xRa2Yd9Bc
     type: milestones
     enabled: true
+    subtitle: 'Unsere Geschichte:'
+    title: 'Meilensteine aus 125 Jahren'
+    text: 'Die Geschichte der Raiffeisenbank Weissenstein ist geprägt von regionaler Verwurzelung, genossenschaftlichem Engagement und kontinuierlicher Weiterentwicklung. Über mehr als ein Jahrhundert hinweg ist aus mehreren lokalen Raiffeisenbanken eine starke Bank für die Region entstanden – geprägt von engagierten Mitarbeitenden, getragen von ihren Genossenschafterinnen und Genossenschaftern und dem Vertrauen ihrer Kundinnen und Kunden.'
+    slides:
+      -
+        id: mLs1Tn-row-1
+        year: '1902'
+        image: dummy/dummy-testimonial-1.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Lorem ipsum dolor sit amet,'
+              -
+                type: text
+                text: ' consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      -
+        id: mLs1Tn-row-2
+        year: '1928'
+        image: dummy/dummy-pageteaser-1.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Duis aute irure dolor,'
+              -
+                type: text
+                text: ' in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.'
+      -
+        id: mLs1Tn-row-3
+        year: '1933'
+        image: dummy/dummy-testimonial-2.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Sed ut perspiciatis unde omnis,'
+              -
+                type: text
+                text: ' iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore.'
+      -
+        id: mLs1Tn-row-4
+        year: '1961'
+        image: dummy/dummy-pageteaser-2.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Nemo enim ipsam voluptatem,'
+              -
+                type: text
+                text: ' quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
+      -
+        id: mLs1Tn-row-5
+        year: '1987'
+        image: dummy/dummy-testimonial-3.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Neque porro quisquam est,'
+              -
+                type: text
+                text: ' qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.'
+      -
+        id: mLs1Tn-row-6
+        year: '2004'
+        image: dummy/dummy-pageteaser-3.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Ut enim ad minima veniam,'
+              -
+                type: text
+                text: ' quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.'
+      -
+        id: mLs1Tn-row-7
+        year: '2027'
+        image: dummy/dummy-4.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Quis autem vel eum iure,'
+              -
+                type: text
+                text: ' reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat.'
+    button_title: 'Der Weg zur Raiffeisenbank Weissenstein'
+    button_label: 'Mehr erfahren'
+    button_link: 'https://www.raiffeisen.ch'
   -
     id: tSt1Ml-Rv8kQw3Nd7Za2X
     type: testimonials
