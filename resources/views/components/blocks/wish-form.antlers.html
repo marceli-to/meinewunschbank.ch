@@ -1,10 +1,4 @@
-{{#
-  `data-prefill` fills the form with test data so a tester only has to pick a
-  photo. It is emitted from the server, never baked into the bundle — the built
-  JS is committed and deployed as-is, so a build-time flag would leak whatever
-  was set on the machine that ran the build.
-#}}
 {{ partial:components/layout/container compact="true" spacing="py-20 md:py-28 lg:py-36" }}
-  <div id="wish-form" data-title="{{ form_title | entities }}" {{ if config:app:env != 'production' }}data-prefill="true"{{ /if }}>
+  <div id="wish-form" data-title="{{ form_title | entities }}">
   </div>
 {{ /partial:components/layout/container }}

@@ -17,6 +17,5 @@ const el = document.getElementById('wish-form');
 if (el) {
     createApp(WishForm, {
         title: el.dataset.title ?? '',
-        prefill: el.dataset.prefill === 'true',
     }).mount(el);
 }

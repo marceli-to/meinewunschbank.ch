@@ -7,12 +7,9 @@ import FormLabel from '@/components/form/FormLabel.vue';
 import FormLegend from '@/components/form/FormLegend.vue';
 import FormTextarea from '@/components/form/FormTextarea.vue';
 import PhotoUpload from '@/components/form/PhotoUpload.vue';
-import { wishFormDefaults } from '@/support/wishFormDefaults';
 
-const props = defineProps({
+defineProps({
 	title: { type: String, default: 'Jetzt Herzenswunsch einreichen' },
-	// Set by the server outside production — see the block template.
-	prefill: { type: Boolean, default: false },
 });
 
 // One flat object — mirrors the payload SubmitWishRequest validates, so a
@@ -31,11 +28,6 @@ const form = reactive({
 	accepts_terms: false,
 	accepts_publication: false,
 });
-
-// Everything but the photo, which a browser will not let us set.
-if (props.prefill) {
-	Object.assign(form, wishFormDefaults());
-}
 
 const root = ref(null);
 const errors = ref({});
@@ -120,17 +112,14 @@ async function submit() {
 
 <template>
 	<section ref="root">
-		<h2 class="text-balance font-bold leading-[1.1] text-lg md:text-2xl lg:text-4xl mb-32 md:mb-48 lg:mb-64">
+		<h2 class="text-balance font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2] mb-24 md:mb-40 lg:mb-56">
 			{{ title }}
 		</h2>
 
 		<template v-if="done">
-			<div role="status" class="border border-brand p-20 md:p-32">
-				<div class="font-bold mb-16 md:mb-20 lg:mb-24">
-					Vielen Dank für Ihren Herzenswunsch!
-				</div>
-				<div>
-					Wir haben Ihre Einreichung erhalten und melden uns bei Ihnen.
+			<div role="status" class="text-brand text-[18px] md:text-[24px] lg:text-[28px]">
+				<div class="mb-16 md:mb-20 lg:mb-24">
+					<strong>Vielen Dank für Ihren Herzenswunsch!</strong><br>Wir haben Ihre Einreichung erhalten und melden uns bei Ihnen.
 				</div>
 			</div>
 		</template>
@@ -246,7 +235,7 @@ async function submit() {
 						class="self-start">
 						{{ sending ? 'Wird gesendet …' : 'Absenden' }}
 					</Button>
-					<div class="text-xxs">
+					<div>
 						* Pflichtfelder
 					</div>
 				</fieldset>

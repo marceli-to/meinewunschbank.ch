@@ -68,7 +68,7 @@ function clear() {
 		</div>
 
 		<template v-if="showHint">
-			<div id="photo-status" class="text-xxs md:text-xs absolute top-48 lg:top-60 left-0">
+			<div id="photo-status" class="absolute top-48 lg:top-60 left-0">
 				JPG, PNG oder WEBP, max. 12 MB
 			</div>
 		</template>
