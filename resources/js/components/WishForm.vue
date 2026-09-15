@@ -136,7 +136,8 @@ async function submit() {
 		</template>
 
 		<template v-else>
-			<form novalidate class="flex flex-col gap-40 md:gap-56 lg:gap-72" @focusin="clearError" @submit.prevent="submit">
+			<form novalidate class="flex flex-col gap-24 md:gap-40 lg:gap-56" @focusin="clearError" @submit.prevent="submit">
+
 				<fieldset aria-labelledby="photo-heading">
 					<PhotoUpload
 						v-model="form.photo"
@@ -175,12 +176,12 @@ async function submit() {
 					<FormLegend required>
 						Ihre Kontaktdaten
 					</FormLegend>
-					<div class="mb-24 md:mb-32">
-						Hinweis: Herzenswünsche können von Personen ab 18 Jahren eingereicht werden.
-						Wünsche für Kinder und Jugendliche sind selbstverständlich willkommen.
+
+					<div class="mb-16 md:mb-20 lg:mb-24">
+            Hinweis: Herzenswünsche können von Personen ab 18 Jahren eingereicht werden. Wünsche für Kinder und Jugendliche sind selbstverständlich willkommen.
 					</div>
 
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 lg:gap-x-32 gap-y-20 md:gap-y-24">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-20 gap-y-20 md:gap-y-24">
 						<div>
 							<FormLabel for="firstname">
 								Vorname
@@ -226,7 +227,7 @@ async function submit() {
 					</div>
 				</fieldset>
 
-				<fieldset class="flex flex-col gap-20 md:gap-24">
+				<fieldset class="flex flex-col gap-20 md:gap-24 lg:gap-28">
 					<FormCheckbox id="accepts_terms" v-model="form.accepts_terms" :error="errors.accepts_terms">
 						Ich habe die Teilnahmebedingungen gelesen und akzeptiere sie.
 					</FormCheckbox>

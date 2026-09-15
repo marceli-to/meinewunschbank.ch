@@ -97,10 +97,10 @@ function clear() {
 				<button
 					type="button"
 					aria-label="Foto entfernen"
-					class="btn group mt-8 md:mt-10 lg:mt-12 inline-flex items-center gap-6 cursor-pointer text-xxs"
+					class="btn group mt-8 md:mt-12 lg:mt-16 inline-flex items-center gap-6 cursor-pointer text-[14px] md:text-[16px] lg:text-[18px]"
 					@click="clear">
 					<IconTrash class="size-18 md:size-20 lg:size-22 shrink-0" />
-					<span class="underline underline-offset-2 group-hover:no-underline">
+					<span class="no-underline underline-offset-2 decoration-1 group-hover:underline leading-none">
 						entfernen
 					</span>
 				</button>
