@@ -1,8 +1,8 @@
 <script setup>
 import { computed, ref } from 'vue';
-import Button from '../Button.vue';
-import FormLegend from './FormLegend.vue';
-import IconTrash from '../icons/IconTrash.vue';
+import Button from '@/components/Button.vue';
+import FormLegend from '@/components/form/FormLegend.vue';
+import IconTrash from '@/components/icons/IconTrash.vue';
 
 const props = defineProps({
 	modelValue: { type: File, default: null },
@@ -54,7 +54,9 @@ function clear() {
 <template>
 	<div class="relative">
 		<div class="flex items-end gap-16 md:gap-24 mb-24 md:mb-28 lg:mb-32">
-			<FormLegend as="div" id="photo-heading" :required="required" class="grow border-b border-brand pb-8">{{ label }}</FormLegend>
+			<FormLegend as="div" id="photo-heading" :required="required" class="grow border-b border-brand pb-8">
+				{{ label }}
+			</FormLegend>
 			<Button
 				variant="secondary"
 				:aria-describedby="showHint ? 'photo-status' : null"
@@ -65,12 +67,14 @@ function clear() {
 		</div>
 
 		<template v-if="showHint">
-		  <div id="photo-status" class="text-xxs md:text-xs absolute top-48 lg:top-60 left-0">
-			JPG, PNG oder WEBP, max. 12 MB
-		  </div>
+			<div id="photo-status" class="text-xxs md:text-xs absolute top-48 lg:top-60 left-0">
+				JPG, PNG oder WEBP, max. 12 MB
+			</div>
 		</template>
 
-		<p aria-live="polite" class="sr-only">{{ filename ? `${filename} ausgewählt` : '' }}</p>
+		<div aria-live="polite" class="sr-only">
+			{{ filename ? `${filename} ausgewählt` : '' }}
+		</div>
 
 		<input
 			ref="input"
@@ -95,13 +99,17 @@ function clear() {
 					class="btn group mt-8 md:mt-10 lg:mt-12 inline-flex items-center gap-6 cursor-pointer text-xxs"
 					@click="clear">
 					<IconTrash class="size-18 md:size-20 lg:size-22 shrink-0" />
-					<span class="underline underline-offset-2 group-hover:no-underline">entfernen</span>
+					<span class="underline underline-offset-2 group-hover:no-underline">
+						entfernen
+					</span>
 				</button>
 			</div>
 		</template>
 
 		<template v-if="error">
-			<p role="alert" class="mt-6 text-xxs text-error">{{ error }}</p>
+			<div role="alert" class="mt-6 text-xxs text-error">
+				{{ error }}
+			</div>
 		</template>
 	</div>
 </template>

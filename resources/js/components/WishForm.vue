@@ -1,13 +1,13 @@
 <script setup>
 import { reactive, ref } from 'vue';
-import Button from './Button.vue';
-import FormCheckbox from './form/FormCheckbox.vue';
-import FormInput from './form/FormInput.vue';
-import FormLabel from './form/FormLabel.vue';
-import FormLegend from './form/FormLegend.vue';
-import FormTextarea from './form/FormTextarea.vue';
-import PhotoUpload from './form/PhotoUpload.vue';
-import { wishFormDefaults } from '../support/wishFormDefaults';
+import Button from '@/components/Button.vue';
+import FormCheckbox from '@/components/form/FormCheckbox.vue';
+import FormInput from '@/components/form/FormInput.vue';
+import FormLabel from '@/components/form/FormLabel.vue';
+import FormLegend from '@/components/form/FormLegend.vue';
+import FormTextarea from '@/components/form/FormTextarea.vue';
+import PhotoUpload from '@/components/form/PhotoUpload.vue';
+import { wishFormDefaults } from '@/support/wishFormDefaults';
 
 const props = defineProps({
 	title: { type: String, default: 'Jetzt Herzenswunsch einreichen' },
@@ -116,8 +116,12 @@ async function submit() {
 
 		<template v-if="done">
 			<div role="status" class="border border-brand p-20 md:p-32">
-				<p class="font-bold">Vielen Dank für Ihren Herzenswunsch!</p>
-				<p class="mb-0">Wir haben Ihre Einreichung erhalten und melden uns bei Ihnen.</p>
+				<div class="font-bold mb-16 md:mb-20 lg:mb-24">
+					Vielen Dank für Ihren Herzenswunsch!
+				</div>
+				<div>
+					Wir haben Ihre Einreichung erhalten und melden uns bei Ihnen.
+				</div>
 			</div>
 		</template>
 
@@ -161,38 +165,52 @@ async function submit() {
 					<FormLegend required>
 						Ihre Kontaktdaten
 					</FormLegend>
-					<p class="mb-24 md:mb-32">
+					<div class="mb-24 md:mb-32">
 						Hinweis: Herzenswünsche können von Personen ab 18 Jahren eingereicht werden.
 						Wünsche für Kinder und Jugendliche sind selbstverständlich willkommen.
-					</p>
+					</div>
 
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 lg:gap-x-32 gap-y-20 md:gap-y-24">
 						<div>
-							<FormLabel for="firstname">Vorname</FormLabel>
+							<FormLabel for="firstname">
+								Vorname
+							</FormLabel>
 							<FormInput id="firstname" v-model="form.firstname" :error="errors.firstname" autocomplete="given-name" />
 						</div>
 						<div>
-							<FormLabel for="lastname">Nachname</FormLabel>
+							<FormLabel for="lastname">
+								Nachname
+							</FormLabel>
 							<FormInput id="lastname" v-model="form.lastname" :error="errors.lastname" autocomplete="family-name" />
 						</div>
 						<div>
-							<FormLabel for="street">Strasse, Nr.</FormLabel>
+							<FormLabel for="street">
+								Strasse, Nr.
+							</FormLabel>
 							<FormInput id="street" v-model="form.street" :error="errors.street" autocomplete="street-address" />
 						</div>
 						<div>
-							<FormLabel for="city">PLZ, Ort</FormLabel>
+							<FormLabel for="city">
+								PLZ, Ort
+							</FormLabel>
 							<FormInput id="city" v-model="form.city" :error="errors.city" autocomplete="postal-code" />
 						</div>
 						<div>
-							<FormLabel for="email">E-Mail-Adresse</FormLabel>
+							<FormLabel for="email">
+								E-Mail-Adresse
+							</FormLabel>
 							<FormInput id="email" v-model="form.email" type="email" :error="errors.email" autocomplete="email" />
 						</div>
 						<div>
-							<FormLabel for="phone">Telefonnummer</FormLabel>
+							<FormLabel for="phone">
+								Telefonnummer
+							</FormLabel>
 							<FormInput id="phone" v-model="form.phone" type="tel" :error="errors.phone" autocomplete="tel" />
 						</div>
 						<div>
-							<FormLabel for="birthdate">Geburtsdatum</FormLabel>
+							<FormLabel for="birthdate">
+								Geburtsdatum
+							</FormLabel>
 							<FormInput id="birthdate" v-model="form.birthdate" type="date" :error="errors.birthdate" autocomplete="bday" />
 						</div>
 					</div>
@@ -217,13 +235,15 @@ async function submit() {
 						class="self-start">
 						{{ sending ? 'Wird gesendet …' : 'Absenden' }}
 					</Button>
-					<p class="mb-0 text-xxs">* Pflichtfelder</p>
+					<div class="text-xxs">
+						* Pflichtfelder
+					</div>
 				</fieldset>
 
 				<template v-if="failed">
-					<p role="alert" class="mb-0 text-error">
+					<div role="alert" class="text-error">
 						Das hat leider nicht geklappt. Bitte versuchen Sie es später noch einmal.
-					</p>
+					</div>
 				</template>
 			</form>
 		</template>

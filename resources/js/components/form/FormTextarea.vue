@@ -24,7 +24,9 @@ defineEmits(['update:modelValue']);
 			class="w-full border border-brand p-12 md:p-14 lg:p-18 bg-white text-[18px] md:text-[20px] lg:text-[22px] placeholder:text-slate outline-none focus:ring-2 focus:ring-brand/40"
 			@input="$emit('update:modelValue', $event.target.value)"></textarea>
 		<template v-if="error">
-			<p :id="`${id}-error`" role="alert" class="mt-6 text-xxs text-error">{{ error }}</p>
+			<div :id="`${id}-error`" role="alert" class="mt-6 text-xxs text-error">
+				{{ error }}
+			</div>
 		</template>
 	</div>
 </template>

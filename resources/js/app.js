@@ -1,8 +1,8 @@
 import Alpine from 'alpinejs';
 import collapse from '@alpinejs/collapse';
 import { createApp } from 'vue';
-import initSliders from './behaviors/slider';
-import WishForm from './components/WishForm.vue';
+import initSliders from '@/behaviors/slider';
+import WishForm from '@/components/WishForm.vue';
 
 // Alpine handles lightweight UI state (menu toggles, transitions).
 window.Alpine = Alpine;

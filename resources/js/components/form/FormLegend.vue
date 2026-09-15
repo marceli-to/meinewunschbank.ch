@@ -9,6 +9,7 @@ defineProps({
 <template>
 	<component :is="as" class="w-full font-bold text-[18px] md:text-[24px] lg:text-[28px] mb-4 md:mb-6 lg:mb-8">
 		<slot />
+		<!-- On one line: split, the space before the asterisk is lost. -->
 		<template v-if="required">
 			<span aria-hidden="true"> *</span>
 		</template>

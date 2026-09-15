@@ -24,7 +24,9 @@ defineEmits(['update:modelValue']);
 			</label>
 		</div>
 		<template v-if="error">
-			<p :id="`${id}-error`" role="alert" class="mt-6 text-xxs text-error">{{ error }}</p>
+			<div :id="`${id}-error`" role="alert" class="mt-6 text-xxs text-error">
+				{{ error }}
+			</div>
 		</template>
 	</div>
 </template>
