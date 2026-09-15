@@ -1,7 +1,6 @@
 {{#
   @param href    - When set, renders an <a>; otherwise a <button type="button">.
-  @param variant - 'primary' (default, brand bg) or 'inverted' (white bg, for
-                   use on the brand background, e.g. the post teaser card).
+  @param variant - 'primary' (default, brand fill) or 'secondary' (outlined).
   @param on      - Alpine @click expression for the <button> variant.
   @param label   - aria-label.
   @param class   - Extra classes.
@@ -9,11 +8,13 @@
 
   `btn` marks it exempt from the `article a:not(.btn)` underline rule.
 #}}
+{{ button_base = "btn inline-flex w-auto font-bold text-[16px] lg:text-[18px] leading-none px-16 py-10 md:px-20 md:py-12 lg:px-32 lg:py-14 rounded-full border no-underline transition-colors" }}
+{{ button_variant = variant == 'secondary' ? "border-brand text-brand hover:bg-brand/15 active:bg-brand/20" : "border-transparent bg-brand text-white hover:bg-crimson active:bg-garnet" }}
 {{ if href }}
   <a
     href="{{ href }}"
     {{ if label }}aria-label="{{ label }}"{{ /if }}
-    class="btn inline-flex w-auto font-bold text-[16px] lg:text-[18px] leading-none px-16 py-10 md:px-20 md:py-12 lg:px-32 lg:py-14 rounded-full no-underline bg-brand text-white hover:bg-crimson transition-colors {{ class }}">
+    class="{{ button_base }} {{ button_variant }} {{ class }}">
     {{ slot }}
   </a>
 {{ else }}
@@ -21,7 +22,7 @@
     type="button"
     {{ if on }}@click="{{ on }}"{{ /if }}
     {{ if label }}aria-label="{{ label }}"{{ /if }}
-    class="btn inline-flex w-auto font-bold text-[16px] lg:text-[18px] leading-none px-16 py-10 md:px-20 md:py-12 lg:px-32 lg:py-14 rounded-full no-underline cursor-pointer bg-brand text-white hover:bg-crimson transition-colors {{ class }}">
+    class="{{ button_base }} cursor-pointer {{ button_variant }} {{ class }}">
     {{ slot }}
   </button>
 {{ /if }}
