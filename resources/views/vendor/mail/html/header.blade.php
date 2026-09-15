@@ -1,9 +1,8 @@
 @props(['url'])
 <tr>
 <td class="header">
-{{-- Text wordmark until the Raiffeisen lockup exists as a hosted PNG. Remote
-     images are blocked by default in most clients anyway, so text also means
-     the sender is identifiable before anyone clicks "show images". --}}
-<a href="{{ $url }}" style="display: inline-block;">{{ $slot }}</a>
+<a href="{{ $url }}" style="display: inline-block;">
+<img src="{{ rtrim(config('app.url'), '/') }}/mail/logo.png" alt="{{ config('app.name') }}" width="220" height="47" style="display: block; width: 220px; height: 47px; border: none;">
+</a>
 </td>
 </tr>

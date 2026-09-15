@@ -1,9 +1,7 @@
 <x-mail::layout>
 {{-- Header --}}
 <x-slot:header>
-<x-mail::header :url="config('app.url')">
-Meine Wunschbank
-</x-mail::header>
+<x-mail::header :url="config('app.url')" />
 </x-slot:header>
 
 {{-- Body --}}
@@ -21,7 +19,7 @@ Meine Wunschbank
 {{-- Footer --}}
 <x-slot:footer>
 <x-mail::footer>
-{!! nl2br(e(\Statamic\Facades\GlobalSet::findByHandle('address')?->inDefaultSite()?->get('address') ?? '')) !!}
+{!! nl2br((string) \Statamic\Facades\GlobalSet::findByHandle('address')?->inDefaultSite()?->augmentedValue('address')) !!}
 </x-mail::footer>
 </x-slot:footer>
 </x-mail::layout>

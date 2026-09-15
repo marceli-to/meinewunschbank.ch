@@ -49,6 +49,10 @@ function clear() {
 	input.value.value = '';
 	emit('update:modelValue', null);
 }
+
+// The parent resets the whole form after a successful submission, and the
+// preview and the file input are ours to clear.
+defineExpose({ reset: clear });
 </script>
 
 <template>
