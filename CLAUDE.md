@@ -91,6 +91,18 @@ Tailwind 4, configured entirely in `resources/css/app.css` — there is no
   mobile-only overrides, such as the footer's reordered grid.
 - Alpine handles small UI state (the menu). One Vue island handles the form.
 
+## Formatting
+
+**Indentation is one tab per level, everywhere** — Vue SFCs (script and
+template alike), JS, Antlers, CSS and PHP. `.editorconfig` carries it, and
+`.php-cs-fixer.php` sets `setIndent("\t")` to match. YAML and JSON are the
+exceptions and stay on spaces: YAML forbids tabs, and composer and npm rewrite
+their own files their own way.
+
+Write tabs from the start rather than reformatting afterwards, and leave
+existing space-indented files alone unless asked to convert one. After
+converting a file, `git diff -w` should come back empty.
+
 ## Language
 
 UI copy, editor-facing labels and `aria-label`s are German.
