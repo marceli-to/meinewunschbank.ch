@@ -58,6 +58,7 @@ function clear() {
 				{{ label }}
 			</FormLegend>
 			<Button
+				id="photo"
 				variant="secondary"
 				:aria-describedby="showHint ? 'photo-status' : null"
 				class="shrink-0 mb-4 md:mb-6 lg:mb-8 translate-y-1/2"
@@ -107,7 +108,7 @@ function clear() {
 		</template>
 
 		<template v-if="error">
-			<div role="alert" class="mt-6 text-xxs text-error">
+			<div role="alert" class="mt-6 font-bold text-brand text-[16px] md:text-[18px] lg:text-[20px]">
 				{{ error }}
 			</div>
 		</template>

@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue';
+import { nextTick, reactive, ref } from 'vue';
 import Button from '@/components/Button.vue';
 import FormCheckbox from '@/components/form/FormCheckbox.vue';
 import FormInput from '@/components/form/FormInput.vue';
@@ -37,6 +37,7 @@ if (props.prefill) {
 	Object.assign(form, wishFormDefaults());
 }
 
+const root = ref(null);
 const errors = ref({});
 const sending = ref(false);
 const done = ref(false);
@@ -44,6 +45,12 @@ const failed = ref(false);
 
 function csrf() {
 	return document.querySelector('meta[name="csrf-token"]')?.content ?? '';
+}
+
+// A field's message goes as soon as the user comes back to it. focusin, not
+// focus, so one listener on the form covers every field.
+function clearError(event) {
+	delete errors.value[event.target.id];
 }
 
 async function submit() {
@@ -83,9 +90,12 @@ async function submit() {
 				Object.entries(body.errors ?? {}).map(([key, messages]) => [key, messages[0]]),
 			);
 
-			// Put the first offending field in view — the form is long enough
-			// that an error above the fold would otherwise go unnoticed.
-			document.getElementById(Object.keys(errors.value)[0])?.scrollIntoView({
+			// Put the first offending field in view — the form is long enough that
+			// an error above the fold would otherwise go unnoticed. The messages
+			// render on the next tick, and photo has no field of its own to reach.
+			await nextTick();
+
+			root.value?.querySelector('[role="alert"]')?.scrollIntoView({
 				behavior: 'smooth',
 				block: 'center',
 			});
@@ -109,7 +119,7 @@ async function submit() {
 </script>
 
 <template>
-	<section>
+	<section ref="root">
 		<h2 class="text-balance font-bold leading-[1.1] text-lg md:text-2xl lg:text-4xl mb-32 md:mb-48 lg:mb-64">
 			{{ title }}
 		</h2>
@@ -126,7 +136,7 @@ async function submit() {
 		</template>
 
 		<template v-else>
-			<form novalidate class="flex flex-col gap-40 md:gap-56 lg:gap-72" @submit.prevent="submit">
+			<form novalidate class="flex flex-col gap-40 md:gap-56 lg:gap-72" @focusin="clearError" @submit.prevent="submit">
 				<fieldset aria-labelledby="photo-heading">
 					<PhotoUpload
 						v-model="form.photo"
@@ -241,7 +251,7 @@ async function submit() {
 				</fieldset>
 
 				<template v-if="failed">
-					<div role="alert" class="text-error">
+					<div role="alert" class="font-bold text-brand text-[16px] md:text-[18px] lg:text-[20px]">
 						Das hat leider nicht geklappt. Bitte versuchen Sie es später noch einmal.
 					</div>
 				</template>
