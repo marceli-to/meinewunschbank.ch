@@ -2,6 +2,7 @@ import Alpine from 'alpinejs';
 import collapse from '@alpinejs/collapse';
 import { createApp } from 'vue';
 import initSliders from '@/behaviors/slider';
+import initReveals from '@/behaviors/reveal';
 import WishForm from '@/components/WishForm.vue';
 
 // Alpine handles lightweight UI state (menu toggles, transitions).
@@ -10,6 +11,7 @@ Alpine.plugin(collapse);
 Alpine.start();
 
 initSliders();
+initReveals();
 
 // Vue island — the wish form, mounted wherever a page places the block.
 const el = document.getElementById('wish-form');

@@ -2,6 +2,7 @@
 @import "tailwindcss";
 @import "./partials/spacing.css";
 @import "./partials/font-sizes.css";
+@import "./partials/reveal.css";
 
 @source "../views";
 @source "../../content";

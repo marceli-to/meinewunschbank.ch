@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-XLEztIc8.css",
+    "file": "assets/app-BIw15aMU.css",
     "name": "app",
     "names": [
       "app.css"
@@ -41,7 +41,7 @@
     "src": "resources/fonts/starstoles-regular.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-C405LfV_.js",
+    "file": "assets/app-BJ8isUaa.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,

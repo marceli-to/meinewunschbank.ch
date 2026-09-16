@@ -1,0 +1,30 @@
+/* The pre-reveal state is gated on scripting so a no-JS visitor, or a crawler,
+   never meets a page of invisible content. */
+@media (scripting: enabled) {
+	.reveal,
+	.reveal-group > * {
+		opacity: 0;
+		/* The standalone translate property, so this cannot clash with a
+		   Tailwind transform utility on the same element. */
+		translate: 0 24px;
+		transition:
+			opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+			translate 700ms cubic-bezier(0.22, 1, 0.36, 1);
+		transition-delay: var(--reveal-delay, 0ms);
+	}
+
+	.reveal.is-revealed,
+	.reveal-group > .is-revealed {
+		opacity: 1;
+		translate: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal,
+	.reveal-group > * {
+		opacity: 1;
+		translate: none;
+		transition: none;
+	}
+}
