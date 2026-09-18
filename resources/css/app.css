@@ -31,6 +31,8 @@
   --color-slate: #999999;
   --color-charcoal: #4D4D4D;
   --color-linen: #E5DBD0;
+  --color-linen-soft: color-mix(in srgb, var(--color-linen) 65%, var(--color-snow));
+  --color-linen-faint: color-mix(in srgb, var(--color-linen) 35%, var(--color-snow));
   --color-sand: #CCBCA9;
   --color-walnut: #A99480;
 
