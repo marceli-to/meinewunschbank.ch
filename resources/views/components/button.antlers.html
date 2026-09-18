@@ -8,7 +8,7 @@
 
   `btn` marks it exempt from the `article a:not(.btn)` underline rule.
 #}}
-{{ button_base = "btn inline-flex w-auto font-bold text-[16px] lg:text-[18px] leading-none px-16 py-10 md:px-20 md:py-12 lg:px-32 lg:py-14 rounded-full border no-underline transition-colors" }}
+{{ button_base = "btn inline-flex w-auto font-capped font-bold text-[16px] lg:text-[18px] leading-none px-16 py-10 md:px-20 md:py-12 lg:px-32 lg:py-14 rounded-full border no-underline transition-colors" }}
 {{ button_variant = variant == 'secondary' ? "border-brand text-brand hover:bg-brand/15 active:bg-brand/20" : "border-transparent bg-brand text-white hover:bg-crimson active:bg-garnet" }}
 {{ if href }}
   <a

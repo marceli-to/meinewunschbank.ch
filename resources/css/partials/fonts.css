@@ -29,3 +29,34 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* The same Frutiger with its vertical metrics cut down to the cap height, so a
+   line box holds cap-to-baseline and nothing else. Centring the box then
+   centres the letters — which the real metrics do not, since they reserve
+   0.279em below the baseline that a button label or an input's single line
+   never fills. The URLs match the faces above, so nothing is downloaded
+   twice. */
+
+@font-face {
+  font-family: 'Frutiger Next Capped';
+  src: url('../../fonts/frutiger-next-regular.woff2') format('woff2'),
+       url('../../fonts/frutiger-next-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 66.7%;
+  descent-override: 0%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Frutiger Next Capped';
+  src: url('../../fonts/frutiger-next-bold.woff2') format('woff2'),
+       url('../../fonts/frutiger-next-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 66.7%;
+  descent-override: 0%;
+  line-gap-override: 0%;
+}

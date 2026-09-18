@@ -18,6 +18,7 @@
 @theme {
   --font-sans: 'Frutiger Next', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   --font-script: 'Starstoles', ui-rounded, cursive;
+  --font-capped: 'Frutiger Next Capped', var(--font-sans);
 
   --color-brand: #E82025;
   --color-snow: #FFFFFF;
