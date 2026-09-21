@@ -1,0 +1,5 @@
+/* Swiper animates the wrapper with an inline transition-duration and leaves the
+   curve to this variable, so the slides share the reveal behavior's easing. */
+.swiper {
+	--swiper-wrapper-transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}

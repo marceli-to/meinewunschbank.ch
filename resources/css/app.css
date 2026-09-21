@@ -3,6 +3,7 @@
 @import "./partials/spacing.css";
 @import "./partials/font-sizes.css";
 @import "./partials/reveal.css";
+@import "./partials/slider.css";
 
 @source "../views";
 @source "../../content";
