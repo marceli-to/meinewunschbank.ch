@@ -4,8 +4,8 @@ fields:
     handle: media
     field:
       type: assets
-      display: 'Bild oder Video'
-      instructions: 'Wird über die volle Bildschirmbreite ausgegeben.'
+      display: 'Animation oder Video'
+      instructions: 'Eine animierte SVG-Datei, ein Video oder ein Bild. Wird über die volle Bildschirmbreite ausgegeben.'
       container: assets
       max_files: 1
       mode: list

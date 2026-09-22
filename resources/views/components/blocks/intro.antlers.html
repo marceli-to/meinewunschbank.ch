@@ -1,7 +1,16 @@
 {{ partial:components/layout/section }}
 
   {{ if media }}
-    {{ if media:is_video }}
+    {{ if media:extension == 'svg' }}
+    <div class="p-24">
+      <img
+        src="{{ media:url }}"
+        alt="{{ media:alt }}"
+        class="block w-full h-auto object-cover"
+        loading="eager"
+        decoding="async">
+      </div>
+    {{ elseif media:is_video }}
       <video
         src="{{ media:url }}"
         class="block w-full h-auto aspect-square md:aspect-[16/8] lg:aspect-[16/6] object-cover"

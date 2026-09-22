@@ -272,9 +272,12 @@ return [
 	| potential security issues. However, if you have a valid reason for
 	| disabling this, and you trust your users, you may do so here.
 	|
+	| Off, because the sanitizer strips <animate>, <set> and <use>, which the
+	| animated SVG in the intro block needs.
+	|
 	*/
 
-	'svg_sanitization_on_upload' => true,
+	'svg_sanitization_on_upload' => false,
 
 	/*
 	|--------------------------------------------------------------------------

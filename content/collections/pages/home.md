@@ -22,7 +22,7 @@ blocks:
           -
             type: text
             text: ' ist nicht nur unser Jubiläumsmotto, sondern auch ein Versprechen für die Zukunft: zuhören, Bedürfnisse verstehen und gemeinsam Lösungen finden. Über das ganze Jubiläumsjahr hinweg machen wir dieses Versprechen erlebbar – mit Begegnungen, Geschichten, Aktionen und besonderen Momenten für Sie, liebe Kundinnen und Kunden, für die Region und für alle, die mit uns verbunden sind. So schlagen wir die Brücke von der Vergangenheit über die Gegenwart in die Zukunft.'
-    media: dummy/dummy-intro-hero.jpg
+    media: rbw_125_animation.svg
   -
     id: 7c1e4d92-3a58-4e0b-9f27-1d6b8c3a5e41
     type: page_teasers
@@ -224,5 +224,5 @@ blocks:
 meta_description: 'Reichen Sie Ihren Herzenswunsch bei der Raiffeisenbank Weissenstein ein.'
 noindex: false
 updated_by: 448047dc-96bb-4513-80da-27938e2d8dac
-updated_at: 1789375839
+updated_at: 1790084255
 ---
