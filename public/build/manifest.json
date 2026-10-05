@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-DxO5Yi6r.css",
+    "file": "assets/app-DBPjaCgK.css",
     "name": "app",
     "names": [
       "app.css"
@@ -8,36 +8,36 @@
     "src": "resources/css/app.css",
     "isEntry": true,
     "assets": [
-      "assets/frutiger-next-regular-DrwvbFQ3.woff2",
-      "assets/frutiger-next-regular-DzuTzjfW.woff",
-      "assets/frutiger-next-bold-DBM-NV_G.woff2",
-      "assets/frutiger-next-bold-B3n6_IDh.woff",
-      "assets/starstoles-regular-5H0tqgtF.woff2",
-      "assets/starstoles-regular-BohyDZJD.woff"
+      "assets/frutiger-next-regular-YXQ4k1f4.woff2",
+      "assets/frutiger-next-regular-BcOnlLXW.woff",
+      "assets/frutiger-next-bold-g9K-1X_-.woff2",
+      "assets/frutiger-next-bold-RrhJ9Wqh.woff",
+      "assets/starstoles-regular-CnH48E03.woff2",
+      "assets/starstoles-regular-tAdZA9wW.woff"
     ]
   },
   "resources/fonts/frutiger-next-bold.woff": {
-    "file": "assets/frutiger-next-bold-B3n6_IDh.woff",
+    "file": "assets/frutiger-next-bold-RrhJ9Wqh.woff",
     "src": "resources/fonts/frutiger-next-bold.woff"
   },
   "resources/fonts/frutiger-next-bold.woff2": {
-    "file": "assets/frutiger-next-bold-DBM-NV_G.woff2",
+    "file": "assets/frutiger-next-bold-g9K-1X_-.woff2",
     "src": "resources/fonts/frutiger-next-bold.woff2"
   },
   "resources/fonts/frutiger-next-regular.woff": {
-    "file": "assets/frutiger-next-regular-DzuTzjfW.woff",
+    "file": "assets/frutiger-next-regular-BcOnlLXW.woff",
     "src": "resources/fonts/frutiger-next-regular.woff"
   },
   "resources/fonts/frutiger-next-regular.woff2": {
-    "file": "assets/frutiger-next-regular-DrwvbFQ3.woff2",
+    "file": "assets/frutiger-next-regular-YXQ4k1f4.woff2",
     "src": "resources/fonts/frutiger-next-regular.woff2"
   },
   "resources/fonts/starstoles-regular.woff": {
-    "file": "assets/starstoles-regular-BohyDZJD.woff",
+    "file": "assets/starstoles-regular-tAdZA9wW.woff",
     "src": "resources/fonts/starstoles-regular.woff"
   },
   "resources/fonts/starstoles-regular.woff2": {
-    "file": "assets/starstoles-regular-5H0tqgtF.woff2",
+    "file": "assets/starstoles-regular-CnH48E03.woff2",
     "src": "resources/fonts/starstoles-regular.woff2"
   },
   "resources/js/app.js": {
