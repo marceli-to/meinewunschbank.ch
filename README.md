@@ -68,6 +68,35 @@ assets. `composer lint` / `composer lint:fix` for PHP code style.
   published, routable, non-private `pages` entries; the `seo` fieldset's
   `noindex` toggle both excludes an entry there and emits the robots meta tag.
 
+## Going live
+
+`public/.htaccess` is gitignored and deployed by hand. Besides the Laravel
+rewrites it switches off the rules in cyon's WAF that rate-limit AI crawlers
+(GPTBot, ChatGPT-User, ClaudeBot …) with a "Please wait while your request is
+being verified" page those tools cannot get past (see cyon's
+[Ratelimit für AI-Bots deaktivieren](https://www.cyon.ch/support/a/ratelimit-fur-ai-bots-deaktivieren)):
+
+```apache
+<IfModule mod_security.c>
+	SecRuleRemoveById 77350583
+	SecRuleRemoveById 77457768
+	SecRuleRemoveById 77457769
+	SecRuleRemoveById 77999908
+	SecRuleRemoveById 77999909
+</IfModule>
+```
+
+Once the domain is online:
+
+- [ ] Fetch the site as an AI crawler and check for real HTML, not the
+      challenge page — e.g. `curl -A "GPTBot/1.2" https://meinewunschbank.ch/`,
+      and ask ChatGPT / Claude to read the site.
+- [ ] Compare the IDs against cyon's article, which they update as the rules
+      change. If cyon renumbers them the snippet silently stops working.
+
+cyon warns that lifting the limit can mean heavy bot traffic, and that they
+may block a hosting that overloads their servers.
+
 ## Conventions
 
 - Spacing utilities are 1:1 with pixels (`p-16` = 16px) — see
