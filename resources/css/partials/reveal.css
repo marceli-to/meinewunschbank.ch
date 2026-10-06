@@ -8,8 +8,8 @@
 		   Tailwind transform utility on the same element. */
 		translate: 0 24px;
 		transition:
-			opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
-			translate 700ms cubic-bezier(0.22, 1, 0.36, 1);
+			opacity 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+			translate 1100ms cubic-bezier(0.22, 1, 0.36, 1);
 		transition-delay: var(--reveal-delay, 0ms);
 	}
 
@@ -19,11 +19,17 @@
 		translate: none;
 	}
 
+	/* Swiper's stylesheet loads later and narrows slides to transform only,
+	   which would make them pop in rather than fade. */
+	.reveal-group > .swiper-slide {
+		transition-property: opacity, translate;
+	}
+
 	/* Script headings write themselves in from the left. The inset overshoots
 	   every edge so swashes and the final mark's pop are never cut off. */
 	.reveal-write {
 		clip-path: inset(-25% 105% -25% -5%);
-		transition: clip-path 1400ms cubic-bezier(0.65, 0, 0.35, 1);
+		transition: clip-path 2000ms cubic-bezier(0.65, 0, 0.35, 1);
 	}
 
 	.reveal-write.is-revealed {
@@ -37,7 +43,7 @@
 	}
 
 	.reveal-write.is-revealed .reveal-write-mark {
-		animation: reveal-pop 700ms cubic-bezier(0.34, 1.56, 0.64, 1) 1100ms both;
+		animation: reveal-pop 900ms cubic-bezier(0.34, 1.56, 0.64, 1) 1700ms both;
 	}
 
 	/* The milestones line draws across, then the dots land one by one. Dots
@@ -45,16 +51,16 @@
 	.reveal-timeline [data-timeline-line] {
 		transform-origin: left;
 		scale: 0 1;
-		transition: scale 1200ms cubic-bezier(0.65, 0, 0.35, 1);
+		transition: scale 1800ms cubic-bezier(0.65, 0, 0.35, 1);
 	}
 
 	.reveal-timeline [data-timeline-dot] {
 		opacity: 0;
 		scale: 0.4;
 		transition:
-			opacity 500ms cubic-bezier(0.22, 1, 0.36, 1),
-			scale 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
-		transition-delay: calc(500ms + min(var(--dot, 0), 4) * 220ms);
+			opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
+			scale 800ms cubic-bezier(0.34, 1.56, 0.64, 1);
+		transition-delay: calc(900ms + min(var(--dot, 0), 4) * 320ms);
 	}
 
 	.reveal-timeline.is-revealed [data-timeline-line] {

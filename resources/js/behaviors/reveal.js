@@ -1,4 +1,4 @@
-const STEP = 80;
+const STEP = 160;
 const MAX_STEPS = 6;
 
 function reveal(entries, observer) {
