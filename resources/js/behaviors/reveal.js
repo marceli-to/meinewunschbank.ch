@@ -16,13 +16,13 @@ function reveal(entries, observer) {
 		});
 }
 
-// Elements opt in with .reveal, or with .reveal-group on a parent whose direct
-// children should come in one after the other. The stagger counts position
-// within the batch rather than within the group, so a grid arriving at once
-// steps out while a tall list arriving item by item does not collect a growing
-// delay. Revealing unobserves, so nothing plays twice on the way back up.
+// Elements opt in with .reveal, .reveal-write or .reveal-timeline, or with
+// .reveal-group on a parent whose direct children should come in one after the
+// other. The stagger counts position within the batch rather than within the
+// group, so a grid arriving at once steps out while a tall list arriving item
+// by item does not collect a growing delay. Revealing unobserves, so nothing plays twice on the way back up.
 export default function initReveals() {
-	const targets = document.querySelectorAll('.reveal, .reveal-group > *');
+	const targets = document.querySelectorAll('.reveal, .reveal-group > *, .reveal-write, .reveal-timeline');
 
 	if (!targets.length) {
 		return;

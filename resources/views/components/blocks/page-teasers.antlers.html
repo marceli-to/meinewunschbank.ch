@@ -4,7 +4,7 @@
 
     {{ if title }}
       {{ partial:components/layout/container compact="true" }}
-        {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2]" }}
+        {{ partial:components/headings/h2 class="reveal font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2]" }}
           {{ title }}
         {{ /partial:components/headings/h2 }}
       {{ /partial:components/layout/container }}
@@ -14,7 +14,7 @@
 
       {{ partial:components/swiper/buttons }}
 
-      {{ partial:components/swiper/container class="mt-16 md:mt-20 lg:mt-24" }}
+      {{ partial:components/swiper/container class="mt-16 md:mt-20 lg:mt-24" wrapperClass="reveal-group" }}
         {{ pages }}
           {{ partial:components/swiper/item }}
             {{ partial:components/card }}

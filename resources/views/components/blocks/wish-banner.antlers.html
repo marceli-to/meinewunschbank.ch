@@ -5,8 +5,8 @@
     <div class="mx-auto w-full max-w-[60rem] relative">
 
       {{ if title }}
-        {{ partial:components/headings/h2 class="font-script text-crimson text-[64px] md:text-[96px] lg:text-[128px] leading-none md:absolute md:-top-48 lg:-top-64" }}
-          {{ title }}
+        {{ partial:components/headings/h2 class="reveal-write font-script text-crimson text-[64px] md:text-[96px] lg:text-[128px] leading-none md:absolute md:-top-48 lg:-top-64" }}
+          {{ title | replace('?', '<span class="reveal-write-mark">?</span>') }}
         {{ /partial:components/headings/h2 }}
       {{ /if }}
 
@@ -14,7 +14,7 @@
         {{ partial:components/media/image
           :image="image"
           :alt="image:alt"
-          wrapperClass="md:mt-36 lg:mt-48 md:max-w-[32rem] lg:max-w-[40rem] mx-auto"
+          wrapperClass="reveal md:mt-36 lg:mt-48 md:max-w-[32rem] lg:max-w-[40rem] mx-auto"
           class="aspect-[3/2] object-cover"
           sizes="(min-width: 768px) 672px, 100vw" }}
       {{ /if }}

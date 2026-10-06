@@ -3,12 +3,12 @@
   {{ partial:components/layout/container compact="true" }}
 
     {{ if title }}
-      {{ partial:components/headings/h2 class="font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2]" }}
+      {{ partial:components/headings/h2 class="reveal font-bold text-[28px] md:text-[36px] lg:text-[44px] leading-[1.2]" }}
         {{ title }}
       {{ /partial:components/headings/h2 }}
     {{ /if }}
 
-    <ol class="mt-24 md:mt-32 lg:mt-40 flex flex-col gap-y-16 md:gap-y-40 lg:gap-y-64">
+    <ol class="reveal-group mt-24 md:mt-32 lg:mt-40 flex flex-col gap-y-16 md:gap-y-40 lg:gap-y-64">
       {{ steps }}
         <li class="flex items-start gap-16 md:gap-40 lg:gap-64">
 

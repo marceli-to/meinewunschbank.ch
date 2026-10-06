@@ -2,10 +2,11 @@
   Must sit inside an element carrying data-swiper-scope: app.js initialises one
   Swiper per scope, which is what pairs a container with its buttons.
   @param class - Extra classes.
+  @param wrapperClass - Extra classes for the wrapper that holds the slides.
   @param slot - The slides, each wrapped in components/swiper/item.
 #}}
 <div class="swiper {{ class }}" data-swiper>
-  <div class="swiper-wrapper">
+  <div class="swiper-wrapper {{ wrapperClass }}">
     {{ slot }}
   </div>
 </div>
