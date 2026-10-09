@@ -17,6 +17,18 @@ class SubmitWishRequest extends FormRequest
 		return true;
 	}
 
+	protected function prepareForValidation(): void
+	{
+		$link = trim((string) $this->input('link'));
+
+		// Visitors type "www.example.ch"; the url rule wants a scheme.
+		if ($link !== '' && !preg_match('~^[a-z][a-z0-9+.-]*://~i', $link)) {
+			$link = 'https://'.$link;
+		}
+
+		$this->merge(['link' => $link === '' ? null : $link]);
+	}
+
 	public function rules(): array
 	{
 		return [
@@ -44,7 +56,7 @@ class SubmitWishRequest extends FormRequest
 			'photo.max' => 'Das Foto darf höchstens 12 MB gross sein.',
 			'wish.required' => 'Bitte beschreiben Sie Ihren Herzenswunsch.',
 			'wish.min' => 'Bitte beschreiben Sie Ihren Wunsch etwas ausführlicher.',
-			'link.url' => 'Bitte geben Sie einen gültigen Link an (inkl. https://).',
+			'link.url' => 'Bitte geben Sie einen gültigen Link an.',
 			'firstname.required' => 'Bitte geben Sie Ihren Vornamen an.',
 			'lastname.required' => 'Bitte geben Sie Ihren Nachnamen an.',
 			'street.required' => 'Bitte geben Sie Strasse und Nummer an.',
