@@ -30,11 +30,12 @@
   font-display: swap;
 }
 
-/* The same Frutiger with its vertical metrics cut down to the cap height, so a
-   line box holds cap-to-baseline and nothing else. Centring the box then
-   centres the letters — which the real metrics do not, since they reserve
-   0.279em below the baseline that a button label or an input's single line
-   never fills. The URLs match the faces above, so nothing is downloaded
+/* The same Frutiger with its vertical metrics made symmetric about the middle
+   of the capitals (cap height 0.667em, descent 0.279em, so the ascent is
+   0.667 + 0.279), so centring a line centres the letters. The real metrics
+   sit them high. Trimming the metrics to the cap height would centre them too,
+   but the caret and selection are drawn at ascent + descent and would shrink
+   to cap height. The URLs match the faces above, so nothing is downloaded
    twice. */
 
 @font-face {
@@ -44,8 +45,8 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  ascent-override: 66.7%;
-  descent-override: 0%;
+  ascent-override: 94.6%;
+  descent-override: 27.9%;
   line-gap-override: 0%;
 }
 
@@ -56,7 +57,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  ascent-override: 66.7%;
-  descent-override: 0%;
+  ascent-override: 94.6%;
+  descent-override: 27.9%;
   line-gap-override: 0%;
 }
