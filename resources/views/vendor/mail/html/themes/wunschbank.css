@@ -25,7 +25,7 @@ body *:not(html):not(style):not(br):not(tr):not(code) {
 
 body {
     -webkit-text-size-adjust: none;
-    background-color: #EDEDED;
+    background-color: #F6F2EF;
     color: #1a1a1a;
     height: 100%;
     line-height: 1.5;
@@ -97,7 +97,7 @@ img {
     -premailer-cellpadding: 0;
     -premailer-cellspacing: 0;
     -premailer-width: 100%;
-    background-color: #EDEDED;
+    background-color: #F6F2EF;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -130,9 +130,9 @@ img {
     -premailer-cellpadding: 0;
     -premailer-cellspacing: 0;
     -premailer-width: 100%;
-    background-color: #EDEDED;
-    border-bottom: 1px solid #EDEDED;
-    border-top: 1px solid #EDEDED;
+    background-color: #F6F2EF;
+    border-bottom: 1px solid #F6F2EF;
+    border-top: 1px solid #F6F2EF;
     margin: 0;
     padding: 32px 0 0;
     width: 100%;
