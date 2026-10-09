@@ -1,4 +1,4 @@
 {{ partial:components/layout/container compact="true" spacing="py-20 md:py-28 lg:py-36" }}
-  <div id="wish-form" data-title="{{ form_title | entities }}">
+  <div id="wish-form" data-title="{{ form_title | entities }}" data-sitekey="{{ config:services:turnstile:site_key }}">
   </div>
 {{ /partial:components/layout/container }}

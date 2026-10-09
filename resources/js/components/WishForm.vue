@@ -1,5 +1,5 @@
 <script setup>
-import { nextTick, reactive, ref } from 'vue';
+import { nextTick, onBeforeUnmount, onMounted, reactive, ref } from 'vue';
 import Button from '@/components/Button.vue';
 import FormCheckbox from '@/components/form/FormCheckbox.vue';
 import FormInput from '@/components/form/FormInput.vue';
@@ -8,8 +8,9 @@ import FormLegend from '@/components/form/FormLegend.vue';
 import FormTextarea from '@/components/form/FormTextarea.vue';
 import PhotoUpload from '@/components/form/PhotoUpload.vue';
 
-defineProps({
+const props = defineProps({
 	title: { type: String, default: 'Jetzt Herzenswunsch einreichen' },
+	sitekey: { type: String, default: '' },
 });
 
 // One flat object — mirrors the payload SubmitWishRequest validates, so a
@@ -41,6 +42,74 @@ const errors = ref({});
 const sending = ref(false);
 const done = ref(false);
 const failed = ref(false);
+const challenge = ref(null);
+
+let widget = null;
+let pending = null;
+
+function loadTurnstile() {
+	if (window.turnstile) {
+		return Promise.resolve(window.turnstile);
+	}
+
+	return new Promise((resolve, reject) => {
+		const script = document.createElement('script');
+		script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+		script.async = true;
+		script.onload = () => resolve(window.turnstile);
+		script.onerror = reject;
+		document.head.append(script);
+	});
+}
+
+onMounted(async () => {
+	if (! props.sitekey) {
+		return;
+	}
+
+	try {
+		const turnstile = await loadTurnstile();
+
+		// Rendered up front but only run on submit, so the token is fresh. It
+		// stays invisible unless Cloudflare insists on an interaction.
+		widget = turnstile.render(challenge.value, {
+			sitekey: props.sitekey,
+			action: 'wish',
+			execution: 'execute',
+			appearance: 'interaction-only',
+			language: 'de',
+			callback: (token) => pending?.resolve(token),
+			'error-callback': () => {
+				pending?.resolve('');
+
+				return true;
+			},
+			'timeout-callback': () => pending?.resolve(''),
+		});
+	} catch {
+		// Blocked or offline: submit without a token and let the server's
+		// message explain.
+	}
+});
+
+onBeforeUnmount(() => {
+	if (widget !== null) {
+		window.turnstile?.remove(widget);
+	}
+});
+
+// Tokens are single-use, so every submission runs a fresh challenge.
+function verify() {
+	if (widget === null) {
+		return Promise.resolve('');
+	}
+
+	return new Promise((resolve) => {
+		pending = { resolve };
+		window.turnstile.reset(widget);
+		window.turnstile.execute(widget);
+	});
+}
 
 function csrf() {
 	return document.querySelector('meta[name="csrf-token"]')?.content ?? '';
@@ -63,6 +132,13 @@ async function submit() {
 	errors.value = {};
 
 	const payload = new FormData();
+	const token = await verify();
+
+	pending = null;
+
+	if (token) {
+		payload.append('turnstile', token);
+	}
 
 	Object.entries(form).forEach(([key, value]) => {
 		if (value === null || value === '') {
@@ -260,11 +336,19 @@ async function submit() {
 				</div>
 			</fieldset>
 
+			<template v-if="errors.turnstile">
+				<div role="alert" class="font-bold text-brand text-[16px] md:text-[18px] lg:text-[20px]">
+					{{ errors.turnstile }}
+				</div>
+			</template>
+
 			<template v-if="failed">
 				<div role="alert" class="font-bold text-brand text-[16px] md:text-[18px] lg:text-[20px]">
 					Das hat leider nicht geklappt. Bitte versuchen Sie es später noch einmal.
 				</div>
 			</template>
 		</form>
+
+		<div ref="challenge"></div>
 	</section>
 </template>

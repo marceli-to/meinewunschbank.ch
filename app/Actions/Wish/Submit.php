@@ -8,9 +8,9 @@ use Throwable;
 
 /**
  * The wish submission, start to finish: store the photo, write the entry, tell
- * the team. Each step is its own action; this one only orders them and owns the
- * one thing none of them can — undoing a stored photo when the entry it was
- * meant for never came into existence.
+ * the team, thank the visitor. Each step is its own action; this one only
+ * orders them and owns the one thing none of them can — undoing a stored photo
+ * when the entry it was meant for never came into existence.
  */
 class Submit
 {
@@ -19,6 +19,7 @@ class Submit
 		private StorePhoto $storePhoto,
 		private Create $createEntry,
 		private Notify $notify,
+		private Confirm $confirm,
 	) {}
 
 	/**
@@ -42,6 +43,7 @@ class Submit
 		}
 
 		$this->notify->handle($entry);
+		$this->confirm->handle($entry);
 
 		return $entry;
 	}

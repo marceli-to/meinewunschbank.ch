@@ -19,5 +19,6 @@ const el = document.getElementById('wish-form');
 if (el) {
     createApp(WishForm, {
         title: el.dataset.title ?? '',
+        sitekey: el.dataset.sitekey ?? '',
     }).mount(el);
 }

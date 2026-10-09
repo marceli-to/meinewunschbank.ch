@@ -17,7 +17,12 @@ password hashes and this repo is public), roles in `resources/users/roles.yaml`,
 and session/cache are file-backed. The one exception is the queue: it runs on
 sqlite, holding nothing but the `jobs` and `failed_jobs` tables — so **mail needs
 a worker** (`php artisan queue:work`, or `composer dev`, which runs one
-alongside `artisan serve`, `pail` and the Vite watcher).
+alongside `artisan serve`, `pail` and the Vite watcher). In production the
+scheduler drains the queue every minute, so the server needs one cron entry:
+
+```
+* * * * * cd /home/pumutuxu/www/meinewunschbank.ch && php artisan schedule:run >> /dev/null 2>&1
+```
 
 `npm run dev` for the front-end watcher, `npm run cp:dev` for Control Panel
 assets. `composer lint` / `composer lint:fix` for PHP code style.
@@ -39,10 +44,17 @@ assets. `composer lint` / `composer lint:fix` for PHP code style.
   10/min). The controller only wires things together: validation lives in
   `SubmitWishRequest` (18+ birthdate, image ≤ 12 MB, German messages), the work
   in `App\Actions\Wish\Submit`, which composes `MakeSlug`, `StorePhoto`,
-  `Create` and `Notify` from the same namespace. The entry is created at status
-  `pending` and the notification to `MAIL_NOTIFY` is queued. If the entry fails
-  to save the uploaded photo is deleted again; if the notification cannot be
-  queued it is logged rather than failing the visitor's submission.
+  `Create`, `Notify` and `Confirm` from the same namespace. The entry is created
+  at status `pending`, the notification to `MAIL_NOTIFY` and the confirmation to
+  the visitor are queued. If the entry fails to save the uploaded photo is
+  deleted again; if a mail cannot be queued it is logged rather than failing the
+  visitor's submission.
+- **Spam protection** — Cloudflare Turnstile, invisible. The form runs the
+  challenge on submit and sends the token as `turnstile`; the `Turnstile` rule
+  checks it with siteverify and fails closed — it also requires the action
+  `wish` and a hostname from `TURNSTILE_HOSTNAMES`. Keys are
+  `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY`; production sets
+  `TURNSTILE_HOSTNAMES=meinewunschbank.ch`.
 - **Mails** are Markdown mailables themed by
   `resources/views/vendor/mail/html/themes/wunschbank.css`
   (`config('mail.markdown.theme')`). The components next to it are published, so

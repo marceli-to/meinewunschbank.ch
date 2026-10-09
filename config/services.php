@@ -28,6 +28,12 @@ return [
 		'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
 	],
 
+	'turnstile' => [
+		'site_key' => env('TURNSTILE_SITE_KEY'),
+		'secret_key' => env('TURNSTILE_SECRET_KEY'),
+		'hostnames' => array_values(array_filter(array_map('trim', explode(',', (string) env('TURNSTILE_HOSTNAMES'))))),
+	],
+
 	'slack' => [
 		'notifications' => [
 			'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),

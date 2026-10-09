@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\Turnstile;
 use Illuminate\Foundation\Http\FormRequest;
 
 /**
@@ -31,6 +32,7 @@ class SubmitWishRequest extends FormRequest
 			'birthdate' => ['required', 'date', 'before:-18 years'],
 			'accepts_terms' => ['accepted'],
 			'accepts_publication' => ['accepted'],
+			'turnstile' => ['required', 'string', new Turnstile('wish')],
 		];
 	}
 
@@ -54,6 +56,7 @@ class SubmitWishRequest extends FormRequest
 			'birthdate.before' => 'Herzenswünsche können von Personen ab 18 Jahren eingereicht werden.',
 			'accepts_terms.accepted' => 'Bitte akzeptieren Sie die Teilnahmebedingungen.',
 			'accepts_publication.accepted' => 'Bitte stimmen Sie der Veröffentlichung zu.',
+			'turnstile.required' => 'Die Spam-Prüfung ist fehlgeschlagen. Bitte laden Sie die Seite neu und versuchen Sie es noch einmal.',
 		];
 	}
 }
