@@ -9,7 +9,8 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 // Shared hosting has no supervisor, so cron drains the mail queue once a
-// minute instead of a long-running worker.
+// minute instead of a long-running worker. The lock outlives a run by a little
+// but not by the default day, so a crashed run cannot stall the queue.
 Schedule::command('queue:work --stop-when-empty --max-time=50')
 	->everyMinute()
-	->withoutOverlapping();
+	->withoutOverlapping(2);
