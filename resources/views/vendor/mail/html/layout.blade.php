@@ -25,11 +25,13 @@ width: 100% !important;
 </style>
 {!! $head ?? '' !!}
 </head>
-<body>
+{{-- bgcolor as well as the inlined CSS: some clients only paint the attribute
+     past the end of the content. --}}
+<body bgcolor="#F6F2EF">
 
-<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation" bgcolor="#F6F2EF">
 <tr>
-<td align="center">
+<td align="center" style="padding-bottom: 32px;">
 <table class="content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
 
 <!-- Email Body -->
