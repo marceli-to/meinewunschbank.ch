@@ -1,11 +1,15 @@
 <?php
 
+use App\Http\Controllers\RobotsController;
 use App\Http\Controllers\ServeWishPhotoController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 // Pages are served by Statamic's `pages` collection. Statamic registers its own
 // front-end and Control Panel routes automatically.
+
+// Production allows crawling; every other environment disallows it.
+Route::get('/robots.txt', RobotsController::class)->name('robots');
 
 // XML sitemap for search engines, generated from the routable Statamic entries.
 Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
