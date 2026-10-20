@@ -32,7 +32,6 @@ blocks:
       - 6873a7d8-ea8b-4be3-aabf-f633e3cf6adb
       - ccc6ab59-7d77-4a79-bea1-a0b443dd5447
       - 9920400c-d1a4-418a-a2be-d0442efb7cff
-      - cdf07c27-e58b-4893-b63a-3461fd78441f
   -
     id: uKuMgt-lhIHBp7kK2t8k6
     title: 'Wir lassen Herzenswünsche wahr werden'
@@ -42,7 +41,7 @@ blocks:
         content:
           -
             type: text
-            text: 'Im Jubiläumsjahr erfüllen wir jeden Monat Herzenswünsche. Nehmen Sie auf einer Wunschbank bei einer unserer Filialen in Solothurn, Langendorf oder Grenchen Platz und erzählen Sie uns von Ihrem Herzenswunsch! Vielleicht geht er schon bald in Erfüllung.'
+            text: 'Im Jubiläumsjahr erfüllen wir jeden Monat Herzenswünsche. Nehmen Sie auf einer Wunschbank vor einer unserer Filialen in Solothurn, Langendorf oder Grenchen Platz, machen Sie ein Foto und reichen Sie dieses zusammen mit Ihrem Herzenswunsch auf unserer Jubiläumswebsite ein. Vielleicht geht Ihr Wunsch schon bald in Erfüllung.'
     image: dummy/dummy-testimonial-2.jpg
     button_label: 'Jetzt mitmachen'
     button_link: 'entry::6873a7d8-ea8b-4be3-aabf-f633e3cf6adb'

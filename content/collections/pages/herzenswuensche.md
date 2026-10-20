@@ -35,7 +35,7 @@ blocks:
         id: hSt3Mk-row-1
         icon: selfie-bench
         title: 'Fotografieren Sie sich auf der Wunschbank'
-        text: 'Unsere Wunschbänke finden Sie vor unseren Filialen in Solothurn, Langendorf und Grenchen. Nehmen Sie Platz und machen Sie ein Foto von sich auf der Wunschbank.'
+        text: "Unsere Wunschbänke finden Sie vor unseren Filialen in Solothurn, Langendorf oder Grenchen. Nehmen Sie Platz und machen Sie ein Foto von sich auf der Wunschbank.\nWir veröffentlichen Ihr Foto nicht. Wir möchten einfach sicher sein, dass Sie eine unserer Wunschbänke gefunden haben."
       -
         id: hSt3Mk-row-2
         icon: mobile-app
@@ -51,7 +51,7 @@ blocks:
     type: wish_criteria
     enabled: true
     title: 'Welche Herzenswünsche suchen wir?'
-    lead: 'Wir suchen Wünsche, die Freude bereiten, Menschen unterstützen oder Gemeinschaft fördern. Ob klein oder gross – entscheidend ist die Geschichte dahinter.'
+    lead: 'Wir suchen Wünsche, die Freude bereiten, Menschen unterstützen oder Gemeinschaft fördern. Entscheidend ist die Geschichte dahinter. Manchmal braucht es nicht viel, um Grosses zu bewirken. Im Jubiläumsjahr erfüllen wir Herzenswünsche im Gesamtwert von 15''000 Franken.'
     editor:
       -
         type: heading
@@ -99,7 +99,7 @@ blocks:
                 content:
                   -
                     type: text
-                    text: 'Neue Trainingsshirts oder eine Anschaffung für einen Verein.'
+                    text: 'Shirts für die Nachwuchsgruppe eines Vereins.'
           -
             type: listItem
             content:
