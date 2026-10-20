@@ -64,7 +64,7 @@ defineExpose({ reset: clear });
 			<Button
 				id="photo"
 				variant="secondary"
-				:aria-describedby="showHint ? 'photo-status photo-note' : 'photo-note'"
+				:aria-describedby="showHint ? 'photo-status' : undefined"
 				class="shrink-0 mb-4 md:mb-6 lg:mb-8 translate-y-1/2"
 				@click="pick">
 				Foto hochladen
@@ -76,10 +76,6 @@ defineExpose({ reset: clear });
 				JPG, PNG oder WEBP, max. 12 MB
 			</div>
 		</template>
-
-		<div id="photo-note" class="mt-8 md:mt-12">
-			Wir veröffentlichen Ihr Foto nicht. Wir möchten einfach sicher sein, dass Sie eine unserer Wunschbänke gefunden haben. ;-)
-		</div>
 
 		<div aria-live="polite" class="sr-only">
 			{{ filename ? `${filename} ausgewählt` : '' }}
