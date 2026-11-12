@@ -22,7 +22,7 @@ blocks:
           -
             type: text
             text: ' ist nicht nur unser Jubiläumsmotto, sondern auch ein Versprechen für die Zukunft: zuhören, Bedürfnisse verstehen und gemeinsam Lösungen finden. Über das ganze Jubiläumsjahr hinweg machen wir dieses Versprechen erlebbar – mit Begegnungen, Geschichten, Aktionen und besonderen Momenten für Sie, liebe Kundinnen und Kunden, für die Region und für alle, die mit uns verbunden sind. So schlagen wir die Brücke von der Vergangenheit über die Gegenwart in die Zukunft.'
-    media: rbw_125_animation.svg
+    media: rbw_125_animation_weiss_auf_rot.svg
   -
     id: 7c1e4d92-3a58-4e0b-9f27-1d6b8c3a5e41
     type: page_teasers
