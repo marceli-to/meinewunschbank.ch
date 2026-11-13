@@ -2,9 +2,8 @@
 
   {{ if media }}
     {{ if media:extension == 'svg' }}
-      {{# The SVG carries its own crimson, so the band only has to continue it to the window edges #}}
       <div class="bg-crimson">
-        {{ partial:components/layout/container compact="true" }}
+        {{ partial:components/layout/container compact="true" spacing="py-40 md:py-56 lg:py-72" }}
           <img
             src="{{ media:url }}"
             alt="{{ media:alt }}"
