@@ -3,6 +3,8 @@
   @param variant - 'primary' (default, brand fill) or 'secondary' (outlined).
   @param on      - Alpine @click expression for the <button> variant.
   @param label   - aria-label.
+  @param controls - Id of the element the <button> variant expands; adds
+                   aria-controls and aria-expanded.
   @param class   - Extra classes.
   @param slot    - Button label / content.
 
@@ -22,6 +24,7 @@
     type="button"
     {{ if on }}@click="{{ on }}"{{ /if }}
     {{ if label }}aria-label="{{ label }}"{{ /if }}
+    {{ if controls }}aria-controls="{{ controls }}" aria-expanded="false"{{ /if }}
     class="{{ button_base }} cursor-pointer {{ button_variant }} {{ class }}">
     {{ slot }}
   </button>

@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-DPg0ot7G.css",
+    "file": "assets/app-Cg91DBQ1.css",
     "name": "app",
     "names": [
       "app.css"
@@ -41,12 +41,24 @@
     "src": "resources/fonts/starstoles-regular.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-Ce1lw6_B.js",
+    "file": "assets/app-DT9tPDMD.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
+    "dynamicImports": [
+      "resources/js/components/MergerTree.vue"
+    ],
     "css": [
       "assets/app-Bdbi0viN.css"
+    ]
+  },
+  "resources/js/components/MergerTree.vue": {
+    "file": "assets/MergerTree-B5lQwU-D.js",
+    "name": "MergerTree",
+    "src": "resources/js/components/MergerTree.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
     ]
   }
 }

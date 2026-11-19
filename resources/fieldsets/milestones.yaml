@@ -49,3 +49,9 @@ fields:
       display: 'Titel neben dem Button'
       instructions: 'Steht links neben dem Button unter dem Zeitstrahl.'
   - import: button
+  -
+    handle: merger_tree
+    field:
+      type: toggle
+      display: Fusionsgeschichte
+      instructions: 'Der Button klappt unter dem Zeitstrahl die interaktive Fusionsgeschichte auf, statt auf das Button-Ziel zu verlinken.'

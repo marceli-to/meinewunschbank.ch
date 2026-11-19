@@ -79,7 +79,8 @@ Tailwind 4, configured entirely in `resources/css/app.css` — there is no
   token to avoid an arbitrary value, and don't retrofit existing templates.
 - **Colours** are the tokens in `app.css`: `brand` (Raiffeisen red), `snow`,
   `ink`, `blush`, `crimson`, `garnet`, `maroon`, `mist`, `silver`, `slate`,
-  `charcoal`, `linen`, `sand`, `walnut`. There is no `accent` token.
+  `charcoal`, `linen`, `sand`, `walnut`, plus `aubergine`, `rosewood` and
+  `seafoam` for the merger tree's bank lines. There is no `accent` token.
 - **Images are stored uncropped and cropped by CSS.** Glide has one preset per
   width (`md`/`lg`/`xl` = 768/1280/1920, plus `-webp` twins) at `fit: max`, so
   a file is never upscaled. The ratio comes from an aspect class passed to

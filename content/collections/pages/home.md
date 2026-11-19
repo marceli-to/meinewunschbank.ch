@@ -267,6 +267,7 @@ blocks:
     button_title: 'Der Weg zur Raiffeisenbank Weissenstein'
     button_label: 'Mehr erfahren'
     button_link: 'https://www.raiffeisen.ch'
+    merger_tree: true
   -
     id: tSt1Ml-Rv8kQw3Nd7Za2X
     type: testimonials

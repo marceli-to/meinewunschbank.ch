@@ -38,6 +38,9 @@
   --color-linen-faint: color-mix(in srgb, var(--color-linen) 35%, var(--color-snow));
   --color-sand: #CCBCA9;
   --color-walnut: #A99480;
+  --color-aubergine: #614073;
+  --color-rosewood: #C15C5C;
+  --color-seafoam: #7EB8B5;
 
 }
 

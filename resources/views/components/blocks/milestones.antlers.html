@@ -93,11 +93,11 @@
 
 	{{ /if }}
 
-	{{ if button_title || (button_label && button_link) }}
+	{{ if button_title || (button_label && (button_link || merger_tree)) }}
 
 		{{ partial:components/layout/container class="mt-40 md:mt-56 lg:mt-72" }}
 
-			<div class="reveal flex flex-col md:flex-row items-center justify-center gap-16 md:gap-40 lg:gap-56">
+			<div data-merger-tree-band class="reveal flex flex-col md:flex-row items-center justify-center gap-16 md:gap-40 lg:gap-56 scroll-mt-120 lg:scroll-mt-160">
 
 				{{ if button_title }}
 					<div class="text-balance text-center font-bold text-[22px] md:text-[28px] lg:text-[34px]">
@@ -105,13 +105,21 @@
 					</div>
 				{{ /if }}
 
-				{{ if button_label && button_link }}
+				{{ if merger_tree && button_label }}
+					{{ partial:components/button controls="merger-tree" class="shrink-0" }}
+						{{ button_label }}
+					{{ /partial:components/button }}
+				{{ elseif button_label && button_link }}
 					{{ partial:components/button :href="button_link" class="shrink-0" }}
 						{{ button_label }}
 					{{ /partial:components/button }}
 				{{ /if }}
 
 			</div>
+
+			{{ if merger_tree && button_label }}
+				<div id="merger-tree" data-merger-tree></div>
+			{{ /if }}
 
 		{{ /partial:components/layout/container }}
 

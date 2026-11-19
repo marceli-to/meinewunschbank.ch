@@ -22,3 +22,12 @@ if (el) {
         sitekey: el.dataset.sitekey ?? '',
     }).mount(el);
 }
+
+// Loaded only where a milestones block switches the merger tree on.
+const tree = document.querySelector('[data-merger-tree]');
+
+if (tree) {
+    import('@/components/MergerTree.vue').then(({ default: MergerTree }) => {
+        createApp(MergerTree, { panelId: tree.id }).mount(tree);
+    });
+}
