@@ -37,7 +37,7 @@ fields:
           field:
             type: assets
             display: Bild
-            instructions: 'Wird quadratisch beschnitten.'
+            instructions: 'Wird quadratisch beschnitten. Ohne Bild steht der Text auf einer quadratischen Fläche.'
             container: assets
             max_files: 1
             mode: list

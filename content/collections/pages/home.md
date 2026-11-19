@@ -61,13 +61,13 @@ blocks:
     type: milestones
     enabled: true
     subtitle: 'Unsere Geschichte:'
-    title: 'Meilensteine aus 125 Jahren'
-    text: 'Die Geschichte der Raiffeisenbank Weissenstein ist geprägt von regionaler Verwurzelung, genossenschaftlichem Engagement und kontinuierlicher Weiterentwicklung. Über mehr als ein Jahrhundert hinweg ist aus mehreren lokalen Raiffeisenbanken eine starke Bank für die Region entstanden – geprägt von engagierten Mitarbeitenden, getragen von ihren Genossenschafterinnen und Genossenschaftern und dem Vertrauen ihrer Kundinnen und Kunden.'
+    title: 'Seit 1902 in der Region verwurzelt'
+    text: 'Die heutige Raiffeisenbank Weissenstein ist aus zahlreichen lokalen Raiffeisenbanken entstanden. Ihre Geschichte beginnt im Jahr 1902. Über Generationen wuchsen die einzelnen Banken mit ihren Gemeinden, bevor sie sich Schritt für Schritt zur heutigen Raiffeisenbank Weissenstein zusammenschlossen.'
     slides:
       -
         id: mLs1Tn-row-1
         year: '1902'
-        image: dummy/dummy-testimonial-1.jpg
+        image: geschichte/1902-restaurant-loewen-selzach.jpg
         editor:
           -
             type: paragraph
@@ -77,31 +77,26 @@ blocks:
                 marks:
                   -
                     type: bold
-                text: 'Lorem ipsum dolor sit amet,'
+                text: 'Der Anfang in Selzach'
+              -
+                type: hardBreak
               -
                 type: text
-                text: ' consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                text: 'Am 13. Dezember 1902 gründen 31 Männer im Restaurant Löwen in Selzach eine Darlehenskasse. Im Februar 1903 nimmt sie ihren Betrieb auf. Damit wird der Grundstein für die heutige Raiffeisenbank Weissenstein gelegt.'
       -
         id: mLs1Tn-row-2
-        year: '1928'
-        image: dummy/dummy-pageteaser-1.jpg
+        year: '1931'
         editor:
           -
             type: paragraph
             content:
               -
                 type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Duis aute irure dolor,'
-              -
-                type: text
-                text: ' in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.'
+                text: 'Der Flugplatz Grenchen wird in Betrieb genommen.'
       -
         id: mLs1Tn-row-3
-        year: '1933'
-        image: dummy/dummy-testimonial-2.jpg
+        year: '1932'
+        image: geschichte/1932-raiffeisen-logo-1942.jpg
         editor:
           -
             type: paragraph
@@ -111,14 +106,16 @@ blocks:
                 marks:
                   -
                     type: bold
-                text: 'Sed ut perspiciatis unde omnis,'
+                text: 'Die Raiffeisenidee verbreitet sich'
+              -
+                type: hardBreak
               -
                 type: text
-                text: ' iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore.'
+                text: 'In Oberdorf, Lommiswil, Solothurn, Günsberg sowie Flumenthal-Hubersdorf entstehen weitere lokale Raiffeisenkassen. Die genossenschaftliche Bankidee fasst in der gesamten Region Fuss.'
       -
         id: mLs1Tn-row-4
-        year: '1961'
-        image: dummy/dummy-pageteaser-2.jpg
+        year: '1951–1957'
+        image: geschichte/1951-raiffeisenbank-riedholz.jpg
         editor:
           -
             type: paragraph
@@ -128,48 +125,36 @@ blocks:
                 marks:
                   -
                     type: bold
-                text: 'Nemo enim ipsam voluptatem,'
+                text: 'Immer näher bei den Menschen'
+              -
+                type: hardBreak
               -
                 type: text
-                text: ' quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
+                text: 'Auch Bellach, Bettlach, Rüttenen, Feldbrunnen und Riedholz erhalten eigene Raiffeisenkassen. Aus zahlreichen lokal verankerten Banken entsteht ein dichtes Netzwerk in der Region.'
       -
         id: mLs1Tn-row-5
-        year: '1987'
-        image: dummy/dummy-testimonial-3.jpg
+        year: '1970'
         editor:
           -
             type: paragraph
             content:
               -
                 type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Neque porro quisquam est,'
-              -
-                type: text
-                text: ' qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.'
+                text: 'Die Krise in der Uhrenindustrie trifft die Region hart. In einem einzigen Jahr haben rund 5000 Menschen die Stadt Grenchen verlassen.'
       -
         id: mLs1Tn-row-6
-        year: '2004'
-        image: dummy/dummy-pageteaser-3.jpg
+        year: '1982'
         editor:
           -
             type: paragraph
             content:
               -
                 type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Ut enim ad minima veniam,'
-              -
-                type: text
-                text: ' quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.'
+                text: 'Die ersten 300''000 Swatch-Uhren werden produziert.'
       -
         id: mLs1Tn-row-7
-        year: '2027'
-        image: dummy/dummy-4.jpg
+        year: '1997–1999'
+        image: geschichte/1997-raiffeisenbank-solothurn.jpg
         editor:
           -
             type: paragraph
@@ -179,10 +164,106 @@ blocks:
                 marks:
                   -
                     type: bold
-                text: 'Quis autem vel eum iure,'
+                text: 'Die ersten Banken schliessen sich zusammen'
+              -
+                type: hardBreak
               -
                 type: text
-                text: ' reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat.'
+                text: 'Selzach und Lommiswil fusionieren. Oberdorf und Rüttenen bilden die damalige Raiffeisenbank Weissenstein. Aus Selzach-Lommiswil und Bettlach entsteht die Raiffeisenbank Wandflue, die gleichzeitig eine Geschäftsstelle in Grenchen eröffnet. Auch die Raiffeisenbank Solothurn schliesst sich mit Feldbrunnen und Riedholz zusammen.'
+      -
+        id: mLs1Tn-row-8
+        year: '2000–2007'
+        image: geschichte/2000-raiffeisenbank-bellach.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Drei starke Regionalbanken entstehen'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Günsberg und Flumenthal-Hubersdorf vereinigen sich und werden später Teil der Raiffeisenbank Solothurn. Bellach schliesst sich der damaligen Raiffeisenbank Weissenstein an. Damit nehmen jene drei Regionalbanken Gestalt an, die später zur heutigen Raiffeisenbank Weissenstein werden.'
+      -
+        id: mLs1Tn-row-9
+        year: '2010–2012'
+        image: geschichte/2012-eroeffnung-grenchen.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Investitionen in die regionale Präsenz'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'In Langendorf wird 2010 ein neues Bankgebäude bezogen. Zwei Jahre später eröffnet die Raiffeisenbank Wandflue ihren Neubau in Grenchen. Die Investitionen unterstreichen das langfristige Bekenntnis zu den Standorten in der Region.'
+      -
+        id: mLs1Tn-row-10
+        year: '2016'
+        image: geschichte/2016-generalversammlung-wandflue.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Aus drei Banken wird die heutige Raiffeisenbank Weissenstein'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Die Raiffeisenbank Wandflue, die Raiffeisenbank Solothurn und die damalige Raiffeisenbank Weissenstein fusionieren zur heutigen Raiffeisenbank Weissenstein. Die neue Bank zählt zu diesem Zeitpunkt 17’677 Mitglieder.'
+      -
+        id: mLs1Tn-row-11
+        year: '2023'
+        image: geschichte/2023-photovoltaik.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Regional verwurzelt, nachhaltig ausgerichtet'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Auf den Geschäftsstellen in Grenchen, Selzach, Langendorf, Bellach und Flumenthal werden Photovoltaikanlagen installiert. Im selben Jahr erhält die Raiffeisenbank Weissenstein die Umweltzertifizierung ISO 14001.'
+      -
+        id: mLs1Tn-row-12
+        year: '2027'
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: '125 Jahre Raiffeisen in der Region'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Die Raiffeisenbank Weissenstein feiert ihre 125-jährige Geschichte. Aus einer kleinen Darlehenskasse in Selzach ist eine Regionalbank mit sieben Standorten und rund 80 Mitarbeitenden geworden – fest verwurzelt in der Region und bereit für die Zukunft.'
     button_title: 'Der Weg zur Raiffeisenbank Weissenstein'
     button_label: 'Mehr erfahren'
     button_link: 'https://www.raiffeisen.ch'

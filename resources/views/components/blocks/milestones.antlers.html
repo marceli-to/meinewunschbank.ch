@@ -69,9 +69,13 @@
 											:alt="image:alt"
 											class="aspect-square object-cover"
 											sizes="(min-width: 1024px) 25vw, (min-width: 768px) 40vw, 80vw" }}
+									{{ elseif editor }}
+										<article class="flex aspect-square items-center bg-linen p-24 lg:p-32 text-[15px] leading-[1.4]">
+											<div>{{ editor }}</div>
+										</article>
 									{{ /if }}
 
-									{{ if editor }}
+									{{ if image && editor }}
 										<article class="mt-12 text-[15px] leading-[1.4] transition-opacity duration-300 pointer-fine:opacity-0 pointer-fine:group-hover:opacity-100 [.swiper-slide-active_&]:opacity-100 pointer-fine:[.swiper-wrapper:has(.swiper-slide:hover)_.swiper-slide-active:not(:hover)_&]:opacity-0">
 											{{ editor }}
 										</article>
