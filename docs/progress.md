@@ -8,8 +8,9 @@ Running notes on where the site stands. Newest first; how things work lives in
 - **2026-11-20 — Timeline from the final doc.** The client had sent the wrong
   doc. The 17 milestones now follow `RBW_Geschichte_Website_19112026_final.docx`;
   the photos it adds were taken from the doc itself (some are small, e.g. the
-  1907 note at 191px). Slides gained a caption (credits) and an «uncropped»
-  toggle for graphics; photos zoom on hover. The milestones heading is back to
+  1907 note at 191px, turned upright). The doc's captions, credits included,
+  are the alt texts, not shown on the page. An «uncropped» toggle fits graphics
+  and the 1994 photo whole into the square; photos zoom on hover. The milestones heading is back to
   «Meilensteine aus 125 Jahren»; the merger tree carries the «Seit 1902…» title
   and lead, both editable on the block.
 - **2026-11-19 — History timeline.** The homepage `milestones` block carries
@@ -44,7 +45,8 @@ Running notes on where the site stands. Newest first; how things work lives in
 
 ### Staging
 
-- Upload `public/assets/geschichte/` (with `.meta/`; nine new files on 2026-11-20), e.g.
+- Upload `public/assets/geschichte/` (with `.meta/`, which holds the alt texts; new and renamed files and new
+  alt texts on 2026-11-20), e.g.
   `rsync -avz public/assets/geschichte/ <host>:www/meinewunschbank.ch/public/assets/geschichte/`,
   then
   `php please stache:refresh`. If an earlier copy of the Solothurn photo went
