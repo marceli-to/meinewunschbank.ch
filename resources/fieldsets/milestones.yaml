@@ -48,12 +48,6 @@ fields:
             display: 'Bild nicht beschneiden'
             instructions: 'Für Grafiken, Inserate und Screenshots: Das ganze Bild wird ins Quadrat eingepasst.'
         - import: editor
-        -
-          handle: image_credit
-          field:
-            type: text
-            display: Bildlegende
-            instructions: 'Steht klein unter dem Text, z. B. mit der Bildquelle.'
   -
     handle: button_title
     field:

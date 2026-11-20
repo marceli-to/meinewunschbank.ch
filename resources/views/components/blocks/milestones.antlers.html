@@ -74,12 +74,9 @@
 										<div class="aspect-square bg-linen"></div>
 									{{ /if }}
 
-									{{ if editor || image_credit }}
+									{{ if editor }}
 										<article class="mt-12 text-[15px] leading-[1.4] transition-opacity duration-300 pointer-fine:opacity-0 pointer-fine:group-hover:opacity-100 [.swiper-slide-active_&]:opacity-100 pointer-fine:[.swiper-wrapper:has(.swiper-slide:hover)_.swiper-slide-active:not(:hover)_&]:opacity-0">
 											{{ editor }}
-											{{ if image_credit }}
-												<div class="mt-8 text-[12px] leading-[1.4]">{{ image_credit }}</div>
-											{{ /if }}
 										</article>
 									{{ /if }}
 
