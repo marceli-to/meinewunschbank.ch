@@ -49,7 +49,7 @@ fields:
             instructions: 'Für Grafiken, Inserate und Screenshots: Das ganze Bild wird auf weissem Grund eingepasst.'
         - import: editor
         -
-          handle: caption
+          handle: image_credit
           field:
             type: text
             display: Bildlegende
