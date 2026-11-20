@@ -41,7 +41,19 @@ fields:
             container: assets
             max_files: 1
             mode: list
+        -
+          handle: image_contain
+          field:
+            type: toggle
+            display: 'Bild nicht beschneiden'
+            instructions: 'Für Grafiken, Inserate und Screenshots: Das ganze Bild wird auf weissem Grund eingepasst.'
         - import: editor
+        -
+          handle: caption
+          field:
+            type: text
+            display: Bildlegende
+            instructions: 'Steht klein unter dem Text, z. B. mit der Bildquelle.'
   -
     handle: button_title
     field:
@@ -55,3 +67,18 @@ fields:
       type: toggle
       display: Fusionsgeschichte
       instructions: 'Der Button klappt unter dem Zeitstrahl die interaktive Fusionsgeschichte auf, statt auf das Button-Ziel zu verlinken.'
+  -
+    handle: merger_tree_title
+    field:
+      type: text
+      display: 'Titel der Fusionsgeschichte'
+      if:
+        merger_tree: 'equals true'
+  -
+    handle: merger_tree_text
+    field:
+      type: textarea
+      display: 'Text der Fusionsgeschichte'
+      instructions: 'Einleitung unter dem Titel der Fusionsgeschichte.'
+      if:
+        merger_tree: 'equals true'

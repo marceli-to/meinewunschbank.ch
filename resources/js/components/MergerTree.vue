@@ -4,6 +4,8 @@ import { FINAL, banks as source, mergers } from '@/data/merger-tree';
 
 const props = defineProps({
 	panelId: { type: String, required: true },
+	title: { type: String, default: '' },
+	text: { type: String, default: '' },
 });
 
 // The chart switches layout on its own width, not the viewport's: below this
@@ -409,9 +411,13 @@ onBeforeUnmount(() => {
 					class="bg-snow px-16 pt-32 md:px-32 lg:px-44 lg:pt-44"
 					:class="wide && 'pb-32 lg:pb-44'">
 
-					<h3 class="text-balance font-bold text-[32px] md:text-[44px] lg:text-[64px] leading-[1.05] tracking-[-.02em] mb-8">
-						Viele Wurzeln. Eine Bank.
+					<h3 v-if="title" class="text-balance font-bold text-[32px] md:text-[44px] lg:text-[64px] leading-[1.05] tracking-[-.02em] mb-12 md:mb-16">
+						{{ title }}
 					</h3>
+
+					<div v-if="text" class="max-w-[56.25rem] text-[16px] md:text-[18px] lg:text-[20px] leading-[1.4] mb-16 md:mb-20">
+						{{ text }}
+					</div>
 
 					<div class="text-[15px] md:text-[16px] text-charcoal mb-32 lg:mb-40">
 						Wählen Sie eine Bank oder ein Jahr, um den Weg nachzuverfolgen.

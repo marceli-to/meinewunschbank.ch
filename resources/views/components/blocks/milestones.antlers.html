@@ -67,15 +67,19 @@
 										{{ partial:components/media/image
 											:image="image"
 											:alt="image:alt"
-											class="aspect-square object-cover"
+											wrapperClass="overflow-hidden"
+											class="aspect-square {{ image_contain ? 'object-contain bg-snow p-16 md:p-20' : 'object-cover' }} transition-transform duration-700 ease-out pointer-fine:group-hover:scale-105 motion-reduce:transition-none"
 											sizes="(min-width: 1024px) 25vw, (min-width: 768px) 40vw, 80vw" }}
 									{{ else }}
 										<div class="aspect-square bg-linen"></div>
 									{{ /if }}
 
-									{{ if editor }}
+									{{ if editor || caption }}
 										<article class="mt-12 text-[15px] leading-[1.4] transition-opacity duration-300 pointer-fine:opacity-0 pointer-fine:group-hover:opacity-100 [.swiper-slide-active_&]:opacity-100 pointer-fine:[.swiper-wrapper:has(.swiper-slide:hover)_.swiper-slide-active:not(:hover)_&]:opacity-0">
 											{{ editor }}
+											{{ if caption }}
+												<div class="mt-8 text-[12px] leading-[1.4] text-slate">{{ caption }}</div>
+											{{ /if }}
 										</article>
 									{{ /if }}
 
@@ -118,7 +122,7 @@
 			</div>
 
 			{{ if merger_tree && button_label }}
-				<div id="merger-tree" data-merger-tree></div>
+				<div id="merger-tree" data-merger-tree data-title="{{ merger_tree_title | entities }}" data-text="{{ merger_tree_text | entities }}"></div>
 			{{ /if }}
 
 		{{ /partial:components/layout/container }}

@@ -61,13 +61,33 @@ blocks:
     type: milestones
     enabled: true
     subtitle: 'Unsere Geschichte:'
-    title: 'Seit 1902 in der Region verwurzelt'
-    text: 'Die heutige Raiffeisenbank Weissenstein ist aus zahlreichen lokalen Raiffeisenbanken entstanden. Ihre Geschichte beginnt im Jahr 1902. Über Generationen wuchsen die einzelnen Banken mit ihren Gemeinden, bevor sie sich Schritt für Schritt zur heutigen Raiffeisenbank Weissenstein zusammenschlossen.'
+    title: 'Meilensteine aus 125 Jahren'
+    text: 'Die Geschichte der Raiffeisenbank Weissenstein ist geprägt von regionaler Verwurzelung, genossenschaftlichem Engagement und kontinuierlicher Weiterentwicklung. Über mehr als ein Jahrhundert hinweg ist aus mehreren lokalen Raiffeisenbanken eine starke Bank für die Region entstanden – geprägt von engagierten Mitarbeitenden, getragen von ihren Genossenschafterinnen und Genossenschaftern und dem Vertrauen ihrer Kundinnen und Kunden.'
     slides:
       -
         id: mLs1Tn-row-1
+        year: '1900'
+        image: geschichte/1900-kirche-bichelsee.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Gründung der ersten Raiffeisenkasse der Schweiz'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Die erste Schweizer Raiffeisenkasse wird am Bichelsee, im Kanton Thurgau, eröffnet. Sie orientiert sich am genossenschaftlichen Raiffeisensystem, nach dem Vorbild des deutschen Reformers Friedrich Wilhelm Raiffeisen, der die Idee 1846 im Westerwald, Deutschland, entwickelt hatte.'
+        caption: 'Paritätische Kirche Bichelsee (TG), um 1920 (Histor. Raiffeisenarchiv)'
+      -
+        id: mLs1Tn-row-2
         year: '1902'
-        image: geschichte/1902-restaurant-loewen-selzach.jpg
+        image: geschichte/1902-hotel-loewen-selzach.jpg
         editor:
           -
             type: paragraph
@@ -83,18 +103,25 @@ blocks:
               -
                 type: text
                 text: 'Am 13. Dezember 1902 gründen 31 Männer im Restaurant Löwen in Selzach eine Darlehenskasse. Im Februar 1903 nimmt sie ihren Betrieb auf. Damit wird der Grundstein für die heutige Raiffeisenbank Weissenstein gelegt.'
+        caption: 'Hotel Restaurant Löwen in Selzach, ca. 1910 (Quelle: Verein für Ortsgeschichte Selzach)'
       -
-        id: mLs1Tn-row-2
-        year: '1931'
+        id: mLs1Tn-row-3
+        year: '1907'
+        image: geschichte/1907-50-franken-note.jpg
+        image_contain: true
         editor:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Der Flugplatz Grenchen wird in Betrieb genommen.'
+                marks:
+                  -
+                    type: bold
+                text: 'Einführung der ersten Schweizer Banknotenserie'
+        caption: 'Erste 50-Franken-Note, Ausgabedatum: 20.06.1907 (Quelle: Archiv der SNB)'
       -
-        id: mLs1Tn-row-3
+        id: mLs1Tn-row-4
         year: '1932'
         image: geschichte/1932-raiffeisen-logo-1942.jpg
         editor:
@@ -112,8 +139,9 @@ blocks:
               -
                 type: text
                 text: 'In Oberdorf, Lommiswil, Solothurn, Günsberg sowie Flumenthal-Hubersdorf entstehen weitere lokale Raiffeisenkassen. Die genossenschaftliche Bankidee fasst in der gesamten Region Fuss.'
+        caption: 'Erstes Raiffeisen-Logo, 1942'
       -
-        id: mLs1Tn-row-4
+        id: mLs1Tn-row-5
         year: '1951–1957'
         image: geschichte/1951-raiffeisenbank-riedholz.jpg
         editor:
@@ -131,28 +159,50 @@ blocks:
               -
                 type: text
                 text: 'Auch Bellach, Bettlach, Rüttenen, Feldbrunnen und Riedholz erhalten eigene Raiffeisenkassen. Aus zahlreichen lokal verankerten Banken entsteht ein dichtes Netzwerk in der Region.'
-      -
-        id: mLs1Tn-row-5
-        year: '1970'
-        editor:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                text: 'Die Krise in der Uhrenindustrie trifft die Region hart. In einem einzigen Jahr haben rund 5000 Menschen die Stadt Grenchen verlassen.'
+        caption: 'Raiffeisenkasse Riedholz, ca. 1975–1980'
       -
         id: mLs1Tn-row-6
-        year: '1982'
+        year: '1986'
+        image: geschichte/1986-inserat-1982.jpg
+        image_contain: true
         editor:
           -
             type: paragraph
             content:
               -
                 type: text
-                text: 'Die ersten 300''000 Swatch-Uhren werden produziert.'
+                marks:
+                  -
+                    type: bold
+                text: 'Raiffeisenkassen werden zu Raiffeisenbanken'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'In den 1980er-Jahren existierten zwischenzeitlich 1’229 Raiffeisen-Institute in der Schweiz. Dies führte zu Ineffizienzen. Ab den 1990er-Jahren fusionieren Raiffeisenbanken zu grösseren und effizienteren Einheiten. Auch werden die Raiffeisenkassen in Raiffeisenbanken umbenannt.'
+        caption: 'Inserat von 1982'
       -
         id: mLs1Tn-row-7
+        year: '1994'
+        image: geschichte/1994-solothurner-kantonalbank.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Verkauf der Solothurner Kantonalbank'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Im Dezember 1994 entschied ein deutliches Mehr der Solothurner Stimmenden, die Solothurner Kantonalbank zu verkaufen. Somit ist Solothurn der erste Kanton ohne Kantonalbank.'
+        caption: 'Die ehemalige Solothurner Kantonalbank (Quelle: Keystone)'
+      -
+        id: mLs1Tn-row-8
         year: '1997–1999'
         image: geschichte/1997-raiffeisenbank-solothurn.jpg
         editor:
@@ -164,14 +214,15 @@ blocks:
                 marks:
                   -
                     type: bold
-                text: 'Die ersten Banken schliessen sich zusammen'
+                text: 'Die ersten Raiffeisenbanken schliessen sich zusammen'
               -
                 type: hardBreak
               -
                 type: text
-                text: 'Selzach und Lommiswil fusionieren. Oberdorf und Rüttenen bilden die damalige Raiffeisenbank Weissenstein. Aus Selzach-Lommiswil und Bettlach entsteht die Raiffeisenbank Wandflue, die gleichzeitig eine Geschäftsstelle in Grenchen eröffnet. Auch die Raiffeisenbank Solothurn schliesst sich mit Feldbrunnen und Riedholz zusammen.'
+                text: 'Die Raiffeisenbanken Selzach und Lommiswil fusionieren. Oberdorf und Rüttenen bilden die damalige Raiffeisenbank Weissenstein. Aus Selzach-Lommiswil und Bettlach entsteht die Raiffeisenbank Wandflue, die gleichzeitig eine Geschäftsstelle in Grenchen eröffnet. Auch die Raiffeisenbank Solothurn schliesst sich mit Feldbrunnen und Riedholz zusammen.'
+        caption: 'Raiffeisenbank Solothurn, ca. 1979'
       -
-        id: mLs1Tn-row-8
+        id: mLs1Tn-row-9
         year: '2000–2007'
         image: geschichte/2000-raiffeisenbank-bellach.jpg
         editor:
@@ -188,10 +239,93 @@ blocks:
                 type: hardBreak
               -
                 type: text
-                text: 'Günsberg und Flumenthal-Hubersdorf vereinigen sich und werden später Teil der Raiffeisenbank Solothurn. Bellach schliesst sich der damaligen Raiffeisenbank Weissenstein an. Damit nehmen jene drei Regionalbanken Gestalt an, die später zur heutigen Raiffeisenbank Weissenstein werden.'
+                text: 'Die Raiffeisenbanken Günsberg und Flumenthal-Hubersdorf vereinigen sich und werden später Teil der Raiffeisenbank Solothurn. Bellach schliesst sich der damaligen Raiffeisenbank Weissenstein an. Damit nehmen jene drei Regionalbanken Gestalt an, die später zur heutigen Raiffeisenbank Weissenstein werden.'
+        caption: 'Raiffeisenbank Bellach, ca. 1990'
       -
-        id: mLs1Tn-row-9
-        year: '2010–2012'
+        id: mLs1Tn-row-10
+        year: '2000'
+        image: geschichte/2000-museumspass.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: '100 Jahre Raiffeisen Schweiz'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Zum 100. Geburtstag führt Raiffeisen Schweiz im Jahr 2000 den Museumspass für ihre Mitglieder ein.'
+        caption: 'Gratis in über 500 Museen in der Schweiz'
+      -
+        id: mLs1Tn-row-11
+        year: '2001'
+        image: geschichte/2001-e-banking.jpg
+        image_contain: true
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Einführung E-Banking'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Die Einführung des E-Bankings verändert die Erbringung von Bankdienstleistungen fundamental.'
+        caption: 'Die Bildschirmansicht des ersten E-Bankings'
+      -
+        id: mLs1Tn-row-12
+        year: '2006'
+        image: geschichte/2006-raiffeisen-logos.jpg
+        image_contain: true
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Neues Raiffeisen-Logo'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Schlichte Buchstaben auf einfarbigem Grund: 2006 wird das Branding der Raiffeisen Gruppe erneuert, wie es bis heute Bestand hat.'
+        caption: 'Fünf Beispiele, wie sich das Logo in den 1950er- bis 1970er-Jahren entwickelte'
+      -
+        id: mLs1Tn-row-13
+        year: '2008'
+        image: geschichte/2008-boersencrash.jpg
+        editor:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Finanzkrise ausgelöst durch die US-Immobilienkrise'
+              -
+                type: hardBreak
+              -
+                type: text
+                text: 'Die globale Finanzkrise erschütterte das internationale Finanzsystem und führte zu weitreichenden wirtschaftlichen Folgen.'
+        caption: 'Der Börsencrash am 15. September 2008'
+      -
+        id: mLs1Tn-row-14
+        year: '2010–2013'
         image: geschichte/2012-eroeffnung-grenchen.jpg
         editor:
           -
@@ -207,9 +341,10 @@ blocks:
                 type: hardBreak
               -
                 type: text
-                text: 'In Langendorf wird 2010 ein neues Bankgebäude bezogen. Zwei Jahre später eröffnet die Raiffeisenbank Wandflue ihren Neubau in Grenchen. Die Investitionen unterstreichen das langfristige Bekenntnis zu den Standorten in der Region.'
+                text: 'Die Raiffeisenbank bezieht 2010 in Langendorf ein neues Bankgebäude. Zwei Jahre später eröffnet die Raiffeisenbank Wandflue ihren Neubau in Grenchen. In Solothurn werden 2013 die neuen Räumlichkeiten bezogen. Die Investitionen unterstreichen das langfristige Bekenntnis zu den Standorten in der Region.'
+        caption: '2012 – Eröffnung Umbau Grenchen'
       -
-        id: mLs1Tn-row-10
+        id: mLs1Tn-row-15
         year: '2016'
         image: geschichte/2016-generalversammlung-wandflue.jpg
         editor:
@@ -227,8 +362,9 @@ blocks:
               -
                 type: text
                 text: 'Die Raiffeisenbank Wandflue, die Raiffeisenbank Solothurn und die damalige Raiffeisenbank Weissenstein fusionieren zur heutigen Raiffeisenbank Weissenstein. Die neue Bank zählt zu diesem Zeitpunkt 17’677 Mitglieder.'
+        caption: 'Generalversammlung Raiffeisenbank Wandflue, 2016'
       -
-        id: mLs1Tn-row-11
+        id: mLs1Tn-row-16
         year: '2023'
         image: geschichte/2023-photovoltaik.jpg
         editor:
@@ -245,9 +381,9 @@ blocks:
                 type: hardBreak
               -
                 type: text
-                text: 'Auf den Geschäftsstellen in Grenchen, Selzach, Langendorf, Bellach und Flumenthal werden Photovoltaikanlagen installiert. Im selben Jahr erhält die Raiffeisenbank Weissenstein die Umweltzertifizierung ISO 14001.'
+                text: 'Auf den Geschäftsstellen in Grenchen, Selzach, Langendorf, Bellach und Flumenthal werden Photovoltaikanlagen installiert.'
       -
-        id: mLs1Tn-row-12
+        id: mLs1Tn-row-17
         year: '2027'
         editor:
           -
@@ -263,11 +399,13 @@ blocks:
                 type: hardBreak
               -
                 type: text
-                text: 'Die Raiffeisenbank Weissenstein feiert ihre 125-jährige Geschichte. Aus einer kleinen Darlehenskasse in Selzach ist eine Regionalbank mit sieben Standorten und rund 80 Mitarbeitenden geworden – fest verwurzelt in der Region und bereit für die Zukunft.'
+                text: 'Die Raiffeisenbank Weissenstein feiert ihre 125-jährige Geschichte. Aus einer kleinen Darlehenskasse in Selzach ist eine Regionalbank mit sieben Standorten und über 80 Mitarbeitenden geworden – fest verwurzelt in der Region und bereit für die Zukunft.'
     button_title: 'Der Weg zur Raiffeisenbank Weissenstein'
     button_label: 'Mehr erfahren'
     button_link: 'https://www.raiffeisen.ch'
     merger_tree: true
+    merger_tree_title: 'Seit 1902 in der Region verwurzelt'
+    merger_tree_text: 'Die heutige Raiffeisenbank Weissenstein ist aus zahlreichen lokalen Raiffeisenbanken entstanden. Ihre Geschichte beginnt im Jahr 1902. Über Generationen wuchsen die einzelnen Banken mit ihren Gemeinden, bevor sie sich Schritt für Schritt zur heutigen Raiffeisenbank Weissenstein zusammenschlossen.'
   -
     id: tSt1Ml-Rv8kQw3Nd7Za2X
     type: testimonials

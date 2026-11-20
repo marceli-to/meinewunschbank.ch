@@ -28,6 +28,10 @@ const tree = document.querySelector('[data-merger-tree]');
 
 if (tree) {
     import('@/components/MergerTree.vue').then(({ default: MergerTree }) => {
-        createApp(MergerTree, { panelId: tree.id }).mount(tree);
+        createApp(MergerTree, {
+            panelId: tree.id,
+            title: tree.dataset.title ?? '',
+            text: tree.dataset.text ?? '',
+        }).mount(tree);
     });
 }

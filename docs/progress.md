@@ -5,6 +5,13 @@ Running notes on where the site stands. Newest first; how things work lives in
 
 ## Done
 
+- **2026-11-20 — Timeline from the final doc.** The client had sent the wrong
+  doc. The 17 milestones now follow `RBW_Geschichte_Website_19112026_final.docx`;
+  the photos it adds were taken from the doc itself (some are small, e.g. the
+  1907 note at 191px). Slides gained a caption (credits) and an «uncropped»
+  toggle for graphics; photos zoom on hover. The milestones heading is back to
+  «Meilensteine aus 125 Jahren»; the merger tree carries the «Seit 1902…» title
+  and lead, both editable on the block.
 - **2026-11-19 — History timeline.** The homepage `milestones` block carries
   the 13 entries from the client's `RBW_Geschichte_Website.docx`, with the
   doc's heading and intro. Eight of Sara's photos are matched by year and sit in
@@ -24,12 +31,9 @@ Running notes on where the site stands. Newest first; how things work lives in
 
 ### Waiting on the client
 
-- **Timeline gaps** (mail to Dominic, 2026-11-19):
-  - No photo for 1931, 1970, 1982, 2027. For 2027, the 125 logo could stand in.
-  - Eight photos have no text: 1900, 1907, 1986, 1994, 2000 Museumspass, 2001,
-    2006, 2008.
-  - The doc says 2010–2012 but the filename says 2010-2013. The 1997–1999
-    slide uses a 1979 photo.
+- **Timeline images**: 2023 drone shot of Langendorf (from José), a static
+  «meine Wunschbank» logo for 2027, and larger originals for the small doc
+  images (1900, 1907, 1986, 2000 Museumspass, 2008).
 - **Global notification address** for `MAIL_NOTIFY`.
 
 ### Dummy content still on the homepage
@@ -40,7 +44,7 @@ Running notes on where the site stands. Newest first; how things work lives in
 
 ### Staging
 
-- Upload `public/assets/geschichte/` (with `.meta/`), e.g.
+- Upload `public/assets/geschichte/` (with `.meta/`; nine new files on 2026-11-20), e.g.
   `rsync -avz public/assets/geschichte/ <host>:www/meinewunschbank.ch/public/assets/geschichte/`,
   then
   `php please stache:refresh`. If an earlier copy of the Solothurn photo went
