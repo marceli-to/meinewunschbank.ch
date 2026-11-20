@@ -46,7 +46,7 @@ fields:
           field:
             type: toggle
             display: 'Bild nicht beschneiden'
-            instructions: 'Für Grafiken, Inserate und Screenshots: Das ganze Bild wird auf weissem Grund eingepasst.'
+            instructions: 'Für Grafiken, Inserate und Screenshots: Das ganze Bild wird ins Quadrat eingepasst.'
         - import: editor
         -
           handle: image_credit

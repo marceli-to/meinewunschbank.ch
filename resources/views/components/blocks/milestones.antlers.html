@@ -68,7 +68,7 @@
 											:image="image"
 											:alt="image:alt"
 											wrapperClass="overflow-hidden"
-											class="aspect-square {{ image_contain ? 'object-contain bg-snow p-16 md:p-20' : 'object-cover' }} transition-transform duration-700 ease-out pointer-fine:group-hover:scale-105 motion-reduce:transition-none"
+											class="aspect-square {{ image_contain ? 'object-contain' : 'object-cover' }} transition-transform duration-700 ease-out pointer-fine:group-hover:scale-105 motion-reduce:transition-none"
 											sizes="(min-width: 1024px) 25vw, (min-width: 768px) 40vw, 80vw" }}
 									{{ else }}
 										<div class="aspect-square bg-linen"></div>

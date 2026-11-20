@@ -107,7 +107,7 @@ blocks:
       -
         id: mLs1Tn-row-3
         year: '1907'
-        image: geschichte/1907-50-franken-note.jpg
+        image: geschichte/1907-50-franken-note-quer.jpg
         image_contain: true
         editor:
           -
