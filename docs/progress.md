@@ -40,10 +40,14 @@ Running notes on where the site stands. Newest first; how things work lives in
 
 ### Staging
 
-- Upload `public/assets/geschichte/` (with `.meta/`), then
+- Upload `public/assets/geschichte/` (with `.meta/`), e.g.
+  `rsync -avz public/assets/geschichte/ <host>:www/meinewunschbank.ch/public/assets/geschichte/`,
+  then
   `php please stache:refresh`. If an earlier copy of the Solothurn photo went
   up (it was a PNG named `.jpg`), also `php please glide:clear` and
   `php artisan cache:clear`.
+- Confirm where staging lives: on 2026-11-20 its domain resolved to Hostpoint
+  (`sl40.web.hostpoint.ch`), not the cyon server in the notes.
 - Restore `MAIL_TO` once the agency's mail test is over, and set
   `MAIL_NOTIFY`.
 
