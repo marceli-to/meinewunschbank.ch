@@ -3,3 +3,22 @@
 .swiper {
 	--swiper-wrapper-transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+/* Slider arrows nudge outward while hovered, to show the row scrolls. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+	[data-swiper-prev]:not(.swiper-button-disabled):hover svg {
+		animation: arrow-nudge-prev 900ms ease-in-out infinite;
+	}
+
+	[data-swiper-next]:not(.swiper-button-disabled):hover svg {
+		animation: arrow-nudge-next 900ms ease-in-out infinite;
+	}
+}
+
+@keyframes arrow-nudge-prev {
+	50% { translate: -6px 0; }
+}
+
+@keyframes arrow-nudge-next {
+	50% { translate: 6px 0; }
+}

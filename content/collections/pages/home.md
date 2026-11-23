@@ -371,6 +371,8 @@ blocks:
       -
         id: mLs1Tn-row-17
         year: '2027'
+        image: geschichte/2027-jubilaeumslogo.svg
+        image_contain: true
         editor:
           -
             type: paragraph

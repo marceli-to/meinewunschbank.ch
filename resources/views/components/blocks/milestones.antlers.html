@@ -32,16 +32,16 @@
 
 					<div class="absolute inset-x-0 top-0 h-12 text-sand">
 
-						<div data-timeline-line class="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 bg-current"></div>
+						<div data-timeline-line class="absolute left-50 right-50 md:left-56 md:right-56 top-1/2 h-1 -translate-y-1/2 bg-current"></div>
 
 						<button type="button" data-swiper-prev aria-label="Frühere Meilensteine"
-							class="absolute left-0 top-1/2 z-20 grid size-44 md:size-48 -translate-y-1/2 items-center justify-items-start cursor-pointer transition-opacity [&.swiper-button-disabled]:opacity-50 [&.swiper-button-disabled]:cursor-default">
-							{{ partial:components/icons/arrow-left-thin class="w-5 h-10 md:w-6 md:h-12" }}
+							class="absolute left-0 top-1/2 z-20 grid size-44 md:size-48 -translate-y-1/2 items-center justify-items-start text-ink cursor-pointer transition-opacity [&.swiper-button-disabled]:opacity-50 [&.swiper-button-disabled]:cursor-default">
+							{{ partial:components/icons/arrow-left-short class="w-34 md:w-40 h-auto" }}
 						</button>
 
 						<button type="button" data-swiper-next aria-label="Spätere Meilensteine"
-							class="absolute right-0 top-1/2 z-20 grid size-44 md:size-48 -translate-y-1/2 items-center justify-items-end cursor-pointer transition-opacity [&.swiper-button-disabled]:opacity-50 [&.swiper-button-disabled]:cursor-default">
-							{{ partial:components/icons/arrow-right-thin class="w-5 h-10 md:w-6 md:h-12" }}
+							class="absolute right-0 top-1/2 z-20 grid size-44 md:size-48 -translate-y-1/2 items-center justify-items-end text-ink cursor-pointer transition-opacity [&.swiper-button-disabled]:opacity-50 [&.swiper-button-disabled]:cursor-default">
+							{{ partial:components/icons/arrow-right-short class="w-34 md:w-40 h-auto" }}
 						</button>
 
 					</div>
@@ -63,7 +63,12 @@
 										{{ /if }}
 									</div>
 
-									{{ if image }}
+									{{ if image:extension == 'svg' }}
+										<div class="overflow-hidden">
+											<img src="{{ image:url }}" alt="{{ image:alt }}" loading="lazy"
+												class="block aspect-square w-full object-contain p-24 md:p-32 transition-transform duration-700 ease-out pointer-fine:group-hover:scale-105 motion-reduce:transition-none">
+										</div>
+									{{ elseif image }}
 										{{ partial:components/media/image
 											:image="image"
 											:alt="image:alt"
