@@ -41,7 +41,7 @@
     "src": "resources/fonts/starstoles-regular.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-Cx5bxwcu.js",
+    "file": "assets/app-DtxUY75A.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -53,7 +53,7 @@
     ]
   },
   "resources/js/components/MergerTree.vue": {
-    "file": "assets/MergerTree-BqZtK93R.js",
+    "file": "assets/MergerTree-DvETkaBz.js",
     "name": "MergerTree",
     "src": "resources/js/components/MergerTree.vue",
     "isDynamicEntry": true,

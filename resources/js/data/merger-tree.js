@@ -21,7 +21,7 @@ export const banks = [
 	{ id: 'guensberg', year: 1932, x: 1080, y: 135, name: 'Günsberg', group: 'd' },
 	{ id: 'flumenthal-hubersdorf', year: 1932, x: 1130, y: 185, name: 'Flumenthal-Hubersdorf', group: 'd' },
 	{ id: 'flumenthal-guensberg', year: 2000, x: 1055, y: 590, name: 'Flumenthal-Günsberg', group: 'd', text: 'Die Raiffeisenbanken Günsberg und Flumenthal-Hubersdorf fusionieren zur Raiffeisenbank Flumenthal-Günsberg.' },
-	{ id: 'solothurn-2007', year: 2007, x: 920, y: 755, name: 'Solothurn', group: 'c', text: 'Die Raiffeisenbank Flumenthal-Günsberg fusioniert mit der Raiffeisenbank Solothurn.' },
+	{ id: 'solothurn-2007', year: 2007, x: 930, y: 755, name: 'Solothurn', group: 'c', text: 'Die Raiffeisenbank Flumenthal-Günsberg fusioniert mit der Raiffeisenbank Solothurn.' },
 	{ id: 'weissenstein-2016', year: 2016, x: 590, y: 867, name: 'Weissenstein', group: 'final', text: 'Die Raiffeisenbanken Wandflue, Weissenstein und Solothurn fusionieren zur heutigen Raiffeisenbank Weissenstein.' },
 ];
 
