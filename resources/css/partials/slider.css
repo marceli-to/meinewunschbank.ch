@@ -4,14 +4,14 @@
 	--swiper-wrapper-transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Slider arrows nudge outward while hovered, to show the row scrolls. */
+/* Slider arrows nudge outward once on hover, to show the row scrolls. */
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
 	[data-swiper-prev]:not(.swiper-button-disabled):hover svg {
-		animation: arrow-nudge-prev 900ms ease-in-out infinite;
+		animation: arrow-nudge-prev 900ms ease-in-out;
 	}
 
 	[data-swiper-next]:not(.swiper-button-disabled):hover svg {
-		animation: arrow-nudge-next 900ms ease-in-out infinite;
+		animation: arrow-nudge-next 900ms ease-in-out;
 	}
 }
 
